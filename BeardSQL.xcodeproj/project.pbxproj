@@ -1,0 +1,498 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A3DA90301D51577C006AF174 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DA902F1D51577C006AF174 /* AppDelegate.swift */; };
+		A3DA90321D51577C006AF174 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DA90311D51577C006AF174 /* ViewController.swift */; };
+		A3DA90341D51577C006AF174 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3DA90331D51577C006AF174 /* Assets.xcassets */; };
+		A3DA90371D51577C006AF174 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3DA90351D51577C006AF174 /* Main.storyboard */; };
+		A3DA90421D51577C006AF174 /* BeardSQLTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DA90411D51577C006AF174 /* BeardSQLTests.swift */; };
+		A3DA904D1D51577C006AF174 /* BeardSQLUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DA904C1D51577C006AF174 /* BeardSQLUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A3DA903E1D51577C006AF174 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A3DA90241D51577C006AF174 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A3DA902B1D51577C006AF174;
+			remoteInfo = BeardSQL;
+		};
+		A3DA90491D51577C006AF174 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A3DA90241D51577C006AF174 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A3DA902B1D51577C006AF174;
+			remoteInfo = BeardSQL;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A3DA902C1D51577C006AF174 /* BeardSQL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeardSQL.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A3DA902F1D51577C006AF174 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A3DA90311D51577C006AF174 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A3DA90331D51577C006AF174 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A3DA90361D51577C006AF174 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A3DA90381D51577C006AF174 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A3DA903D1D51577C006AF174 /* BeardSQLTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeardSQLTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A3DA90411D51577C006AF174 /* BeardSQLTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeardSQLTests.swift; sourceTree = "<group>"; };
+		A3DA90431D51577C006AF174 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A3DA90481D51577C006AF174 /* BeardSQLUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeardSQLUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A3DA904C1D51577C006AF174 /* BeardSQLUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeardSQLUITests.swift; sourceTree = "<group>"; };
+		A3DA904E1D51577C006AF174 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A3DA90291D51577C006AF174 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A3DA903A1D51577C006AF174 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A3DA90451D51577C006AF174 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A3DA90231D51577C006AF174 = {
+			isa = PBXGroup;
+			children = (
+				A3DA902E1D51577C006AF174 /* BeardSQL */,
+				A3DA90401D51577C006AF174 /* BeardSQLTests */,
+				A3DA904B1D51577C006AF174 /* BeardSQLUITests */,
+				A3DA902D1D51577C006AF174 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A3DA902D1D51577C006AF174 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A3DA902C1D51577C006AF174 /* BeardSQL.app */,
+				A3DA903D1D51577C006AF174 /* BeardSQLTests.xctest */,
+				A3DA90481D51577C006AF174 /* BeardSQLUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A3DA902E1D51577C006AF174 /* BeardSQL */ = {
+			isa = PBXGroup;
+			children = (
+				A3DA902F1D51577C006AF174 /* AppDelegate.swift */,
+				A3DA90311D51577C006AF174 /* ViewController.swift */,
+				A3DA90331D51577C006AF174 /* Assets.xcassets */,
+				A3DA90351D51577C006AF174 /* Main.storyboard */,
+				A3DA90381D51577C006AF174 /* Info.plist */,
+			);
+			path = BeardSQL;
+			sourceTree = "<group>";
+		};
+		A3DA90401D51577C006AF174 /* BeardSQLTests */ = {
+			isa = PBXGroup;
+			children = (
+				A3DA90411D51577C006AF174 /* BeardSQLTests.swift */,
+				A3DA90431D51577C006AF174 /* Info.plist */,
+			);
+			path = BeardSQLTests;
+			sourceTree = "<group>";
+		};
+		A3DA904B1D51577C006AF174 /* BeardSQLUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A3DA904C1D51577C006AF174 /* BeardSQLUITests.swift */,
+				A3DA904E1D51577C006AF174 /* Info.plist */,
+			);
+			path = BeardSQLUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A3DA902B1D51577C006AF174 /* BeardSQL */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A3DA90511D51577C006AF174 /* Build configuration list for PBXNativeTarget "BeardSQL" */;
+			buildPhases = (
+				A3DA90281D51577C006AF174 /* Sources */,
+				A3DA90291D51577C006AF174 /* Frameworks */,
+				A3DA902A1D51577C006AF174 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BeardSQL;
+			productName = BeardSQL;
+			productReference = A3DA902C1D51577C006AF174 /* BeardSQL.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A3DA903C1D51577C006AF174 /* BeardSQLTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A3DA90541D51577C006AF174 /* Build configuration list for PBXNativeTarget "BeardSQLTests" */;
+			buildPhases = (
+				A3DA90391D51577C006AF174 /* Sources */,
+				A3DA903A1D51577C006AF174 /* Frameworks */,
+				A3DA903B1D51577C006AF174 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A3DA903F1D51577C006AF174 /* PBXTargetDependency */,
+			);
+			name = BeardSQLTests;
+			productName = BeardSQLTests;
+			productReference = A3DA903D1D51577C006AF174 /* BeardSQLTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A3DA90471D51577C006AF174 /* BeardSQLUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A3DA90571D51577C006AF174 /* Build configuration list for PBXNativeTarget "BeardSQLUITests" */;
+			buildPhases = (
+				A3DA90441D51577C006AF174 /* Sources */,
+				A3DA90451D51577C006AF174 /* Frameworks */,
+				A3DA90461D51577C006AF174 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A3DA904A1D51577C006AF174 /* PBXTargetDependency */,
+			);
+			name = BeardSQLUITests;
+			productName = BeardSQLUITests;
+			productReference = A3DA90481D51577C006AF174 /* BeardSQLUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A3DA90241D51577C006AF174 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Swen van Zanten";
+				TargetAttributes = {
+					A3DA902B1D51577C006AF174 = {
+						CreatedOnToolsVersion = 7.3;
+					};
+					A3DA903C1D51577C006AF174 = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = A3DA902B1D51577C006AF174;
+					};
+					A3DA90471D51577C006AF174 = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = A3DA902B1D51577C006AF174;
+					};
+				};
+			};
+			buildConfigurationList = A3DA90271D51577C006AF174 /* Build configuration list for PBXProject "BeardSQL" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A3DA90231D51577C006AF174;
+			productRefGroup = A3DA902D1D51577C006AF174 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A3DA902B1D51577C006AF174 /* BeardSQL */,
+				A3DA903C1D51577C006AF174 /* BeardSQLTests */,
+				A3DA90471D51577C006AF174 /* BeardSQLUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A3DA902A1D51577C006AF174 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3DA90341D51577C006AF174 /* Assets.xcassets in Resources */,
+				A3DA90371D51577C006AF174 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A3DA903B1D51577C006AF174 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A3DA90461D51577C006AF174 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A3DA90281D51577C006AF174 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3DA90321D51577C006AF174 /* ViewController.swift in Sources */,
+				A3DA90301D51577C006AF174 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A3DA90391D51577C006AF174 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3DA90421D51577C006AF174 /* BeardSQLTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A3DA90441D51577C006AF174 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3DA904D1D51577C006AF174 /* BeardSQLUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A3DA903F1D51577C006AF174 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A3DA902B1D51577C006AF174 /* BeardSQL */;
+			targetProxy = A3DA903E1D51577C006AF174 /* PBXContainerItemProxy */;
+		};
+		A3DA904A1D51577C006AF174 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A3DA902B1D51577C006AF174 /* BeardSQL */;
+			targetProxy = A3DA90491D51577C006AF174 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A3DA90351D51577C006AF174 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A3DA90361D51577C006AF174 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A3DA904F1D51577C006AF174 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A3DA90501D51577C006AF174 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		A3DA90521D51577C006AF174 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = BeardSQL/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = nl.hdsign.BeardSQL;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A3DA90531D51577C006AF174 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = BeardSQL/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = nl.hdsign.BeardSQL;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		A3DA90551D51577C006AF174 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = BeardSQLTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = nl.hdsign.BeardSQLTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BeardSQL.app/Contents/MacOS/BeardSQL";
+			};
+			name = Debug;
+		};
+		A3DA90561D51577C006AF174 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = BeardSQLTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = nl.hdsign.BeardSQLTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BeardSQL.app/Contents/MacOS/BeardSQL";
+			};
+			name = Release;
+		};
+		A3DA90581D51577C006AF174 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = BeardSQLUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = nl.hdsign.BeardSQLUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = BeardSQL;
+			};
+			name = Debug;
+		};
+		A3DA90591D51577C006AF174 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = BeardSQLUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = nl.hdsign.BeardSQLUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = BeardSQL;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A3DA90271D51577C006AF174 /* Build configuration list for PBXProject "BeardSQL" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A3DA904F1D51577C006AF174 /* Debug */,
+				A3DA90501D51577C006AF174 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A3DA90511D51577C006AF174 /* Build configuration list for PBXNativeTarget "BeardSQL" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A3DA90521D51577C006AF174 /* Debug */,
+				A3DA90531D51577C006AF174 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		A3DA90541D51577C006AF174 /* Build configuration list for PBXNativeTarget "BeardSQLTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A3DA90551D51577C006AF174 /* Debug */,
+				A3DA90561D51577C006AF174 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		A3DA90571D51577C006AF174 /* Build configuration list for PBXNativeTarget "BeardSQLUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A3DA90581D51577C006AF174 /* Debug */,
+				A3DA90591D51577C006AF174 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A3DA90241D51577C006AF174 /* Project object */;
+}
