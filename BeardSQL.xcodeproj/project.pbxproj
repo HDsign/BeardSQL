@@ -7,12 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D66918B0E2D5F98DBB726D1 /* Pods_BeardSQLUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16C13D1B4094469663E4729C /* Pods_BeardSQLUITests.framework */; };
+		6270397AF8380AF3992612DF /* Pods_BeardSQLTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB0F7911037277C3FF9DEFC7 /* Pods_BeardSQLTests.framework */; };
 		A3DA90301D51577C006AF174 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DA902F1D51577C006AF174 /* AppDelegate.swift */; };
-		A3DA90321D51577C006AF174 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DA90311D51577C006AF174 /* ViewController.swift */; };
 		A3DA90341D51577C006AF174 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3DA90331D51577C006AF174 /* Assets.xcassets */; };
 		A3DA90371D51577C006AF174 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3DA90351D51577C006AF174 /* Main.storyboard */; };
 		A3DA90421D51577C006AF174 /* BeardSQLTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DA90411D51577C006AF174 /* BeardSQLTests.swift */; };
 		A3DA904D1D51577C006AF174 /* BeardSQLUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DA904C1D51577C006AF174 /* BeardSQLUITests.swift */; };
+		A3DA905C1D515855006AF174 /* ApplicationWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DA905B1D515855006AF174 /* ApplicationWindowController.swift */; };
+		A3DA905F1D515960006AF174 /* QueryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DA905E1D515960006AF174 /* QueryViewController.swift */; };
+		F85E74034FC2FBEFB22EA870 /* Pods_BeardSQL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99168D51BBAC326C55E6AC0A /* Pods_BeardSQL.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,9 +37,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0E9F8379A16ED2005068D6B5 /* Pods-BeardSQL.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeardSQL.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BeardSQL/Pods-BeardSQL.debug.xcconfig"; sourceTree = "<group>"; };
+		16C13D1B4094469663E4729C /* Pods_BeardSQLUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BeardSQLUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C5040C1E1BFBADDC9BB82F9 /* Pods-BeardSQLTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeardSQLTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BeardSQLTests/Pods-BeardSQLTests.release.xcconfig"; sourceTree = "<group>"; };
+		921028E0D509FB616F124DD7 /* Pods-BeardSQLTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeardSQLTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BeardSQLTests/Pods-BeardSQLTests.debug.xcconfig"; sourceTree = "<group>"; };
+		99168D51BBAC326C55E6AC0A /* Pods_BeardSQL.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BeardSQL.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3DA902C1D51577C006AF174 /* BeardSQL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeardSQL.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3DA902F1D51577C006AF174 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A3DA90311D51577C006AF174 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A3DA90331D51577C006AF174 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A3DA90361D51577C006AF174 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A3DA90381D51577C006AF174 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -45,6 +53,12 @@
 		A3DA90481D51577C006AF174 /* BeardSQLUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeardSQLUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3DA904C1D51577C006AF174 /* BeardSQLUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeardSQLUITests.swift; sourceTree = "<group>"; };
 		A3DA904E1D51577C006AF174 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A3DA905B1D515855006AF174 /* ApplicationWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ApplicationWindowController.swift; path = Bootstrap/ApplicationWindowController.swift; sourceTree = "<group>"; };
+		A3DA905E1D515960006AF174 /* QueryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QueryViewController.swift; path = Views/QueryViewController.swift; sourceTree = "<group>"; };
+		A48C678573F3C3B74BD413B7 /* Pods-BeardSQL.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeardSQL.release.xcconfig"; path = "Pods/Target Support Files/Pods-BeardSQL/Pods-BeardSQL.release.xcconfig"; sourceTree = "<group>"; };
+		C66A5202B20BD82F22518B8C /* Pods-BeardSQLUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeardSQLUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BeardSQLUITests/Pods-BeardSQLUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		C81EAF14439EE04852DD09CF /* Pods-BeardSQLUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeardSQLUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BeardSQLUITests/Pods-BeardSQLUITests.release.xcconfig"; sourceTree = "<group>"; };
+		CB0F7911037277C3FF9DEFC7 /* Pods_BeardSQLTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BeardSQLTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F85E74034FC2FBEFB22EA870 /* Pods_BeardSQL.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6270397AF8380AF3992612DF /* Pods_BeardSQLTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,12 +82,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D66918B0E2D5F98DBB726D1 /* Pods_BeardSQLUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1B63FAD7A1710248DBD23837 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				99168D51BBAC326C55E6AC0A /* Pods_BeardSQL.framework */,
+				CB0F7911037277C3FF9DEFC7 /* Pods_BeardSQLTests.framework */,
+				16C13D1B4094469663E4729C /* Pods_BeardSQLUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A3DA90231D51577C006AF174 = {
 			isa = PBXGroup;
 			children = (
@@ -79,6 +106,8 @@
 				A3DA90401D51577C006AF174 /* BeardSQLTests */,
 				A3DA904B1D51577C006AF174 /* BeardSQLUITests */,
 				A3DA902D1D51577C006AF174 /* Products */,
+				A7BE729389C54BD0CDFCB094 /* Pods */,
+				1B63FAD7A1710248DBD23837 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -95,8 +124,9 @@
 		A3DA902E1D51577C006AF174 /* BeardSQL */ = {
 			isa = PBXGroup;
 			children = (
+				A3DA905D1D515929006AF174 /* Views */,
+				A3DA905A1D51581F006AF174 /* Bootstrap */,
 				A3DA902F1D51577C006AF174 /* AppDelegate.swift */,
-				A3DA90311D51577C006AF174 /* ViewController.swift */,
 				A3DA90331D51577C006AF174 /* Assets.xcassets */,
 				A3DA90351D51577C006AF174 /* Main.storyboard */,
 				A3DA90381D51577C006AF174 /* Info.plist */,
@@ -122,6 +152,35 @@
 			path = BeardSQLUITests;
 			sourceTree = "<group>";
 		};
+		A3DA905A1D51581F006AF174 /* Bootstrap */ = {
+			isa = PBXGroup;
+			children = (
+				A3DA905B1D515855006AF174 /* ApplicationWindowController.swift */,
+			);
+			name = Bootstrap;
+			sourceTree = "<group>";
+		};
+		A3DA905D1D515929006AF174 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A3DA905E1D515960006AF174 /* QueryViewController.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		A7BE729389C54BD0CDFCB094 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0E9F8379A16ED2005068D6B5 /* Pods-BeardSQL.debug.xcconfig */,
+				A48C678573F3C3B74BD413B7 /* Pods-BeardSQL.release.xcconfig */,
+				921028E0D509FB616F124DD7 /* Pods-BeardSQLTests.debug.xcconfig */,
+				6C5040C1E1BFBADDC9BB82F9 /* Pods-BeardSQLTests.release.xcconfig */,
+				C66A5202B20BD82F22518B8C /* Pods-BeardSQLUITests.debug.xcconfig */,
+				C81EAF14439EE04852DD09CF /* Pods-BeardSQLUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -129,9 +188,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A3DA90511D51577C006AF174 /* Build configuration list for PBXNativeTarget "BeardSQL" */;
 			buildPhases = (
+				8AA9C15E12949464EB80298D /* [CP] Check Pods Manifest.lock */,
 				A3DA90281D51577C006AF174 /* Sources */,
 				A3DA90291D51577C006AF174 /* Frameworks */,
 				A3DA902A1D51577C006AF174 /* Resources */,
+				C5EAD1E4FE648CFCDC74EE0F /* [CP] Embed Pods Frameworks */,
+				B2B78697BB6B03A5F66485E3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -146,9 +208,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A3DA90541D51577C006AF174 /* Build configuration list for PBXNativeTarget "BeardSQLTests" */;
 			buildPhases = (
+				494C837A977C74F3359EDA62 /* [CP] Check Pods Manifest.lock */,
 				A3DA90391D51577C006AF174 /* Sources */,
 				A3DA903A1D51577C006AF174 /* Frameworks */,
 				A3DA903B1D51577C006AF174 /* Resources */,
+				39B0613E53E2653C52B422B6 /* [CP] Embed Pods Frameworks */,
+				5B6106ADFC4429B0665C5FC0 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -164,9 +229,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A3DA90571D51577C006AF174 /* Build configuration list for PBXNativeTarget "BeardSQLUITests" */;
 			buildPhases = (
+				F8DCAA7A723BA40B395B1346 /* [CP] Check Pods Manifest.lock */,
 				A3DA90441D51577C006AF174 /* Sources */,
 				A3DA90451D51577C006AF174 /* Frameworks */,
 				A3DA90461D51577C006AF174 /* Resources */,
+				3000F9D66383C1E382AF4914 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -247,13 +314,137 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3000F9D66383C1E382AF4914 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BeardSQLUITests/Pods-BeardSQLUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		39B0613E53E2653C52B422B6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BeardSQLTests/Pods-BeardSQLTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		494C837A977C74F3359EDA62 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		5B6106ADFC4429B0665C5FC0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BeardSQLTests/Pods-BeardSQLTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8AA9C15E12949464EB80298D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B2B78697BB6B03A5F66485E3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BeardSQL/Pods-BeardSQL-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C5EAD1E4FE648CFCDC74EE0F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BeardSQL/Pods-BeardSQL-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F8DCAA7A723BA40B395B1346 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A3DA90281D51577C006AF174 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A3DA90321D51577C006AF174 /* ViewController.swift in Sources */,
 				A3DA90301D51577C006AF174 /* AppDelegate.swift in Sources */,
+				A3DA905C1D515855006AF174 /* ApplicationWindowController.swift in Sources */,
+				A3DA905F1D515960006AF174 /* QueryViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -384,6 +575,7 @@
 		};
 		A3DA90521D51577C006AF174 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0E9F8379A16ED2005068D6B5 /* Pods-BeardSQL.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -396,6 +588,7 @@
 		};
 		A3DA90531D51577C006AF174 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A48C678573F3C3B74BD413B7 /* Pods-BeardSQL.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -408,6 +601,7 @@
 		};
 		A3DA90551D51577C006AF174 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 921028E0D509FB616F124DD7 /* Pods-BeardSQLTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COMBINE_HIDPI_IMAGES = YES;
@@ -421,6 +615,7 @@
 		};
 		A3DA90561D51577C006AF174 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6C5040C1E1BFBADDC9BB82F9 /* Pods-BeardSQLTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COMBINE_HIDPI_IMAGES = YES;
@@ -434,6 +629,7 @@
 		};
 		A3DA90581D51577C006AF174 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C66A5202B20BD82F22518B8C /* Pods-BeardSQLUITests.debug.xcconfig */;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = BeardSQLUITests/Info.plist;
@@ -446,6 +642,7 @@
 		};
 		A3DA90591D51577C006AF174 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C81EAF14439EE04852DD09CF /* Pods-BeardSQLUITests.release.xcconfig */;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = BeardSQLUITests/Info.plist;
@@ -475,6 +672,7 @@
 				A3DA90531D51577C006AF174 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A3DA90541D51577C006AF174 /* Build configuration list for PBXNativeTarget "BeardSQLTests" */ = {
 			isa = XCConfigurationList;
@@ -483,6 +681,7 @@
 				A3DA90561D51577C006AF174 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A3DA90571D51577C006AF174 /* Build configuration list for PBXNativeTarget "BeardSQLUITests" */ = {
 			isa = XCConfigurationList;
@@ -491,6 +690,7 @@
 				A3DA90591D51577C006AF174 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
