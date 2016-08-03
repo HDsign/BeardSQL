@@ -35,7 +35,7 @@ class QueryViewController: NSViewController, NSTableViewDataSource
     
     private func connectDatabase()
     {
-        do{
+        do {
             try self.con.open(self.host, user: self.username, passwd: self.password)
             try self.con.use(db_name)
         } catch (let e) {
@@ -45,17 +45,24 @@ class QueryViewController: NSViewController, NSTableViewDataSource
     
     private func initEditor()
     {
-        self.queryEditor.onReady = { [unowned self] in
-            self.queryEditor.string = "select * from role_extras"
-            self.queryEditor.theme = ACETheme.CrimsonEditor
-            self.queryEditor.mode  = .SQL
-            self.queryEditor.basicAutoCompletion = true
-            self.queryEditor.liveAutocompletion = true
-        }
+        self.queryEditor.onReady = { self.editorReady() }
         
         NSNotificationCenter.defaultCenter().addObserverForName("runQueryPushed", object: nil, queue: NSOperationQueue.mainQueue()) { notification in
             self.runQuery()
         }
+    }
+    
+    private func editorReady()
+    {
+        self.queryEditor.string = "select * from role_extras"
+        self.queryEditor.theme = ACETheme.CrimsonEditor
+        self.queryEditor.mode  = .SQL
+        self.queryEditor.basicAutoCompletion = true
+        self.queryEditor.liveAutocompletion = true
+        self.queryEditor.snippets = true
+        self.queryEditor.emmet = true
+        self.queryEditor.useSoftWrap = true
+        self.queryEditor.focus()
     }
     
     private func initTable()
@@ -72,7 +79,6 @@ class QueryViewController: NSViewController, NSTableViewDataSource
             let result = try self.con.query(queryEditor.string)
             let rows = try result.readAllRows()
             
-            //print(rows)
             if let items = rows?.first {
                 self.items = items
                 
@@ -84,13 +90,9 @@ class QueryViewController: NSViewController, NSTableViewDataSource
                     self.queryTable.addTableColumn(col)
                 }
                 
-                dispatch_async(dispatch_get_main_queue(), {
-                    self.queryTable.reloadData()
-                })
+                self.queryTable.reloadData()
                 
             }
-            
-            print(items)
         } catch (let e) {
             let alert = NSAlert()
             alert.addButtonWithTitle("Ok")

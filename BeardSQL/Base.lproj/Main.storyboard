@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15G31" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="10116"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="10117"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -392,7 +392,7 @@
                 <windowController id="B8D-0N-5wS" customClass="ApplicationWindowController" customModule="BeardSQL" customModuleProvider="target" sceneMemberID="viewController">
                     <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
-                        <rect key="contentRect" x="196" y="240" width="900" height="600"/>
+                        <rect key="contentRect" x="196" y="240" width="464" height="265"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
                         <value key="minSize" type="size" width="900" height="600"/>
                         <toolbar key="toolbar" implicitIdentifier="1062FD0B-0F2E-4D86-BDE7-D9CA49AD5727" autosavesConfiguration="NO" displayMode="iconAndLabel" sizeMode="regular" id="eWh-Hz-Lgo">
@@ -427,7 +427,7 @@
                 </windowController>
                 <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-491" y="-73"/>
+            <point key="canvasLocation" x="-512" y="-52.5"/>
         </scene>
         <!--Split View Controller-->
         <scene sceneID="cFP-tJ-5bu">
@@ -448,7 +448,7 @@
                 </splitViewController>
                 <customObject id="eQ8-Ye-JRB" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-491" y="509"/>
+            <point key="canvasLocation" x="-512" y="402"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Lsq-fv-iZt">
@@ -472,7 +472,7 @@
                 </viewController>
                 <customObject id="Tf2-a0-G2V" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="113" y="315"/>
+            <point key="canvasLocation" x="-5" y="320"/>
         </scene>
         <!--Query View Controller-->
         <scene sceneID="oVC-Mc-V3z">
@@ -493,7 +493,7 @@
                                         <rect key="frame" x="0.0" y="159" width="450" height="141"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <clipView key="contentView" id="rfl-TX-0Vb">
-                                            <rect key="frame" x="1" y="23" width="448" height="117"/>
+                                            <rect key="frame" x="1" y="0.0" width="448" height="140"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
                                                 <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" alternatingRowBackgroundColors="YES" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" headerView="b6t-lN-bqU" id="W2C-Xc-4vQ">
@@ -510,10 +510,10 @@
                                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                         </clipView>
                                         <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="iHL-c4-x6M">
-                                            <rect key="frame" x="1" y="112.40486282110214" width="225.6521110534668" height="16"/>
+                                            <rect key="frame" x="1" y="112" width="226" height="16"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </scroller>
-                                        <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="obO-QF-hIr">
+                                        <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="NO" id="obO-QF-hIr">
                                             <rect key="frame" x="224" y="17" width="15" height="102"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </scroller>
@@ -543,7 +543,7 @@
                 </viewController>
                 <customObject id="adt-Y2-4Qe" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="213" y="676"/>
+            <point key="canvasLocation" x="95" y="698"/>
         </scene>
     </scenes>
 </document>
