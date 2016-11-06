@@ -1,0 +1,779 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A341BF531DCE2DBF00E622AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A341BF521DCE2DBF00E622AE /* AppDelegate.swift */; };
+		A341BF571DCE2DBF00E622AE /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = A341BF561DCE2DBF00E622AE /* Document.swift */; };
+		A341BF591DCE2DBF00E622AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A341BF581DCE2DBF00E622AE /* Assets.xcassets */; };
+		A341BF5C1DCE2DBF00E622AE /* Application.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A341BF5A1DCE2DBF00E622AE /* Application.storyboard */; };
+		A341BF671DCE2DBF00E622AE /* BeardSqlTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A341BF661DCE2DBF00E622AE /* BeardSqlTests.swift */; };
+		A341BF721DCE2DBF00E622AE /* BeardSqlUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A341BF711DCE2DBF00E622AE /* BeardSqlUITests.swift */; };
+		A341BFB41DCE2F5E00E622AE /* ACEViewSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A341BFAE1DCE2F3000E622AE /* ACEViewSwift.framework */; };
+		A341BFB51DCE2F5E00E622AE /* ACEViewSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A341BFAE1DCE2F3000E622AE /* ACEViewSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A35A01B51DCFBD8900365317 /* ContentStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A35A01B41DCFBD8900365317 /* ContentStoryboard.storyboard */; };
+		A35A01B91DCFBDAE00365317 /* RelationsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A35A01B81DCFBDAE00365317 /* RelationsStoryboard.storyboard */; };
+		A35A01BB1DCFBDC500365317 /* TriggersStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A35A01BA1DCFBDC500365317 /* TriggersStoryboard.storyboard */; };
+		A35A01BD1DCFBDD300365317 /* TableInfoStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A35A01BC1DCFBDD300365317 /* TableInfoStoryboard.storyboard */; };
+		A35A01BF1DCFBDFC00365317 /* StructureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35A01BE1DCFBDFC00365317 /* StructureViewController.swift */; };
+		A35A01C11DCFBE1600365317 /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35A01C01DCFBE1600365317 /* ContentViewController.swift */; };
+		A35A01C31DCFBE4D00365317 /* RelationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35A01C21DCFBE4D00365317 /* RelationsViewController.swift */; };
+		A35A01C51DCFBE6100365317 /* TriggersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35A01C41DCFBE6100365317 /* TriggersViewController.swift */; };
+		A35A01C71DCFBE7400365317 /* TableInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35A01C61DCFBE7400365317 /* TableInfoViewController.swift */; };
+		A35A01C91DCFC4B000365317 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35A01C81DCFC4B000365317 /* Model.swift */; };
+		A35BDA151DCFE4E500D5DB56 /* SplitViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35BDA141DCFE4E500D5DB56 /* SplitViewProtocol.swift */; };
+		A39724B91DCF8CC200EAC865 /* QueryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39724B81DCF8CC200EAC865 /* QueryViewController.swift */; };
+		A39724BC1DCF8D7A00EAC865 /* QueryStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A39724BB1DCF8D7A00EAC865 /* QueryStoryboard.storyboard */; };
+		A39724BE1DCF943C00EAC865 /* StructureStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A39724BD1DCF943C00EAC865 /* StructureStoryboard.storyboard */; };
+		A39724C01DCF94C600EAC865 /* ApplicationSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39724BF1DCF94C600EAC865 /* ApplicationSplitViewController.swift */; };
+		A3DC077B1DCE376F00626E57 /* ApplicationWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DC077A1DCE376F00626E57 /* ApplicationWindowController.swift */; };
+		A3DC07801DCF51A200626E57 /* Preferences.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3DC077E1DCF51A200626E57 /* Preferences.storyboard */; };
+		A3DC07821DCF51C600626E57 /* PreferencesWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DC07811DCF51C600626E57 /* PreferencesWindowController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A341BF631DCE2DBF00E622AE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A341BF471DCE2DBF00E622AE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A341BF4E1DCE2DBF00E622AE;
+			remoteInfo = BeardSql;
+		};
+		A341BF6E1DCE2DBF00E622AE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A341BF471DCE2DBF00E622AE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A341BF4E1DCE2DBF00E622AE;
+			remoteInfo = BeardSql;
+		};
+		A341BFAD1DCE2F3000E622AE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A341BFA71DCE2F3000E622AE /* ACEViewSwift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 517883C31C04FF66008AB02C;
+			remoteInfo = ACEViewSwift;
+		};
+		A341BFAF1DCE2F3000E622AE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A341BFA71DCE2F3000E622AE /* ACEViewSwift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 517883CD1C04FF66008AB02C;
+			remoteInfo = ACEViewSwiftTests;
+		};
+		A341BFB11DCE2F3000E622AE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A341BFA71DCE2F3000E622AE /* ACEViewSwift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 5178867B1C051F32008AB02C;
+			remoteInfo = ACEViewSwiftDemo;
+		};
+		A341BFB61DCE2F5E00E622AE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A341BFA71DCE2F3000E622AE /* ACEViewSwift.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 517883C21C04FF66008AB02C;
+			remoteInfo = ACEViewSwift;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A341BFB81DCE2F5E00E622AE /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A341BFB51DCE2F5E00E622AE /* ACEViewSwift.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		A341BF4F1DCE2DBF00E622AE /* BeardSql.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeardSql.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A341BF521DCE2DBF00E622AE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A341BF561DCE2DBF00E622AE /* Document.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Document.swift; sourceTree = "<group>"; };
+		A341BF581DCE2DBF00E622AE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A341BF5B1DCE2DBF00E622AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Application.storyboard; sourceTree = "<group>"; };
+		A341BF5D1DCE2DBF00E622AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A341BF621DCE2DBF00E622AE /* BeardSqlTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeardSqlTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A341BF661DCE2DBF00E622AE /* BeardSqlTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeardSqlTests.swift; sourceTree = "<group>"; };
+		A341BF681DCE2DBF00E622AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A341BF6D1DCE2DBF00E622AE /* BeardSqlUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeardSqlUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A341BF711DCE2DBF00E622AE /* BeardSqlUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeardSqlUITests.swift; sourceTree = "<group>"; };
+		A341BF731DCE2DBF00E622AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A341BFA71DCE2F3000E622AE /* ACEViewSwift.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ACEViewSwift.xcodeproj; path = ../ACEViewSwift/ACEViewSwift.xcodeproj; sourceTree = "<group>"; };
+		A35A01B41DCFBD8900365317 /* ContentStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = ContentStoryboard.storyboard; path = Views/Storyboards/ContentStoryboard.storyboard; sourceTree = "<group>"; };
+		A35A01B81DCFBDAE00365317 /* RelationsStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = RelationsStoryboard.storyboard; path = Views/Storyboards/RelationsStoryboard.storyboard; sourceTree = "<group>"; };
+		A35A01BA1DCFBDC500365317 /* TriggersStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = TriggersStoryboard.storyboard; path = Views/Storyboards/TriggersStoryboard.storyboard; sourceTree = "<group>"; };
+		A35A01BC1DCFBDD300365317 /* TableInfoStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = TableInfoStoryboard.storyboard; path = Views/Storyboards/TableInfoStoryboard.storyboard; sourceTree = "<group>"; };
+		A35A01BE1DCFBDFC00365317 /* StructureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StructureViewController.swift; path = Views/Controllers/StructureViewController.swift; sourceTree = "<group>"; };
+		A35A01C01DCFBE1600365317 /* ContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContentViewController.swift; path = Views/Controllers/ContentViewController.swift; sourceTree = "<group>"; };
+		A35A01C21DCFBE4D00365317 /* RelationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RelationsViewController.swift; path = Views/Controllers/RelationsViewController.swift; sourceTree = "<group>"; };
+		A35A01C41DCFBE6100365317 /* TriggersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TriggersViewController.swift; path = Views/Controllers/TriggersViewController.swift; sourceTree = "<group>"; };
+		A35A01C61DCFBE7400365317 /* TableInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TableInfoViewController.swift; path = Views/Controllers/TableInfoViewController.swift; sourceTree = "<group>"; };
+		A35A01C81DCFC4B000365317 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		A35BDA141DCFE4E500D5DB56 /* SplitViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SplitViewProtocol.swift; path = Views/Protocols/SplitViewProtocol.swift; sourceTree = "<group>"; };
+		A39724B81DCF8CC200EAC865 /* QueryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QueryViewController.swift; path = Views/Controllers/QueryViewController.swift; sourceTree = "<group>"; };
+		A39724BB1DCF8D7A00EAC865 /* QueryStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = QueryStoryboard.storyboard; path = Views/Storyboards/QueryStoryboard.storyboard; sourceTree = "<group>"; };
+		A39724BD1DCF943C00EAC865 /* StructureStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = StructureStoryboard.storyboard; path = Views/Storyboards/StructureStoryboard.storyboard; sourceTree = "<group>"; };
+		A39724BF1DCF94C600EAC865 /* ApplicationSplitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ApplicationSplitViewController.swift; path = Views/Controllers/ApplicationSplitViewController.swift; sourceTree = "<group>"; };
+		A3DC077A1DCE376F00626E57 /* ApplicationWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ApplicationWindowController.swift; path = Windows/Controllers/ApplicationWindowController.swift; sourceTree = "<group>"; };
+		A3DC077F1DCF51A200626E57 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Preferences.storyboard; sourceTree = "<group>"; };
+		A3DC07811DCF51C600626E57 /* PreferencesWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PreferencesWindowController.swift; path = Windows/Controllers/PreferencesWindowController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A341BF4C1DCE2DBF00E622AE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A341BFB41DCE2F5E00E622AE /* ACEViewSwift.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A341BF5F1DCE2DBF00E622AE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A341BF6A1DCE2DBF00E622AE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A341BF461DCE2DBF00E622AE = {
+			isa = PBXGroup;
+			children = (
+				A341BFA71DCE2F3000E622AE /* ACEViewSwift.xcodeproj */,
+				A341BF511DCE2DBF00E622AE /* BeardSql */,
+				A341BF651DCE2DBF00E622AE /* BeardSqlTests */,
+				A341BF701DCE2DBF00E622AE /* BeardSqlUITests */,
+				A341BF501DCE2DBF00E622AE /* Products */,
+				A341BF8B1DCE2E1F00E622AE /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		A341BF501DCE2DBF00E622AE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A341BF4F1DCE2DBF00E622AE /* BeardSql.app */,
+				A341BF621DCE2DBF00E622AE /* BeardSqlTests.xctest */,
+				A341BF6D1DCE2DBF00E622AE /* BeardSqlUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A341BF511DCE2DBF00E622AE /* BeardSql */ = {
+			isa = PBXGroup;
+			children = (
+				A39724B41DCF8C8F00EAC865 /* Views */,
+				A3DC07791DCE374400626E57 /* Windows */,
+				A341BF521DCE2DBF00E622AE /* AppDelegate.swift */,
+				A341BF561DCE2DBF00E622AE /* Document.swift */,
+				A341BF581DCE2DBF00E622AE /* Assets.xcassets */,
+				A341BF5D1DCE2DBF00E622AE /* Info.plist */,
+				A35A01C81DCFC4B000365317 /* Model.swift */,
+			);
+			path = BeardSql;
+			sourceTree = "<group>";
+		};
+		A341BF651DCE2DBF00E622AE /* BeardSqlTests */ = {
+			isa = PBXGroup;
+			children = (
+				A341BF661DCE2DBF00E622AE /* BeardSqlTests.swift */,
+				A341BF681DCE2DBF00E622AE /* Info.plist */,
+			);
+			path = BeardSqlTests;
+			sourceTree = "<group>";
+		};
+		A341BF701DCE2DBF00E622AE /* BeardSqlUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A341BF711DCE2DBF00E622AE /* BeardSqlUITests.swift */,
+				A341BF731DCE2DBF00E622AE /* Info.plist */,
+			);
+			path = BeardSqlUITests;
+			sourceTree = "<group>";
+		};
+		A341BF8B1DCE2E1F00E622AE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A341BFA81DCE2F3000E622AE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A341BFAE1DCE2F3000E622AE /* ACEViewSwift.framework */,
+				A341BFB01DCE2F3000E622AE /* ACEViewSwiftTests.xctest */,
+				A341BFB21DCE2F3000E622AE /* ACEViewSwiftDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A35BDA111DCFE4BF00D5DB56 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				A35BDA141DCFE4E500D5DB56 /* SplitViewProtocol.swift */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
+		A39724B41DCF8C8F00EAC865 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A35BDA111DCFE4BF00D5DB56 /* Protocols */,
+				A3C734201DCFE22700335896 /* Extentions */,
+				A39724BA1DCF8D5D00EAC865 /* Storyboards */,
+				A39724B71DCF8C9700EAC865 /* Controllers */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		A39724B71DCF8C9700EAC865 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A39724B81DCF8CC200EAC865 /* QueryViewController.swift */,
+				A39724BF1DCF94C600EAC865 /* ApplicationSplitViewController.swift */,
+				A35A01BE1DCFBDFC00365317 /* StructureViewController.swift */,
+				A35A01C01DCFBE1600365317 /* ContentViewController.swift */,
+				A35A01C21DCFBE4D00365317 /* RelationsViewController.swift */,
+				A35A01C41DCFBE6100365317 /* TriggersViewController.swift */,
+				A35A01C61DCFBE7400365317 /* TableInfoViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		A39724BA1DCF8D5D00EAC865 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				A39724BB1DCF8D7A00EAC865 /* QueryStoryboard.storyboard */,
+				A39724BD1DCF943C00EAC865 /* StructureStoryboard.storyboard */,
+				A35A01B41DCFBD8900365317 /* ContentStoryboard.storyboard */,
+				A35A01B81DCFBDAE00365317 /* RelationsStoryboard.storyboard */,
+				A35A01BA1DCFBDC500365317 /* TriggersStoryboard.storyboard */,
+				A35A01BC1DCFBDD300365317 /* TableInfoStoryboard.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		A3C734201DCFE22700335896 /* Extentions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Extentions;
+			sourceTree = "<group>";
+		};
+		A3DC07791DCE374400626E57 /* Windows */ = {
+			isa = PBXGroup;
+			children = (
+				A3DC077D1DCF4D9E00626E57 /* Storyboards */,
+				A3DC077C1DCF4D9100626E57 /* Controllers */,
+			);
+			name = Windows;
+			sourceTree = "<group>";
+		};
+		A3DC077C1DCF4D9100626E57 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A3DC077A1DCE376F00626E57 /* ApplicationWindowController.swift */,
+				A3DC07811DCF51C600626E57 /* PreferencesWindowController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		A3DC077D1DCF4D9E00626E57 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				A341BF5A1DCE2DBF00E622AE /* Application.storyboard */,
+				A3DC077E1DCF51A200626E57 /* Preferences.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A341BF4E1DCE2DBF00E622AE /* BeardSql */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A341BF761DCE2DBF00E622AE /* Build configuration list for PBXNativeTarget "BeardSql" */;
+			buildPhases = (
+				A341BF4B1DCE2DBF00E622AE /* Sources */,
+				A341BF4C1DCE2DBF00E622AE /* Frameworks */,
+				A341BF4D1DCE2DBF00E622AE /* Resources */,
+				A341BFB81DCE2F5E00E622AE /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A341BFB71DCE2F5E00E622AE /* PBXTargetDependency */,
+			);
+			name = BeardSql;
+			productName = BeardSql;
+			productReference = A341BF4F1DCE2DBF00E622AE /* BeardSql.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A341BF611DCE2DBF00E622AE /* BeardSqlTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A341BF791DCE2DBF00E622AE /* Build configuration list for PBXNativeTarget "BeardSqlTests" */;
+			buildPhases = (
+				A341BF5E1DCE2DBF00E622AE /* Sources */,
+				A341BF5F1DCE2DBF00E622AE /* Frameworks */,
+				A341BF601DCE2DBF00E622AE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A341BF641DCE2DBF00E622AE /* PBXTargetDependency */,
+			);
+			name = BeardSqlTests;
+			productName = BeardSqlTests;
+			productReference = A341BF621DCE2DBF00E622AE /* BeardSqlTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A341BF6C1DCE2DBF00E622AE /* BeardSqlUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A341BF7C1DCE2DBF00E622AE /* Build configuration list for PBXNativeTarget "BeardSqlUITests" */;
+			buildPhases = (
+				A341BF691DCE2DBF00E622AE /* Sources */,
+				A341BF6A1DCE2DBF00E622AE /* Frameworks */,
+				A341BF6B1DCE2DBF00E622AE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A341BF6F1DCE2DBF00E622AE /* PBXTargetDependency */,
+			);
+			name = BeardSqlUITests;
+			productName = BeardSqlUITests;
+			productReference = A341BF6D1DCE2DBF00E622AE /* BeardSqlUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A341BF471DCE2DBF00E622AE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0810;
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = "Swen van Zanten";
+				TargetAttributes = {
+					A341BF4E1DCE2DBF00E622AE = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = S7743EWR3C;
+						ProvisioningStyle = Automatic;
+					};
+					A341BF611DCE2DBF00E622AE = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = S7743EWR3C;
+						ProvisioningStyle = Automatic;
+						TestTargetID = A341BF4E1DCE2DBF00E622AE;
+					};
+					A341BF6C1DCE2DBF00E622AE = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = S7743EWR3C;
+						ProvisioningStyle = Automatic;
+						TestTargetID = A341BF4E1DCE2DBF00E622AE;
+					};
+				};
+			};
+			buildConfigurationList = A341BF4A1DCE2DBF00E622AE /* Build configuration list for PBXProject "BeardSql" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A341BF461DCE2DBF00E622AE;
+			productRefGroup = A341BF501DCE2DBF00E622AE /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = A341BFA81DCE2F3000E622AE /* Products */;
+					ProjectRef = A341BFA71DCE2F3000E622AE /* ACEViewSwift.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				A341BF4E1DCE2DBF00E622AE /* BeardSql */,
+				A341BF611DCE2DBF00E622AE /* BeardSqlTests */,
+				A341BF6C1DCE2DBF00E622AE /* BeardSqlUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		A341BFAE1DCE2F3000E622AE /* ACEViewSwift.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ACEViewSwift.framework;
+			remoteRef = A341BFAD1DCE2F3000E622AE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A341BFB01DCE2F3000E622AE /* ACEViewSwiftTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ACEViewSwiftTests.xctest;
+			remoteRef = A341BFAF1DCE2F3000E622AE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A341BFB21DCE2F3000E622AE /* ACEViewSwiftDemo.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = ACEViewSwiftDemo.app;
+			remoteRef = A341BFB11DCE2F3000E622AE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A341BF4D1DCE2DBF00E622AE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A39724BC1DCF8D7A00EAC865 /* QueryStoryboard.storyboard in Resources */,
+				A39724BE1DCF943C00EAC865 /* StructureStoryboard.storyboard in Resources */,
+				A3DC07801DCF51A200626E57 /* Preferences.storyboard in Resources */,
+				A35A01BD1DCFBDD300365317 /* TableInfoStoryboard.storyboard in Resources */,
+				A35A01B51DCFBD8900365317 /* ContentStoryboard.storyboard in Resources */,
+				A35A01BB1DCFBDC500365317 /* TriggersStoryboard.storyboard in Resources */,
+				A341BF591DCE2DBF00E622AE /* Assets.xcassets in Resources */,
+				A341BF5C1DCE2DBF00E622AE /* Application.storyboard in Resources */,
+				A35A01B91DCFBDAE00365317 /* RelationsStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A341BF601DCE2DBF00E622AE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A341BF6B1DCE2DBF00E622AE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A341BF4B1DCE2DBF00E622AE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A35A01C11DCFBE1600365317 /* ContentViewController.swift in Sources */,
+				A3DC077B1DCE376F00626E57 /* ApplicationWindowController.swift in Sources */,
+				A3DC07821DCF51C600626E57 /* PreferencesWindowController.swift in Sources */,
+				A35A01C91DCFC4B000365317 /* Model.swift in Sources */,
+				A35A01C51DCFBE6100365317 /* TriggersViewController.swift in Sources */,
+				A35A01BF1DCFBDFC00365317 /* StructureViewController.swift in Sources */,
+				A39724C01DCF94C600EAC865 /* ApplicationSplitViewController.swift in Sources */,
+				A341BF531DCE2DBF00E622AE /* AppDelegate.swift in Sources */,
+				A35BDA151DCFE4E500D5DB56 /* SplitViewProtocol.swift in Sources */,
+				A35A01C71DCFBE7400365317 /* TableInfoViewController.swift in Sources */,
+				A35A01C31DCFBE4D00365317 /* RelationsViewController.swift in Sources */,
+				A341BF571DCE2DBF00E622AE /* Document.swift in Sources */,
+				A39724B91DCF8CC200EAC865 /* QueryViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A341BF5E1DCE2DBF00E622AE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A341BF671DCE2DBF00E622AE /* BeardSqlTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A341BF691DCE2DBF00E622AE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A341BF721DCE2DBF00E622AE /* BeardSqlUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A341BF641DCE2DBF00E622AE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A341BF4E1DCE2DBF00E622AE /* BeardSql */;
+			targetProxy = A341BF631DCE2DBF00E622AE /* PBXContainerItemProxy */;
+		};
+		A341BF6F1DCE2DBF00E622AE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A341BF4E1DCE2DBF00E622AE /* BeardSql */;
+			targetProxy = A341BF6E1DCE2DBF00E622AE /* PBXContainerItemProxy */;
+		};
+		A341BFB71DCE2F5E00E622AE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ACEViewSwift;
+			targetProxy = A341BFB61DCE2F5E00E622AE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A341BF5A1DCE2DBF00E622AE /* Application.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A341BF5B1DCE2DBF00E622AE /* Base */,
+			);
+			name = Application.storyboard;
+			sourceTree = "<group>";
+		};
+		A3DC077E1DCF51A200626E57 /* Preferences.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A3DC077F1DCF51A200626E57 /* Base */,
+			);
+			name = Preferences.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A341BF741DCE2DBF00E622AE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A341BF751DCE2DBF00E622AE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+			};
+			name = Release;
+		};
+		A341BF771DCE2DBF00E622AE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = S7743EWR3C;
+				INFOPLIST_FILE = BeardSql/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = nl.hdsign.BeardSql;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		A341BF781DCE2DBF00E622AE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = S7743EWR3C;
+				INFOPLIST_FILE = BeardSql/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = nl.hdsign.BeardSql;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		A341BF7A1DCE2DBF00E622AE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = S7743EWR3C;
+				INFOPLIST_FILE = BeardSqlTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = nl.hdsign.BeardSqlTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BeardSql.app/Contents/MacOS/BeardSql";
+			};
+			name = Debug;
+		};
+		A341BF7B1DCE2DBF00E622AE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = S7743EWR3C;
+				INFOPLIST_FILE = BeardSqlTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = nl.hdsign.BeardSqlTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BeardSql.app/Contents/MacOS/BeardSql";
+			};
+			name = Release;
+		};
+		A341BF7D1DCE2DBF00E622AE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = S7743EWR3C;
+				INFOPLIST_FILE = BeardSqlUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = nl.hdsign.BeardSqlUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = BeardSql;
+			};
+			name = Debug;
+		};
+		A341BF7E1DCE2DBF00E622AE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = S7743EWR3C;
+				INFOPLIST_FILE = BeardSqlUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = nl.hdsign.BeardSqlUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = BeardSql;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A341BF4A1DCE2DBF00E622AE /* Build configuration list for PBXProject "BeardSql" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A341BF741DCE2DBF00E622AE /* Debug */,
+				A341BF751DCE2DBF00E622AE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A341BF761DCE2DBF00E622AE /* Build configuration list for PBXNativeTarget "BeardSql" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A341BF771DCE2DBF00E622AE /* Debug */,
+				A341BF781DCE2DBF00E622AE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A341BF791DCE2DBF00E622AE /* Build configuration list for PBXNativeTarget "BeardSqlTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A341BF7A1DCE2DBF00E622AE /* Debug */,
+				A341BF7B1DCE2DBF00E622AE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A341BF7C1DCE2DBF00E622AE /* Build configuration list for PBXNativeTarget "BeardSqlUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A341BF7D1DCE2DBF00E622AE /* Debug */,
+				A341BF7E1DCE2DBF00E622AE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A341BF471DCE2DBF00E622AE /* Project object */;
+}

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16C32f" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11542"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Window Controller-->
+        <scene sceneID="Ng7-hb-Un5">
+            <objects>
+                <windowController storyboardIdentifier="PreferencesWindow" id="yGz-sz-taq" customClass="PreferencesWindowController" customModule="BeardSql" customModuleProvider="target" sceneMemberID="viewController">
+                    <window key="window" identifier="PreferencesWindow" title="Preferences" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="PreferencesSave" animationBehavior="default" tabbingMode="disallowed" id="q1k-pi-cuu">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
+                        <rect key="contentRect" x="196" y="249" width="480" height="270"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="1440" height="900"/>
+                        <toolbar key="toolbar" implicitIdentifier="6603AD73-69E1-43F7-A50A-136F1F79CD8D" autosavesConfiguration="NO" allowsUserCustomization="NO" displayMode="iconAndLabel" sizeMode="regular" id="NQB-dD-oUI">
+                            <allowedToolbarItems>
+                                <toolbarItem implicitItemIdentifier="095DA775-CBFB-4859-A6BD-75E7B6BB92BE" label="General" paletteLabel="General" image="NSPreferencesGeneral" id="SlB-RQ-uca">
+                                    <connections>
+                                        <action selector="toolbarAction:" target="yGz-sz-taq" id="EGc-L9-5Qg"/>
+                                    </connections>
+                                </toolbarItem>
+                                <toolbarItem implicitItemIdentifier="BABB11DB-C5D3-4B51-A2D9-460258980612" label="Fonts &amp; Colors" paletteLabel="Fonts &amp; Colors" tag="1" image="NSFontPanel" id="olx-0i-9c8">
+                                    <connections>
+                                        <action selector="toolbarAction:" target="yGz-sz-taq" id="mJK-Gi-mII"/>
+                                    </connections>
+                                </toolbarItem>
+                            </allowedToolbarItems>
+                            <defaultToolbarItems>
+                                <toolbarItem reference="SlB-RQ-uca"/>
+                                <toolbarItem reference="olx-0i-9c8"/>
+                            </defaultToolbarItems>
+                        </toolbar>
+                    </window>
+                    <connections>
+                        <outlet property="fontsAndColorsViewController" destination="Sha-hx-bm4" id="Cxk-vV-10O"/>
+                        <outlet property="generalViewController" destination="GBd-G1-sPr" id="pPY-wU-Muh"/>
+                        <segue destination="lFH-yv-yJs" kind="relationship" relationship="window.shadowedContentViewController" id="O6F-kA-dh9"/>
+                    </connections>
+                </windowController>
+                <customObject id="qRs-cU-GLw" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <view id="GBd-G1-sPr">
+                    <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                    <autoresizingMask key="autoresizingMask"/>
+                    <subviews>
+                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="N4E-er-egT">
+                            <rect key="frame" x="18" y="263" width="52" height="17"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="General" id="kVf-Yw-mTw">
+                                <font key="font" metaFont="system"/>
+                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                            </textFieldCell>
+                        </textField>
+                    </subviews>
+                </view>
+                <view id="Sha-hx-bm4">
+                    <rect key="frame" x="0.0" y="0.0" width="450" height="113"/>
+                    <autoresizingMask key="autoresizingMask"/>
+                    <subviews>
+                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FHj-dz-Wew">
+                            <rect key="frame" x="18" y="76" width="37" height="17"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Label" id="q9s-ZD-7Rc">
+                                <font key="font" metaFont="system"/>
+                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                            </textFieldCell>
+                        </textField>
+                    </subviews>
+                </view>
+            </objects>
+            <point key="canvasLocation" x="222" y="2"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="EbF-1w-ElW">
+            <objects>
+                <viewController id="lFH-yv-yJs" sceneMemberID="viewController"/>
+                <customObject id="eSV-c2-Bu5" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="222" y="453"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="NSFontPanel" width="32" height="32"/>
+        <image name="NSPreferencesGeneral" width="32" height="32"/>
+    </resources>
+</document>
