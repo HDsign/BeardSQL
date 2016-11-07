@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16C32f" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11542"/>
@@ -31,7 +31,11 @@
                                             </connections>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="VOq-y0-SEH"/>
-                                        <menuItem title="Preferences…" keyEquivalent="," id="BOF-NM-1cW"/>
+                                        <menuItem title="Preferences…" keyEquivalent="," id="BOF-NM-1cW">
+                                            <connections>
+                                                <segue destination="3ld-Gt-Orm" kind="show" id="ziM-hE-Etn"/>
+                                            </connections>
+                                        </menuItem>
                                         <menuItem isSeparatorItem="YES" id="wFC-TO-SCJ"/>
                                         <menuItem title="Services" id="NMo-om-nkz">
                                             <modifierMask key="keyEquivalentModifierMask"/>
@@ -268,14 +272,14 @@
                         <rect key="screenRect" x="0.0" y="0.0" width="1440" height="900"/>
                         <toolbar key="toolbar" implicitIdentifier="44E5BA89-346A-4C2C-B767-2421EA3F9837" allowsUserCustomization="NO" displayMode="iconAndLabel" sizeMode="regular" id="K9Y-iS-2pO">
                             <allowedToolbarItems>
-                                <toolbarItem implicitItemIdentifier="295D9E08-C55B-45E1-BFCE-D3A9209BA3F1" label="Settings" paletteLabel="Settings" image="Settings" selectable="YES" id="ZZe-HJ-9uS">
+                                <toolbarItem implicitItemIdentifier="295D9E08-C55B-45E1-BFCE-D3A9209BA3F1" label="Settings" paletteLabel="Settings" image="NSActionTemplate" selectable="YES" id="ZZe-HJ-9uS">
                                     <nil key="toolTip"/>
                                     <size key="minSize" width="40" height="25"/>
                                     <size key="maxSize" width="40" height="25"/>
                                     <button key="view" verticalHuggingPriority="750" id="k2q-9W-r09">
                                         <rect key="frame" x="6" y="14" width="40" height="25"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                        <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="Settings" imagePosition="only" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="I4E-14-3vv">
+                                        <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="NSActionTemplate" imagePosition="only" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="I4E-14-3vv">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
@@ -309,22 +313,26 @@
                                         <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="Structure" imagePosition="only" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="hFP-9D-tbd">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
+                                            <string key="keyEquivalent">1</string>
+                                            <modifierMask key="keyEquivalentModifierMask" command="YES"/>
                                         </buttonCell>
                                     </button>
                                     <connections>
                                         <action selector="toolbarAction:" target="jGA-0Y-lOj" id="3em-Ue-9nm"/>
                                     </connections>
                                 </toolbarItem>
-                                <toolbarItem implicitItemIdentifier="1353CCB7-A15F-4109-B40F-102C8B0F1824" label="Content" paletteLabel="Content" tag="1" image="Table" id="yQ9-u7-gdD">
+                                <toolbarItem implicitItemIdentifier="1353CCB7-A15F-4109-B40F-102C8B0F1824" label="Content" paletteLabel="Content" tag="1" image="NSListViewTemplate" id="yQ9-u7-gdD">
                                     <nil key="toolTip"/>
                                     <size key="minSize" width="40" height="25"/>
                                     <size key="maxSize" width="40" height="25"/>
                                     <button key="view" verticalHuggingPriority="750" tag="1" id="0Qb-Js-i35">
                                         <rect key="frame" x="5" y="14" width="40" height="25"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                        <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="Table" imagePosition="only" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Y7x-WK-jMw">
+                                        <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="NSListViewTemplate" imagePosition="only" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Y7x-WK-jMw">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
+                                            <string key="keyEquivalent">2</string>
+                                            <modifierMask key="keyEquivalentModifierMask" command="YES"/>
                                         </buttonCell>
                                     </button>
                                     <connections>
@@ -341,6 +349,8 @@
                                         <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="Relations" imagePosition="only" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="nAz-0J-agB">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
+                                            <string key="keyEquivalent">3</string>
+                                            <modifierMask key="keyEquivalentModifierMask" command="YES"/>
                                         </buttonCell>
                                     </button>
                                     <connections>
@@ -357,56 +367,67 @@
                                         <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="Triggers" imagePosition="only" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ejg-JL-zmu">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
+                                            <string key="keyEquivalent">4</string>
+                                            <modifierMask key="keyEquivalentModifierMask" command="YES"/>
                                         </buttonCell>
                                     </button>
                                     <connections>
                                         <action selector="toolbarAction:" target="jGA-0Y-lOj" id="QrC-XT-yzM"/>
                                     </connections>
                                 </toolbarItem>
-                                <toolbarItem implicitItemIdentifier="79B7618E-A8C8-42BB-BA3C-5B8A5322C97F" label="Table Info" paletteLabel="Table Info" tag="4" image="Info" id="6bc-H4-Xvn">
+                                <toolbarItem implicitItemIdentifier="79B7618E-A8C8-42BB-BA3C-5B8A5322C97F" label="Table Info" paletteLabel="Table Info" tag="4" image="NSInfo" id="6bc-H4-Xvn">
                                     <nil key="toolTip"/>
                                     <size key="minSize" width="40" height="25"/>
                                     <size key="maxSize" width="40" height="25"/>
                                     <button key="view" verticalHuggingPriority="750" tag="4" id="n2M-xX-UYe">
                                         <rect key="frame" x="10" y="14" width="40" height="25"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                        <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="Info" imagePosition="only" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Jao-e5-kLq">
+                                        <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="NSInfo" imagePosition="only" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Jao-e5-kLq">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
+                                            <string key="keyEquivalent">5</string>
+                                            <modifierMask key="keyEquivalentModifierMask" command="YES"/>
                                         </buttonCell>
                                     </button>
                                     <connections>
                                         <action selector="toolbarAction:" target="jGA-0Y-lOj" id="Gi0-3O-zyR"/>
                                     </connections>
                                 </toolbarItem>
-                                <toolbarItem implicitItemIdentifier="D6F6410D-333D-484D-92D9-436AD0C1C4A7" label="Query" paletteLabel="Query" tag="5" image="Console" id="ib1-F6-t3j">
+                                <toolbarItem implicitItemIdentifier="D6F6410D-333D-484D-92D9-436AD0C1C4A7" label="Query" paletteLabel="Query" tag="5" image="NSScriptTemplate" id="ib1-F6-t3j">
                                     <nil key="toolTip"/>
                                     <size key="minSize" width="40" height="25"/>
                                     <size key="maxSize" width="40" height="25"/>
                                     <button key="view" verticalHuggingPriority="750" tag="5" id="Pfj-MS-WY5">
                                         <rect key="frame" x="0.0" y="14" width="40" height="25"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                        <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="Console" imagePosition="only" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="jwX-nq-GjV">
+                                        <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="NSScriptTemplate" imagePosition="only" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="jwX-nq-GjV">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
+                                            <string key="keyEquivalent">6</string>
+                                            <modifierMask key="keyEquivalentModifierMask" command="YES"/>
                                         </buttonCell>
                                     </button>
                                     <connections>
                                         <action selector="toolbarAction:" target="jGA-0Y-lOj" id="qux-x0-ntq"/>
                                     </connections>
                                 </toolbarItem>
-                                <toolbarItem implicitItemIdentifier="16718C99-78D8-433F-98A5-FFCFEFB5F628" label="Connection" paletteLabel="Connection" id="N88-bu-ic1">
+                                <toolbarItem implicitItemIdentifier="F94010A0-D724-487A-B308-9EC424D1491D" label="Connection" paletteLabel="Connection" image="NSStatusAvailable" id="85t-nU-J4D">
                                     <nil key="toolTip"/>
-                                    <size key="minSize" width="220" height="28"/>
-                                    <size key="maxSize" width="600" height="28"/>
-                                    <button key="view" verticalHuggingPriority="750" id="ZAX-Qa-Dv6">
-                                        <rect key="frame" x="0.0" y="14" width="300" height="28"/>
+                                    <size key="minSize" width="40" height="25"/>
+                                    <size key="maxSize" width="550" height="25"/>
+                                    <button key="view" verticalHuggingPriority="750" allowsExpansionToolTips="YES" id="ary-7r-EYl">
+                                        <rect key="frame" x="14" y="14" width="40" height="25"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                        <buttonCell key="cell" type="roundTextured" title="Connected to 192.168.175.30:3306" bezelStyle="texturedRounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="8p7-DY-wmr">
+                                        <buttonCell key="cell" type="roundTextured" title="Connected to 192.168.175.30 :  3306 : SH_darwinplants_darwinplants" bezelStyle="texturedRounded" image="NSStatusAvailable" imagePosition="right" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="p0T-WU-vfh">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                            <font key="font" metaFont="cellTitle"/>
+                                            <font key="font" metaFont="system"/>
+                                            <string key="keyEquivalent">6</string>
+                                            <modifierMask key="keyEquivalentModifierMask" command="YES"/>
                                         </buttonCell>
                                     </button>
+                                    <connections>
+                                        <segue destination="es0-Jx-y7b" kind="sheet" id="oPo-XH-gH2"/>
+                                    </connections>
                                 </toolbarItem>
                                 <toolbarItem implicitItemIdentifier="B232DB72-2627-4D20-A554-4CC0CD7C156D" label="Search" paletteLabel="Search" id="y8p-rU-zU6">
                                     <nil key="toolTip"/>
@@ -434,7 +455,7 @@
                                 <toolbarItem reference="6bc-H4-Xvn"/>
                                 <toolbarItem reference="ib1-F6-t3j"/>
                                 <toolbarItem reference="m14-Nc-4iK"/>
-                                <toolbarItem reference="N88-bu-ic1"/>
+                                <toolbarItem reference="85t-nU-J4D"/>
                                 <toolbarItem reference="m14-Nc-4iK"/>
                                 <toolbarItem reference="y8p-rU-zU6"/>
                             </defaultToolbarItems>
@@ -446,7 +467,74 @@
                 </windowController>
                 <customObject id="6f7-a7-6o1" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-65" y="281"/>
+            <point key="canvasLocation" x="-66" y="275"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="K6K-OG-XRL">
+            <objects>
+                <viewController id="es0-Jx-y7b" sceneMemberID="viewController">
+                    <view key="view" id="ct9-37-iof">
+                        <rect key="frame" x="0.0" y="0.0" width="798" height="518"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="B4o-Ih-gB7">
+                                <rect key="frame" x="692" y="13" width="92" height="32"/>
+                                <buttonCell key="cell" type="push" title="Connect" bezelStyle="rounded" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="D4R-tC-DwP">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="dismissController:" target="YiP-S4-0e2" id="VL7-AG-G5E"/>
+                                </connections>
+                            </button>
+                            <tabView translatesAutoresizingMaskIntoConstraints="NO" id="9lR-Mb-hMv">
+                                <rect key="frame" x="13" y="51" width="772" height="453"/>
+                                <font key="font" metaFont="system"/>
+                                <tabViewItems>
+                                    <tabViewItem label="Favorites" identifier="1" id="jfP-aW-suC">
+                                        <view key="view" id="7tc-OM-MJc">
+                                            <rect key="frame" x="10" y="33" width="752" height="407"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        </view>
+                                    </tabViewItem>
+                                    <tabViewItem label="Connect" identifier="2" id="3MR-ai-7fn">
+                                        <view key="view" id="EZc-qG-xdT">
+                                            <rect key="frame" x="10" y="33" width="404" height="189"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        </view>
+                                    </tabViewItem>
+                                </tabViewItems>
+                            </tabView>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="FYY-cm-1yL">
+                                <rect key="frame" x="610" y="13" width="82" height="32"/>
+                                <buttonCell key="cell" type="push" title="Cancel" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="KoH-6d-6ON">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                    <string key="keyEquivalent" base64-UTF8="YES">
+Gw
+</string>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="dismissController:" target="YiP-S4-0e2" id="AeF-2X-B7K"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="9lR-Mb-hMv" secondAttribute="trailing" constant="20" id="7Nw-vh-H3h"/>
+                            <constraint firstItem="FYY-cm-1yL" firstAttribute="top" secondItem="7tc-OM-MJc" secondAttribute="bottom" constant="23" id="7uu-fW-SiY"/>
+                            <constraint firstItem="B4o-Ih-gB7" firstAttribute="leading" secondItem="FYY-cm-1yL" secondAttribute="trailing" constant="12" id="9HU-rp-1mi"/>
+                            <constraint firstAttribute="bottom" secondItem="B4o-Ih-gB7" secondAttribute="bottom" constant="20" id="IIi-sr-Goy"/>
+                            <constraint firstItem="9lR-Mb-hMv" firstAttribute="leading" secondItem="ct9-37-iof" secondAttribute="leading" constant="20" id="WOS-BQ-mU7"/>
+                            <constraint firstAttribute="trailing" secondItem="B4o-Ih-gB7" secondAttribute="trailing" constant="20" id="dgr-11-BQU"/>
+                            <constraint firstItem="B4o-Ih-gB7" firstAttribute="top" secondItem="9lR-Mb-hMv" secondAttribute="bottom" constant="20" id="fAw-Tb-qtj"/>
+                            <constraint firstAttribute="bottom" secondItem="FYY-cm-1yL" secondAttribute="bottom" constant="20" id="i87-Tp-guO"/>
+                            <constraint firstItem="9lR-Mb-hMv" firstAttribute="top" secondItem="ct9-37-iof" secondAttribute="top" constant="20" id="waz-g3-VMN"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <customObject id="YiP-S4-0e2" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="932" y="-349"/>
         </scene>
         <!--Application Split View Controller-->
         <scene sceneID="RcP-vw-ZrG">
@@ -541,13 +629,17 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Console" width="16" height="16"/>
-        <image name="Info" width="16" height="16"/>
-        <image name="Relations" width="16" height="16"/>
-        <image name="Settings" width="16" height="16"/>
-        <image name="Structure" width="16" height="16"/>
-        <image name="Table" width="16" height="16"/>
-        <image name="Triggers" width="16" height="16"/>
+        <image name="NSActionTemplate" width="14" height="14"/>
+        <image name="NSInfo" width="32" height="32"/>
+        <image name="NSListViewTemplate" width="14" height="10"/>
+        <image name="NSScriptTemplate" width="11" height="17"/>
+        <image name="NSStatusAvailable" width="16" height="16"/>
+        <image name="Relations" width="15" height="15"/>
+        <image name="Structure" width="15" height="15"/>
+        <image name="Triggers" width="15" height="15"/>
         <image name="Users" width="16" height="16"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="3OP-gR-1Y1"/>
+    </inferredMetricsTieBreakers>
 </document>

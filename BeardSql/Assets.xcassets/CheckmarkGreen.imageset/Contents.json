@@ -2,12 +2,12 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "Info Squared Filled-16-2.png",
+      "filename" : "Ok Filled-16.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "Info Squared Filled-32.png",
+      "filename" : "Ok Filled-32.png",
       "scale" : "2x"
     },
     {

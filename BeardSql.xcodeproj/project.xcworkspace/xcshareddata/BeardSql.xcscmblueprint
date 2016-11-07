@@ -4,20 +4,27 @@
 
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
-    "FB5E6D4EEDC6AA71A830CD08BB49E4344D22F0EE" : 9223372036854775807,
+    "150A68F5D81F7D884442B46FF5668B805BE44A33" : 9223372036854775807,
+    "6AA9B563339F4175433F6583E018B0E6CF800437" : 9223372036854775807,
     "496ADE360C47B572A9271FFFF8B8BD0D9D701D43" : 9223372036854775807,
-    "6AA9B563339F4175433F6583E018B0E6CF800437" : 9223372036854775807
+    "FB5E6D4EEDC6AA71A830CD08BB49E4344D22F0EE" : 9223372036854775807
   },
-  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "B70626EC-FB99-4F02-ACFC-BC9733ACC9A6",
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "FD450DB6-BBFF-4D98-959E-94A96E2BC46F",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
-    "FB5E6D4EEDC6AA71A830CD08BB49E4344D22F0EE" : "ACEViewSwift\/",
+    "150A68F5D81F7D884442B46FF5668B805BE44A33" : "Fragaria\/",
+    "6AA9B563339F4175433F6583E018B0E6CF800437" : "ACEViewSwift\/ACEBuilds\/",
     "496ADE360C47B572A9271FFFF8B8BD0D9D701D43" : "BeardSql\/",
-    "6AA9B563339F4175433F6583E018B0E6CF800437" : "ACEViewSwift\/ACEBuilds\/"
+    "FB5E6D4EEDC6AA71A830CD08BB49E4344D22F0EE" : "ACEViewSwift\/"
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "BeardSql",
   "DVTSourceControlWorkspaceBlueprintVersion" : 204,
   "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "BeardSql.xcodeproj",
   "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/shysaur\/Fragaria.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "150A68F5D81F7D884442B46FF5668B805BE44A33"
+    },
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/HDsign\/BeardSQL.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",

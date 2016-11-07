@@ -30,6 +30,8 @@
 		A39724BC1DCF8D7A00EAC865 /* QueryStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A39724BB1DCF8D7A00EAC865 /* QueryStoryboard.storyboard */; };
 		A39724BE1DCF943C00EAC865 /* StructureStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A39724BD1DCF943C00EAC865 /* StructureStoryboard.storyboard */; };
 		A39724C01DCF94C600EAC865 /* ApplicationSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39724BF1DCF94C600EAC865 /* ApplicationSplitViewController.swift */; };
+		A3D77A221DD0CF6B000A87A0 /* Fragaria.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3D77A1F1DD0CF63000A87A0 /* Fragaria.framework */; };
+		A3D77A231DD0CF6B000A87A0 /* Fragaria.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A3D77A1F1DD0CF63000A87A0 /* Fragaria.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A3DC077B1DCE376F00626E57 /* ApplicationWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DC077A1DCE376F00626E57 /* ApplicationWindowController.swift */; };
 		A3DC07801DCF51A200626E57 /* Preferences.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3DC077E1DCF51A200626E57 /* Preferences.storyboard */; };
 		A3DC07821DCF51C600626E57 /* PreferencesWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DC07811DCF51C600626E57 /* PreferencesWindowController.swift */; };
@@ -78,6 +80,62 @@
 			remoteGlobalIDString = 517883C21C04FF66008AB02C;
 			remoteInfo = ACEViewSwift;
 		};
+		A3D77A141DD0CF63000A87A0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A3D77A071DD0CF63000A87A0 /* Fragaria.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = AB648E2A11FB385700AEF7BD;
+			remoteInfo = "Fragaria Doc";
+		};
+		A3D77A161DD0CF63000A87A0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A3D77A071DD0CF63000A87A0 /* Fragaria.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = ABCA4DAF16137FC000E4849B;
+			remoteInfo = "Fragaria Simple";
+		};
+		A3D77A181DD0CF63000A87A0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A3D77A071DD0CF63000A87A0 /* Fragaria.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D0C1464C1A87196200DDE90A;
+			remoteInfo = "Fragaria Complex";
+		};
+		A3D77A1A1DD0CF63000A87A0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A3D77A071DD0CF63000A87A0 /* Fragaria.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D0718B501AB551460073493A;
+			remoteInfo = "Fragaria Prefs";
+		};
+		A3D77A1C1DD0CF63000A87A0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A3D77A071DD0CF63000A87A0 /* Fragaria.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 01F0D6FC1C120F7D000A08B6;
+			remoteInfo = "Fragaria Swift";
+		};
+		A3D77A1E1DD0CF63000A87A0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A3D77A071DD0CF63000A87A0 /* Fragaria.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = AB69B62B118B745700903D1D;
+			remoteInfo = Fragaria;
+		};
+		A3D77A201DD0CF63000A87A0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A3D77A071DD0CF63000A87A0 /* Fragaria.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D0E5210D1A90E34F005CB80B;
+			remoteInfo = "Fragaria Tests";
+		};
+		A3D77A241DD0CF6B000A87A0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A3D77A071DD0CF63000A87A0 /* Fragaria.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = AB69B62A118B745700903D1D;
+			remoteInfo = Fragaria;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -88,6 +146,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				A341BFB51DCE2F5E00E622AE /* ACEViewSwift.framework in Embed Frameworks */,
+				A3D77A231DD0CF6B000A87A0 /* Fragaria.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -123,6 +182,7 @@
 		A39724BB1DCF8D7A00EAC865 /* QueryStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = QueryStoryboard.storyboard; path = Views/Storyboards/QueryStoryboard.storyboard; sourceTree = "<group>"; };
 		A39724BD1DCF943C00EAC865 /* StructureStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = StructureStoryboard.storyboard; path = Views/Storyboards/StructureStoryboard.storyboard; sourceTree = "<group>"; };
 		A39724BF1DCF94C600EAC865 /* ApplicationSplitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ApplicationSplitViewController.swift; path = Views/Controllers/ApplicationSplitViewController.swift; sourceTree = "<group>"; };
+		A3D77A071DD0CF63000A87A0 /* Fragaria.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Fragaria.xcodeproj; path = ../Fragaria/Fragaria.xcodeproj; sourceTree = "<group>"; };
 		A3DC077A1DCE376F00626E57 /* ApplicationWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ApplicationWindowController.swift; path = Windows/Controllers/ApplicationWindowController.swift; sourceTree = "<group>"; };
 		A3DC077F1DCF51A200626E57 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Preferences.storyboard; sourceTree = "<group>"; };
 		A3DC07811DCF51C600626E57 /* PreferencesWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PreferencesWindowController.swift; path = Windows/Controllers/PreferencesWindowController.swift; sourceTree = "<group>"; };
@@ -134,6 +194,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A341BFB41DCE2F5E00E622AE /* ACEViewSwift.framework in Frameworks */,
+				A3D77A221DD0CF6B000A87A0 /* Fragaria.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -157,6 +218,7 @@
 		A341BF461DCE2DBF00E622AE = {
 			isa = PBXGroup;
 			children = (
+				A3D77A071DD0CF63000A87A0 /* Fragaria.xcodeproj */,
 				A341BFA71DCE2F3000E622AE /* ACEViewSwift.xcodeproj */,
 				A341BF511DCE2DBF00E622AE /* BeardSql */,
 				A341BF651DCE2DBF00E622AE /* BeardSqlTests */,
@@ -278,6 +340,20 @@
 			name = Extentions;
 			sourceTree = "<group>";
 		};
+		A3D77A081DD0CF63000A87A0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A3D77A151DD0CF63000A87A0 /* Fragaria Doc.app */,
+				A3D77A171DD0CF63000A87A0 /* Fragaria Simple.app */,
+				A3D77A191DD0CF63000A87A0 /* Fragaria Complex.app */,
+				A3D77A1B1DD0CF63000A87A0 /* Fragaria Prefs.app */,
+				A3D77A1D1DD0CF63000A87A0 /* Fragaria Swift.app */,
+				A3D77A1F1DD0CF63000A87A0 /* Fragaria.framework */,
+				A3D77A211DD0CF63000A87A0 /* Fragaria Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		A3DC07791DCE374400626E57 /* Windows */ = {
 			isa = PBXGroup;
 			children = (
@@ -321,6 +397,7 @@
 			);
 			dependencies = (
 				A341BFB71DCE2F5E00E622AE /* PBXTargetDependency */,
+				A3D77A251DD0CF6B000A87A0 /* PBXTargetDependency */,
 			);
 			name = BeardSql;
 			productName = BeardSql;
@@ -408,6 +485,10 @@
 					ProductGroup = A341BFA81DCE2F3000E622AE /* Products */;
 					ProjectRef = A341BFA71DCE2F3000E622AE /* ACEViewSwift.xcodeproj */;
 				},
+				{
+					ProductGroup = A3D77A081DD0CF63000A87A0 /* Products */;
+					ProjectRef = A3D77A071DD0CF63000A87A0 /* Fragaria.xcodeproj */;
+				},
 			);
 			projectRoot = "";
 			targets = (
@@ -438,6 +519,55 @@
 			fileType = wrapper.application;
 			path = ACEViewSwiftDemo.app;
 			remoteRef = A341BFB11DCE2F3000E622AE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A3D77A151DD0CF63000A87A0 /* Fragaria Doc.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = "Fragaria Doc.app";
+			remoteRef = A3D77A141DD0CF63000A87A0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A3D77A171DD0CF63000A87A0 /* Fragaria Simple.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = "Fragaria Simple.app";
+			remoteRef = A3D77A161DD0CF63000A87A0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A3D77A191DD0CF63000A87A0 /* Fragaria Complex.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = "Fragaria Complex.app";
+			remoteRef = A3D77A181DD0CF63000A87A0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A3D77A1B1DD0CF63000A87A0 /* Fragaria Prefs.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = "Fragaria Prefs.app";
+			remoteRef = A3D77A1A1DD0CF63000A87A0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A3D77A1D1DD0CF63000A87A0 /* Fragaria Swift.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = "Fragaria Swift.app";
+			remoteRef = A3D77A1C1DD0CF63000A87A0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A3D77A1F1DD0CF63000A87A0 /* Fragaria.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Fragaria.framework;
+			remoteRef = A3D77A1E1DD0CF63000A87A0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A3D77A211DD0CF63000A87A0 /* Fragaria Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Fragaria Tests.xctest";
+			remoteRef = A3D77A201DD0CF63000A87A0 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -529,6 +659,11 @@
 			isa = PBXTargetDependency;
 			name = ACEViewSwift;
 			targetProxy = A341BFB61DCE2F5E00E622AE /* PBXContainerItemProxy */;
+		};
+		A3D77A251DD0CF6B000A87A0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Fragaria;
+			targetProxy = A3D77A241DD0CF6B000A87A0 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
