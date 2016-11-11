@@ -15,6 +15,7 @@
 		A341BF721DCE2DBF00E622AE /* BeardSqlUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A341BF711DCE2DBF00E622AE /* BeardSqlUITests.swift */; };
 		A341BFB41DCE2F5E00E622AE /* ACEViewSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A341BFAE1DCE2F3000E622AE /* ACEViewSwift.framework */; };
 		A341BFB51DCE2F5E00E622AE /* ACEViewSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A341BFAE1DCE2F3000E622AE /* ACEViewSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A34A52401DD611680076674C /* TablesMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34A523F1DD611680076674C /* TablesMenuViewController.swift */; };
 		A35A01B51DCFBD8900365317 /* ContentStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A35A01B41DCFBD8900365317 /* ContentStoryboard.storyboard */; };
 		A35A01B91DCFBDAE00365317 /* RelationsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A35A01B81DCFBDAE00365317 /* RelationsStoryboard.storyboard */; };
 		A35A01BB1DCFBDC500365317 /* TriggersStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A35A01BA1DCFBDC500365317 /* TriggersStoryboard.storyboard */; };
@@ -167,6 +168,7 @@
 		A341BF711DCE2DBF00E622AE /* BeardSqlUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeardSqlUITests.swift; sourceTree = "<group>"; };
 		A341BF731DCE2DBF00E622AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A341BFA71DCE2F3000E622AE /* ACEViewSwift.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ACEViewSwift.xcodeproj; path = ../ACEViewSwift/ACEViewSwift.xcodeproj; sourceTree = "<group>"; };
+		A34A523F1DD611680076674C /* TablesMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TablesMenuViewController.swift; path = Windows/Sections/TablesMenuViewController.swift; sourceTree = "<group>"; };
 		A35A01B41DCFBD8900365317 /* ContentStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = ContentStoryboard.storyboard; path = Views/Storyboards/ContentStoryboard.storyboard; sourceTree = "<group>"; };
 		A35A01B81DCFBDAE00365317 /* RelationsStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = RelationsStoryboard.storyboard; path = Views/Storyboards/RelationsStoryboard.storyboard; sourceTree = "<group>"; };
 		A35A01BA1DCFBDC500365317 /* TriggersStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = TriggersStoryboard.storyboard; path = Views/Storyboards/TriggersStoryboard.storyboard; sourceTree = "<group>"; };
@@ -287,6 +289,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		A34A52351DD6113C0076674C /* Sections */ = {
+			isa = PBXGroup;
+			children = (
+				A34A523F1DD611680076674C /* TablesMenuViewController.swift */,
+			);
+			name = Sections;
+			sourceTree = "<group>";
+		};
 		A35BDA111DCFE4BF00D5DB56 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
@@ -357,6 +367,7 @@
 		A3DC07791DCE374400626E57 /* Windows */ = {
 			isa = PBXGroup;
 			children = (
+				A34A52351DD6113C0076674C /* Sections */,
 				A3DC077D1DCF4D9E00626E57 /* Storyboards */,
 				A3DC077C1DCF4D9100626E57 /* Controllers */,
 			);
@@ -616,6 +627,7 @@
 				A35A01C91DCFC4B000365317 /* Model.swift in Sources */,
 				A35A01C51DCFBE6100365317 /* TriggersViewController.swift in Sources */,
 				A35A01BF1DCFBDFC00365317 /* StructureViewController.swift in Sources */,
+				A34A52401DD611680076674C /* TablesMenuViewController.swift in Sources */,
 				A39724C01DCF94C600EAC865 /* ApplicationSplitViewController.swift in Sources */,
 				A341BF531DCE2DBF00E622AE /* AppDelegate.swift in Sources */,
 				A35BDA151DCFE4E500D5DB56 /* SplitViewProtocol.swift in Sources */,

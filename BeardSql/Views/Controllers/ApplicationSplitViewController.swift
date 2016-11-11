@@ -25,7 +25,7 @@ class ApplicationSplitViewController: NSSplitViewController
     {
         super.viewDidLoad()
         
-        self.createAllViewControllers().switchViewByTag(tag: 0)
+        self.createAllViewControllers().switchViewByTag(tag: 1)
     }
     
     func createAllViewControllers() -> ApplicationSplitViewController
