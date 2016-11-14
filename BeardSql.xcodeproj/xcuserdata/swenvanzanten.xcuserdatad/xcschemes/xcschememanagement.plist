@@ -7,16 +7,96 @@
 		<key>BeardFramework.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>3</integer>
+			<integer>1</integer>
 		</dict>
 		<key>BeardSql.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>Core.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>5</integer>
+		</dict>
+		<key>JSON.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>8</integer>
+		</dict>
+		<key>Jay.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>7</integer>
+		</dict>
+		<key>MySQL.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>9</integer>
+		</dict>
+		<key>Node.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
+		<key>PathIndexable.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>Polymorphic.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
+		<key>libc.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>6</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>A3186D091DDA4A4D00CADFF6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A3186D181DDA4A8900CADFF6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A3186D271DDA4A9C00CADFF6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A3186D4A1DDA4AC100CADFF6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A3186D761DDA4B0C00CADFF6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A3186D851DDA4B3B00CADFF6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A3186DAD1DDA4BB800CADFF6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A3186DD41DDA4BFC00CADFF6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>A3386FCA1DD659DF00055DA5</key>
 		<dict>
 			<key>primary</key>

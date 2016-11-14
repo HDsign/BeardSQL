@@ -36,7 +36,7 @@ class TablesMenuViewController: NSViewController
         
         self.filteredTables = self.tables
     
-        self.searchField.delegate = self
+//        self.searchField.delegate = self
     }
     
 }

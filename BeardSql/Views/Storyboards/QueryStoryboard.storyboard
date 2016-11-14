@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="kDX-w4-3gK">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16C41b" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="kDX-w4-3gK">
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11542"/>
@@ -21,9 +21,32 @@
                                         <rect key="frame" x="0.0" y="0.0" width="823" height="265"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <subviews>
-                                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="JSX-jb-F1Y" customClass="MGSFragariaView">
+                                            <scrollView wantsLayer="YES" borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5hg-fs-0XQ">
                                                 <rect key="frame" x="0.0" y="33" width="823" height="232"/>
-                                            </customView>
+                                                <clipView key="contentView" id="c5a-vr-am1">
+                                                    <rect key="frame" x="0.0" y="0.0" width="823" height="232"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    <subviews>
+                                                        <textView importsGraphics="NO" usesFontPanel="YES" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="3VD-aQ-mm2">
+                                                            <rect key="frame" x="0.0" y="-1" width="823" height="232"/>
+                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <size key="minSize" width="823" height="232"/>
+                                                            <size key="maxSize" width="823" height="10000000"/>
+                                                            <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                        </textView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </clipView>
+                                                <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="EKt-8m-JD7">
+                                                    <rect key="frame" x="-100" y="-100" width="87" height="18"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </scroller>
+                                                <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="7NL-PJ-fcd">
+                                                    <rect key="frame" x="807" y="0.0" width="16" height="232"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </scroller>
+                                            </scrollView>
                                             <customView verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="PHv-53-h0K">
                                                 <rect key="frame" x="0.0" y="0.0" width="823" height="33"/>
                                                 <subviews>
@@ -50,11 +73,11 @@
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="PHv-53-h0K" secondAttribute="trailing" id="7eJ-c0-eQE"/>
                                             <constraint firstAttribute="bottom" secondItem="PHv-53-h0K" secondAttribute="bottom" id="PxQ-Sb-JYI"/>
-                                            <constraint firstAttribute="trailing" secondItem="JSX-jb-F1Y" secondAttribute="trailing" id="Unh-kW-tgE"/>
                                             <constraint firstItem="PHv-53-h0K" firstAttribute="leading" secondItem="6hH-oC-sFC" secondAttribute="leading" id="aKy-8f-1Di"/>
-                                            <constraint firstItem="JSX-jb-F1Y" firstAttribute="top" secondItem="6hH-oC-sFC" secondAttribute="top" id="bwy-lu-aDs"/>
-                                            <constraint firstItem="PHv-53-h0K" firstAttribute="top" secondItem="JSX-jb-F1Y" secondAttribute="bottom" id="f4H-tF-ZJK"/>
-                                            <constraint firstItem="JSX-jb-F1Y" firstAttribute="leading" secondItem="6hH-oC-sFC" secondAttribute="leading" id="iIY-Ls-83F"/>
+                                            <constraint firstItem="PHv-53-h0K" firstAttribute="top" secondItem="5hg-fs-0XQ" secondAttribute="bottom" id="fV9-vR-Uob"/>
+                                            <constraint firstItem="5hg-fs-0XQ" firstAttribute="top" secondItem="6hH-oC-sFC" secondAttribute="top" id="lYb-Zr-gIH"/>
+                                            <constraint firstItem="5hg-fs-0XQ" firstAttribute="leading" secondItem="6hH-oC-sFC" secondAttribute="leading" id="okf-s8-H7V"/>
+                                            <constraint firstAttribute="trailing" secondItem="5hg-fs-0XQ" secondAttribute="trailing" id="qxW-fU-nKS"/>
                                         </constraints>
                                     </customView>
                                     <customView id="WP7-dt-BS6">
@@ -187,13 +210,10 @@
                             <constraint firstAttribute="trailing" secondItem="f96-V6-zoD" secondAttribute="trailing" id="cHL-1g-mTx"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <outlet property="fragaria" destination="JSX-jb-F1Y" id="0Bs-UN-Nx2"/>
-                    </connections>
                 </viewController>
                 <customObject id="ATL-5z-AFe" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="952" y="-148"/>
+            <point key="canvasLocation" x="951.5" y="-148"/>
         </scene>
     </scenes>
 </document>

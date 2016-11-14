@@ -7,21 +7,20 @@
 //
 
 import Cocoa
+import MySQL
 
 class ContentViewController: NSViewController, SplitViewProtocol
 {
     @IBOutlet weak var tableHeaderView: NSTableHeaderView!
     @IBOutlet weak var tableView: NSTableView!
     
-    let content: [Model] = [
-        Model(id: 1, name: "John Doe"),
-        Model(id: 2, name: "Jane Doe"),
-        Model(id: 23, name: "Swen van Zanten")
-    ]
+    var content: [Model] = []
 
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        
+        self.getData()
         
         self.removeAllColumns()
         
@@ -30,6 +29,30 @@ class ContentViewController: NSViewController, SplitViewProtocol
         self.tableView.delegate = self
         self.tableView.dataSource = self
         
+        self.tableView.reloadData()
+    }
+    
+    func getData()
+    {
+        self.content = []
+        
+        do {
+            let mysql = try MySQL.Database(host: "127.0.0.1", user: "root", password: "", database: "swift")
+            
+            let users = try mysql.execute("SELECT * FROM users")
+            
+            for user in users {
+                let model = Model(id: (user["id"]?.int)!, name: (user["email"]?.string)!)
+                self.content.append(model)
+            }
+        } catch {
+            print(error)
+        }
+    }
+    
+    @IBAction func reloadData(_ sender: Any)
+    {
+        self.getData()
         self.tableView.reloadData()
     }
     

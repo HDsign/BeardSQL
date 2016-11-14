@@ -26,7 +26,7 @@
                                         </textFieldCell>
                                     </textField>
                                     <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="hZr-Vh-GBJ">
-                                        <rect key="frame" x="76" y="7" width="61" height="19"/>
+                                        <rect key="frame" x="76" y="6" width="61" height="19"/>
                                         <popUpButtonCell key="cell" type="roundRect" title="Item 1" bezelStyle="roundedRect" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" selectedItem="0bZ-VO-VPN" id="fGf-nh-Kep">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="cellTitle"/>
@@ -40,7 +40,7 @@
                                         </popUpButtonCell>
                                     </popUpButton>
                                     <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="pIi-Q2-DMm">
-                                        <rect key="frame" x="145" y="7" width="61" height="19"/>
+                                        <rect key="frame" x="145" y="6" width="61" height="19"/>
                                         <popUpButtonCell key="cell" type="roundRect" title="Item 1" bezelStyle="roundedRect" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" selectedItem="KAi-Zf-AD7" id="B0L-eY-MBI">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="cellTitle"/>
@@ -62,17 +62,22 @@
                                         </searchFieldCell>
                                     </searchField>
                                     <button horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Fqd-Ny-aKT">
-                                        <rect key="frame" x="772" y="7" width="43" height="19"/>
+                                        <rect key="frame" x="772" y="6" width="43" height="19"/>
                                         <buttonCell key="cell" type="roundRect" title="Filter" bezelStyle="roundedRect" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="OEK-kO-jqW">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="cellTitle"/>
                                         </buttonCell>
                                     </button>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="IdL-0G-Cfj">
-                                        <rect key="frame" x="827" y="7" width="131" height="19"/>
+                                        <rect key="frame" x="827" y="6" width="131" height="19"/>
                                         <buttonCell key="cell" type="roundRect" title="Columns" bezelStyle="roundedRect" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="zrB-a6-ahp">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="cellTitle"/>
+                                            <string key="keyEquivalent">r</string>
+                                            <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                                            <connections>
+                                                <action selector="reloadData:" target="99f-sf-11A" id="B3o-b7-nOT"/>
+                                            </connections>
                                         </buttonCell>
                                     </button>
                                 </subviews>
