@@ -7,6 +7,7 @@
 //
 
 import Cocoa
+import BeardFramework
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate
@@ -17,11 +18,32 @@ class AppDelegate: NSObject, NSApplicationDelegate
         if #available(OSX 10.12.1, *) {
             NSApplication.shared().isAutomaticCustomizeTouchBarMenuItemEnabled = true
         }
+        
+        self.bootBeardFramework()
     }
 
     func applicationWillTerminate(_ aNotification: Notification)
     {
         // Insert code here to tear down your application
+    }
+    
+    ///
+    /// Boot up the beard framework!
+    ///
+    func bootBeardFramework()
+    {
+        ///
+        /// Give all the service providers you want initialized.
+        ///
+        BeardContainer.shared.providers = [
+            BeardServiceProvider.self,
+            ExampleServiceProvider.self,
+        ]
+        
+        ///
+        /// Initialize all service providers.
+        ///
+        BeardContainer.shared.start()
     }
 }
 

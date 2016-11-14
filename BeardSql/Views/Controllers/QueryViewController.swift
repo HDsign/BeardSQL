@@ -7,13 +7,12 @@
 //
 
 import Cocoa
-import ACEViewSwift
-import Fragaria
+//import Fragaria
+import BeardFramework
 
 class QueryViewController: NSViewController, SplitViewProtocol
 {
-    @IBOutlet weak var aceView: ACEView!
-    @IBOutlet weak var fragaria: MGSFragariaView!
+//    @IBOutlet weak var fragaria: MGSFragariaView!
 
     override func viewDidLoad()
     {
@@ -23,34 +22,15 @@ class QueryViewController: NSViewController, SplitViewProtocol
     func loadAceView() -> Void
     {
         // Some text content
-        let html = "select * from `relaties`"
+        //let html = "select * from `relaties`"
         
-        // onReady() is a convenience closure for configuring
-        // the ACEView right after it has been finished loading
-        
-        /*
-        self.aceView.onReady = { [unowned self] in
-            self.aceView.string              = html
-            self.aceView.mode                = ACEMode.sql
-            self.aceView.theme               = ACETheme.tomorrow
-            self.aceView.keyboardHandler     = ACEKeyboardHandler.ace
-            self.aceView.showPrintMargin     = true
-            self.aceView.printMarginColumn   = 120
-            self.aceView.basicAutoCompletion = true
-            self.aceView.liveAutocompletion  = true
-            self.aceView.snippets            = true
-            self.aceView.emmet               = true
-            self.aceView.borderType          = .noBorder
-        }
-        */
-        
-        self.fragaria.autoCompleteDelay = 0.2
-        self.fragaria.autoCompleteEnabled = true
-        self.fragaria.autoCompleteWithKeywords = true
-        self.fragaria.highlightsCurrentLine = true
-        self.fragaria.syntaxDefinitionName = "MySQL"
-        self.fragaria.showsSyntaxErrors = true
-        self.fragaria.textView.string = html
+//        self.fragaria.autoCompleteDelay = 0.2
+//        self.fragaria.autoCompleteEnabled = true
+//        self.fragaria.autoCompleteWithKeywords = true
+//        self.fragaria.highlightsCurrentLine = true
+//        self.fragaria.syntaxDefinitionName = "MySQL"
+//        self.fragaria.showsSyntaxErrors = true
+//        self.fragaria.textView.string = html
     }
     
     func focusAceView() -> Void

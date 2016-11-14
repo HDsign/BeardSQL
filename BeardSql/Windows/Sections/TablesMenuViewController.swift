@@ -10,11 +10,11 @@ import Cocoa
 
 class TablesMenuViewController: NSViewController
 {
-    
     @IBOutlet weak var searchField: NSSearchField!
-    @IBOutlet weak var tableView: NSTableView!
+    @IBOutlet weak var outlineView: NSOutlineView!
     
-    var tables: [String] = [
+    let tables: [String] = [
+        "Tables",
         "database_migrations",
         "dns_records",
         "domain_records",
@@ -27,35 +27,53 @@ class TablesMenuViewController: NSViewController
         "mail_types",
         "users",
     ]
+    
+    var filteredTables = [String]()
 
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        // Do view setup here.
+        
+        self.filteredTables = self.tables
     
         self.searchField.delegate = self
-        
-        self.tableView.dataSource = self
-        self.tableView.delegate = self
     }
     
 }
 
-extension TablesMenuViewController: NSTableViewDelegate, NSTableViewDataSource
+extension TablesMenuViewController: NSOutlineViewDelegate, NSOutlineViewDataSource
 {
-    func numberOfRows(in tableView: NSTableView) -> Int
+    func outlineView(_ outlineView: NSOutlineView, numberOfChildrenOfItem item: Any?) -> Int
     {
-        return tables.count
+        return self.filteredTables.count
     }
     
-    func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView?
+    func outlineView(_ outlineView: NSOutlineView, isItemExpandable item: Any) -> Bool
     {
-        let table = self.tables[row]
+        return item as! String == "Tables"
+    }
+    
+    func outlineView(_ outlineView: NSOutlineView, child index: Int, ofItem item: Any?) -> Any
+    {
+        return self.filteredTables[index]
+    }
+    
+    func outlineView(_ outlineView: NSOutlineView, viewFor tableColumn: NSTableColumn?, item: Any) -> NSView?
+    {
+        if (item as! String == "Tables") {
+            let cell = outlineView.make(withIdentifier: "HeaderCell", owner: self) as! NSTableCellView
+            
+            cell.textField?.stringValue = (item as! String).uppercased()
+            
+            return cell
+        }
         
-        let cell = tableView.make(withIdentifier: "databaseTableCell", owner: self) as! NSTableCellView
+        let table = item as! String
+        
+        let cell = outlineView.make(withIdentifier: "DataCell", owner: self) as! NSTableCellView
         
         cell.textField?.stringValue = table
-        cell.imageView?.image = NSImage(named: "Triggers")
+        cell.imageView?.image = NSImage(named: "NSStatusAvailable")
         
         return cell
     }
@@ -63,7 +81,24 @@ extension TablesMenuViewController: NSTableViewDelegate, NSTableViewDataSource
 
 extension TablesMenuViewController: NSSearchFieldDelegate
 {
-    func searchFieldDidStartSearching(_ sender: NSSearchField)
+    override func controlTextDidChange(_ obj: Notification)
     {
+        self.filterTable(search: self.searchField.stringValue)
+    }
+    
+    func filterTable(search: String) -> Void
+    {
+        self.filteredTables = self.tables.filter { item in
+            for l in search.characters {
+                if (!item.lowercased().contains(l.description.lowercased())) {
+                    return false
+                }
+            }
+            
+            return true
+        }
+        
+        self.outlineView.reloadData()
     }
 }
+

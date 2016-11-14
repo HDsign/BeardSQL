@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>BeardFramework.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
 		<key>BeardSql.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -12,6 +17,16 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>A3386FCA1DD659DF00055DA5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A3386FD21DD659DF00055DA5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>A341BF4E1DCE2DBF00E622AE</key>
 		<dict>
 			<key>primary</key>

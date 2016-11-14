@@ -48,6 +48,16 @@
                ReferencedContainer = "container:BeardSql.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "A3386FD21DD659DF00055DA5"
+               BuildableName = "BeardFrameworkTests.xctest"
+               BlueprintName = "BeardFrameworkTests"
+               ReferencedContainer = "container:BeardSql.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
