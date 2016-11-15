@@ -13,6 +13,7 @@ import BeardFramework
 class QueryViewController: NSViewController, SplitViewProtocol
 {
 //    @IBOutlet weak var fragaria: MGSFragariaView!
+    @IBOutlet weak var editor: NSTextView!
 
     override func viewDidLoad()
     {

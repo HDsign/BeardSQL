@@ -22,14 +22,18 @@ class ContentViewController: NSViewController, SplitViewProtocol
         
         self.getData()
         
-        self.removeAllColumns()
+        self.tableView.columnAutoresizingStyle = .uniformColumnAutoresizingStyle
         
-        self.createColumns()
-        
-        self.tableView.delegate = self
-        self.tableView.dataSource = self
-        
-        self.tableView.reloadData()
+        if self.content.count > 0 {
+            self.removeAllColumns()
+            
+            self.createColumns()
+            
+            self.tableView.delegate = self
+            self.tableView.dataSource = self
+            
+            self.tableView.reloadData()
+        }
     }
     
     func getData()
@@ -37,7 +41,7 @@ class ContentViewController: NSViewController, SplitViewProtocol
         self.content = []
         
         do {
-            let mysql = try MySQL.Database(host: "127.0.0.1", user: "root", password: "", database: "swift")
+            let mysql = try MySQL.Database(host: "127.0.0.1", user: "root", password: "root", database: "example")
             
             let users = try mysql.execute("SELECT * FROM users")
             

@@ -139,6 +139,7 @@
 		A341BF591DCE2DBF00E622AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A341BF581DCE2DBF00E622AE /* Assets.xcassets */; };
 		A341BF5C1DCE2DBF00E622AE /* Application.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A341BF5A1DCE2DBF00E622AE /* Application.storyboard */; };
 		A34A52401DD611680076674C /* TablesMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34A523F1DD611680076674C /* TablesMenuViewController.swift */; };
+		A34A545C1DDB00480076674C /* Connector.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34A545B1DDB00480076674C /* Connector.swift */; };
 		A35A01B51DCFBD8900365317 /* ContentStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A35A01B41DCFBD8900365317 /* ContentStoryboard.storyboard */; };
 		A35A01B91DCFBDAE00365317 /* RelationsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A35A01B81DCFBDAE00365317 /* RelationsStoryboard.storyboard */; };
 		A35A01BB1DCFBDC500365317 /* TriggersStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A35A01BA1DCFBDC500365317 /* TriggersStoryboard.storyboard */; };
@@ -422,6 +423,7 @@
 		A341BF5B1DCE2DBF00E622AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Application.storyboard; sourceTree = "<group>"; };
 		A341BF5D1DCE2DBF00E622AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A34A523F1DD611680076674C /* TablesMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TablesMenuViewController.swift; path = Windows/Sections/TablesMenuViewController.swift; sourceTree = "<group>"; };
+		A34A545B1DDB00480076674C /* Connector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Connector.swift; path = Support/Database/Connector.swift; sourceTree = "<group>"; };
 		A35A01B41DCFBD8900365317 /* ContentStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = ContentStoryboard.storyboard; path = Views/Storyboards/ContentStoryboard.storyboard; sourceTree = "<group>"; };
 		A35A01B81DCFBDAE00365317 /* RelationsStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = RelationsStoryboard.storyboard; path = Views/Storyboards/RelationsStoryboard.storyboard; sourceTree = "<group>"; };
 		A35A01BA1DCFBDC500365317 /* TriggersStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = TriggersStoryboard.storyboard; path = Views/Storyboards/TriggersStoryboard.storyboard; sourceTree = "<group>"; };
@@ -853,6 +855,7 @@
 		A341BF511DCE2DBF00E622AE /* BeardSql */ = {
 			isa = PBXGroup;
 			children = (
+				A34A545D1DDB004E0076674C /* Support */,
 				A33870051DD7446F00055DA5 /* Providers */,
 				A39724B41DCF8C8F00EAC865 /* Views */,
 				A3DC07791DCE374400626E57 /* Windows */,
@@ -872,6 +875,22 @@
 				A34A523F1DD611680076674C /* TablesMenuViewController.swift */,
 			);
 			name = Sections;
+			sourceTree = "<group>";
+		};
+		A34A545A1DDB002D0076674C /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				A34A545B1DDB00480076674C /* Connector.swift */,
+			);
+			name = Database;
+			sourceTree = "<group>";
+		};
+		A34A545D1DDB004E0076674C /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				A34A545A1DDB002D0076674C /* Database */,
+			);
+			name = Support;
 			sourceTree = "<group>";
 		};
 		A35BDA111DCFE4BF00D5DB56 /* Protocols */ = {
@@ -1461,6 +1480,7 @@
 				A35BDA151DCFE4E500D5DB56 /* SplitViewProtocol.swift in Sources */,
 				A35A01C71DCFBE7400365317 /* TableInfoViewController.swift in Sources */,
 				A35A01C31DCFBE4D00365317 /* RelationsViewController.swift in Sources */,
+				A34A545C1DDB00480076674C /* Connector.swift in Sources */,
 				A341BF571DCE2DBF00E622AE /* Document.swift in Sources */,
 				A39724B91DCF8CC200EAC865 /* QueryViewController.swift in Sources */,
 				A33870071DD7449700055DA5 /* ExampleServiceProvider.swift in Sources */,

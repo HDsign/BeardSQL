@@ -13,30 +13,21 @@ class TablesMenuViewController: NSViewController
     @IBOutlet weak var searchField: NSSearchField!
     @IBOutlet weak var outlineView: NSOutlineView!
     
-    let tables: [String] = [
-        "Tables",
-        "database_migrations",
-        "dns_records",
-        "domain_records",
-        "domains",
-        "hosting_cache",
-        "hosting_plans",
-        "hosting_servers",
-        "logs",
-        "mail_templaces",
-        "mail_types",
-        "users",
-    ]
+    var tables: [String] = []
     
     var filteredTables = [String]()
 
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        let conn = Connector()
+        
+        self.tables.append("Tables")
+        for table in conn.getTables() {
+            self.tables.append(table["Tables_in_sh_darwinplants_t201611140019"]?.string ?? "")
+        }
         
         self.filteredTables = self.tables
-    
-//        self.searchField.delegate = self
     }
     
 }
