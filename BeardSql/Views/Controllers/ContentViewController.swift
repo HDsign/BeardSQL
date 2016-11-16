@@ -40,17 +40,12 @@ class ContentViewController: NSViewController, SplitViewProtocol
     {
         self.content = []
         
-        do {
-            let mysql = try MySQL.Database(host: "127.0.0.1", user: "root", password: "root", database: "example")
-            
-            let users = try mysql.execute("SELECT * FROM users")
-            
-            for user in users {
-                let model = Model(id: (user["id"]?.int)!, name: (user["email"]?.string)!)
-                self.content.append(model)
-            }
-        } catch {
-            print(error)
+        let users = connector().execute("SELECT * FROM users")
+        print(users)
+        for user in users {
+            let model = Model()
+            model.columns = user
+            self.content.append(model)
         }
     }
     
@@ -80,9 +75,8 @@ class ContentViewController: NSViewController, SplitViewProtocol
         }
     }
     
-    func viewActivated()
-    {
-        print("contentView!!")
+    func viewActivated() {
+        //
     }
 }
 
@@ -101,7 +95,9 @@ extension ContentViewController: NSTableViewDelegate, NSTableViewDataSource
         
         if let value = model.columns?[column!] {
             let cell = tableView.make(withIdentifier: "tableCellView", owner: self) as! NSTableCellView
-            cell.textField?.stringValue = String(describing: value)
+            if let nice = value.string {
+                cell.textField?.stringValue = nice
+            }
             
             return cell
         }

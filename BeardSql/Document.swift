@@ -7,10 +7,10 @@
 //
 
 import Cocoa
+import BeardFramework
 
 class Document: NSDocument
 {
-
     override init()
     {
         super.init()

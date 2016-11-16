@@ -7,17 +7,9 @@
 //
 
 import Foundation
+import MySQL
 
 class Model
 {
-    var columns: [String: Any]? = nil
-    
-    init(id: Int, name: String)
-    {
-        self.columns = [
-            "id": id,
-            "name": name,
-            "hello": "Ik ben gerrie"
-        ]
-    }
+    var columns: [String: Node]? = nil
 }

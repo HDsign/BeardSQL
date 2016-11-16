@@ -275,7 +275,7 @@
                                 <toolbarItem implicitItemIdentifier="295D9E08-C55B-45E1-BFCE-D3A9209BA3F1" label="Settings" paletteLabel="Settings" image="NSActionTemplate" selectable="YES" id="ZZe-HJ-9uS">
                                     <nil key="toolTip"/>
                                     <size key="minSize" width="40" height="25"/>
-                                    <size key="maxSize" width="40" height="25"/>
+                                    <size key="maxSize" width="42" height="27"/>
                                     <button key="view" verticalHuggingPriority="750" id="k2q-9W-r09">
                                         <rect key="frame" x="6" y="14" width="40" height="25"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -291,7 +291,7 @@
                                 <toolbarItem implicitItemIdentifier="0996E644-B03E-4775-8798-8798FDF6596B" label="Users" paletteLabel="Users" image="Users" id="NMF-IG-z0g">
                                     <nil key="toolTip"/>
                                     <size key="minSize" width="40" height="25"/>
-                                    <size key="maxSize" width="40" height="25"/>
+                                    <size key="maxSize" width="42" height="27"/>
                                     <button key="view" verticalHuggingPriority="750" id="dDJ-bH-vdo">
                                         <rect key="frame" x="0.0" y="14" width="40" height="25"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -306,7 +306,7 @@
                                 <toolbarItem implicitItemIdentifier="A26E76C2-51A6-45E3-8DAF-1B867FBBC4AB" label="Structure" paletteLabel="Structure" image="Structure" id="ms0-Dl-xwJ">
                                     <nil key="toolTip"/>
                                     <size key="minSize" width="40" height="25"/>
-                                    <size key="maxSize" width="40" height="25"/>
+                                    <size key="maxSize" width="42" height="27"/>
                                     <button key="view" verticalHuggingPriority="750" id="9IS-6L-ppU">
                                         <rect key="frame" x="9" y="14" width="40" height="25"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -324,7 +324,7 @@
                                 <toolbarItem implicitItemIdentifier="1353CCB7-A15F-4109-B40F-102C8B0F1824" label="Content" paletteLabel="Content" tag="1" image="NSListViewTemplate" id="yQ9-u7-gdD">
                                     <nil key="toolTip"/>
                                     <size key="minSize" width="40" height="25"/>
-                                    <size key="maxSize" width="40" height="25"/>
+                                    <size key="maxSize" width="42" height="27"/>
                                     <button key="view" verticalHuggingPriority="750" tag="1" id="0Qb-Js-i35">
                                         <rect key="frame" x="5" y="14" width="40" height="25"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -342,7 +342,7 @@
                                 <toolbarItem implicitItemIdentifier="660BCBF9-9099-452C-99FA-5AF11CF38B4E" label="Relations" paletteLabel="Relations" tag="2" image="Relations" id="aoX-Ji-pc7">
                                     <nil key="toolTip"/>
                                     <size key="minSize" width="40" height="25"/>
-                                    <size key="maxSize" width="40" height="25"/>
+                                    <size key="maxSize" width="42" height="27"/>
                                     <button key="view" verticalHuggingPriority="750" tag="2" id="ajX-e3-vZ3">
                                         <rect key="frame" x="8" y="14" width="40" height="25"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -360,7 +360,7 @@
                                 <toolbarItem implicitItemIdentifier="AD4718CE-431C-4AAB-963B-F9BCE81B89E8" label="Triggers" paletteLabel="Triggers" tag="3" image="Triggers" id="6W0-sC-Wra">
                                     <nil key="toolTip"/>
                                     <size key="minSize" width="40" height="25"/>
-                                    <size key="maxSize" width="40" height="25"/>
+                                    <size key="maxSize" width="42" height="27"/>
                                     <button key="view" verticalHuggingPriority="750" tag="3" id="3og-8H-sDy">
                                         <rect key="frame" x="6" y="14" width="40" height="25"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -378,7 +378,7 @@
                                 <toolbarItem implicitItemIdentifier="79B7618E-A8C8-42BB-BA3C-5B8A5322C97F" label="Table Info" paletteLabel="Table Info" tag="4" image="NSInfo" id="6bc-H4-Xvn">
                                     <nil key="toolTip"/>
                                     <size key="minSize" width="40" height="25"/>
-                                    <size key="maxSize" width="40" height="25"/>
+                                    <size key="maxSize" width="42" height="27"/>
                                     <button key="view" verticalHuggingPriority="750" tag="4" id="n2M-xX-UYe">
                                         <rect key="frame" x="10" y="14" width="40" height="25"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -396,7 +396,7 @@
                                 <toolbarItem implicitItemIdentifier="D6F6410D-333D-484D-92D9-436AD0C1C4A7" label="Query" paletteLabel="Query" tag="5" image="NSScriptTemplate" id="ib1-F6-t3j">
                                     <nil key="toolTip"/>
                                     <size key="minSize" width="40" height="25"/>
-                                    <size key="maxSize" width="40" height="25"/>
+                                    <size key="maxSize" width="42" height="27"/>
                                     <button key="view" verticalHuggingPriority="750" tag="5" id="Pfj-MS-WY5">
                                         <rect key="frame" x="0.0" y="14" width="40" height="25"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -414,9 +414,9 @@
                                 <toolbarItem implicitItemIdentifier="F94010A0-D724-487A-B308-9EC424D1491D" label="Connection" paletteLabel="Connection" image="NSStatusAvailable" id="85t-nU-J4D">
                                     <nil key="toolTip"/>
                                     <size key="minSize" width="40" height="25"/>
-                                    <size key="maxSize" width="550" height="25"/>
+                                    <size key="maxSize" width="550" height="27"/>
                                     <button key="view" verticalHuggingPriority="750" allowsExpansionToolTips="YES" id="ary-7r-EYl">
-                                        <rect key="frame" x="14" y="14" width="40" height="25"/>
+                                        <rect key="frame" x="0.0" y="14" width="400" height="25"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                         <buttonCell key="cell" type="roundTextured" title="Connected to 192.168.175.30 :  3306 : SH_darwinplants_darwinplants" bezelStyle="texturedRounded" image="NSStatusAvailable" imagePosition="right" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="p0T-WU-vfh">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -431,10 +431,10 @@
                                 </toolbarItem>
                                 <toolbarItem implicitItemIdentifier="B232DB72-2627-4D20-A554-4CC0CD7C156D" label="Search" paletteLabel="Search" id="y8p-rU-zU6">
                                     <nil key="toolTip"/>
-                                    <size key="minSize" width="96" height="22"/>
+                                    <size key="minSize" width="40" height="22"/>
                                     <size key="maxSize" width="180" height="22"/>
                                     <searchField key="view" wantsLayer="YES" verticalHuggingPriority="750" id="vkS-IC-tLj">
-                                        <rect key="frame" x="0.0" y="14" width="96" height="22"/>
+                                        <rect key="frame" x="2" y="14" width="40" height="22"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <searchFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" borderStyle="bezel" usesSingleLineMode="YES" bezelStyle="round" id="veu-hx-pG3">
                                             <font key="font" metaFont="system"/>

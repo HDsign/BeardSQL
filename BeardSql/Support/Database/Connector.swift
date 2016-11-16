@@ -14,12 +14,17 @@ class Connector
     var host: String = "127.0.0.1"
     var user: String = "root"
     var password: String = "root"
-    var database: String = "SH_darwinplants_T201611140019"
+    var database: String = "example"
     
     func mysql() -> Database?
     {
         do {
-            return try MySQL.Database(host: self.host, user: self.user, password: self.password, database: self.database) 
+            return try MySQL.Database(
+                host: self.host,
+                user: self.user,
+                password: self.password,
+                database: self.database
+            )
         } catch {
             print(error)
             
@@ -27,10 +32,10 @@ class Connector
         }
     }
     
-    func getTables() -> [[String: Node]]
+    func execute(_ query: String) -> [[String: Node]]
     {
         do {
-            return try self.mysql()?.execute("SHOW /*!50002 FULL*/ TABLES;") ?? [[:]]
+            return try self.mysql()?.execute(query) ?? [[:]]
         } catch {
             print(error)
             

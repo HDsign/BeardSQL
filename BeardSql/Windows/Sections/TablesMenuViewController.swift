@@ -20,11 +20,10 @@ class TablesMenuViewController: NSViewController
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        let conn = Connector()
         
         self.tables.append("Tables")
-        for table in conn.getTables() {
-            self.tables.append(table["Tables_in_sh_darwinplants_t201611140019"]?.string ?? "")
+        for table in repo().getTables() {
+            self.tables.append(table.getName())
         }
         
         self.filteredTables = self.tables

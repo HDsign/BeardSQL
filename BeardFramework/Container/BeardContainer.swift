@@ -36,6 +36,9 @@ public class BeardContainer: BContainer
     ///
     private var singletons: [String: BSingletonable] = [:]
     
+    public init()
+    {}
+    
     ///
     /// Start up the BeardContainer and handle all the service providers.
     ///

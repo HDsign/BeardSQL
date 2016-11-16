@@ -132,8 +132,6 @@
 		A3386FFC1DD65FA800055DA5 /* BeardServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3386FFB1DD65FA800055DA5 /* BeardServiceProvider.swift */; };
 		A3386FFE1DD6603D00055DA5 /* BServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3386FFD1DD6603D00055DA5 /* BServiceProvider.swift */; };
 		A33870021DD742E300055DA5 /* InstanceHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33870011DD742E300055DA5 /* InstanceHandler.swift */; };
-		A33870041DD7444100055DA5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33870031DD7444100055DA5 /* User.swift */; };
-		A33870071DD7449700055DA5 /* ExampleServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33870061DD7449700055DA5 /* ExampleServiceProvider.swift */; };
 		A341BF531DCE2DBF00E622AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A341BF521DCE2DBF00E622AE /* AppDelegate.swift */; };
 		A341BF571DCE2DBF00E622AE /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = A341BF561DCE2DBF00E622AE /* Document.swift */; };
 		A341BF591DCE2DBF00E622AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A341BF581DCE2DBF00E622AE /* Assets.xcassets */; };
@@ -151,6 +149,10 @@
 		A35A01C71DCFBE7400365317 /* TableInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35A01C61DCFBE7400365317 /* TableInfoViewController.swift */; };
 		A35A01C91DCFC4B000365317 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35A01C81DCFC4B000365317 /* Model.swift */; };
 		A35BDA151DCFE4E500D5DB56 /* SplitViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35BDA141DCFE4E500D5DB56 /* SplitViewProtocol.swift */; };
+		A392FAA71DDBC06E0061BA6B /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A392FAA61DDBC06E0061BA6B /* Repository.swift */; };
+		A392FAA91DDBC0950061BA6B /* Table.swift in Sources */ = {isa = PBXBuildFile; fileRef = A392FAA81DDBC0950061BA6B /* Table.swift */; };
+		A392FAAB1DDBC60B0061BA6B /* DatabaseServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A392FAAA1DDBC60B0061BA6B /* DatabaseServiceProvider.swift */; };
+		A392FAAE1DDBD2790061BA6B /* helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A392FAAD1DDBD2790061BA6B /* helpers.swift */; };
 		A39724B91DCF8CC200EAC865 /* QueryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39724B81DCF8CC200EAC865 /* QueryViewController.swift */; };
 		A39724BC1DCF8D7A00EAC865 /* QueryStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A39724BB1DCF8D7A00EAC865 /* QueryStoryboard.storyboard */; };
 		A39724BE1DCF943C00EAC865 /* StructureStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A39724BD1DCF943C00EAC865 /* StructureStoryboard.storyboard */; };
@@ -414,8 +416,6 @@
 		A3386FFB1DD65FA800055DA5 /* BeardServiceProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BeardServiceProvider.swift; path = Providers/BeardServiceProvider.swift; sourceTree = "<group>"; };
 		A3386FFD1DD6603D00055DA5 /* BServiceProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BServiceProvider.swift; path = Providers/BServiceProvider.swift; sourceTree = "<group>"; };
 		A33870011DD742E300055DA5 /* InstanceHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InstanceHandler.swift; path = Container/InstanceHandler.swift; sourceTree = "<group>"; };
-		A33870031DD7444100055DA5 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		A33870061DD7449700055DA5 /* ExampleServiceProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExampleServiceProvider.swift; path = Providers/ExampleServiceProvider.swift; sourceTree = "<group>"; };
 		A341BF4F1DCE2DBF00E622AE /* BeardSql.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeardSql.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A341BF521DCE2DBF00E622AE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A341BF561DCE2DBF00E622AE /* Document.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Document.swift; sourceTree = "<group>"; };
@@ -435,6 +435,10 @@
 		A35A01C61DCFBE7400365317 /* TableInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TableInfoViewController.swift; path = Views/Controllers/TableInfoViewController.swift; sourceTree = "<group>"; };
 		A35A01C81DCFC4B000365317 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		A35BDA141DCFE4E500D5DB56 /* SplitViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SplitViewProtocol.swift; path = Views/Protocols/SplitViewProtocol.swift; sourceTree = "<group>"; };
+		A392FAA61DDBC06E0061BA6B /* Repository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Repository.swift; path = Support/Database/Repository.swift; sourceTree = "<group>"; };
+		A392FAA81DDBC0950061BA6B /* Table.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Table.swift; path = Support/Database/Table.swift; sourceTree = "<group>"; };
+		A392FAAA1DDBC60B0061BA6B /* DatabaseServiceProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DatabaseServiceProvider.swift; path = Providers/DatabaseServiceProvider.swift; sourceTree = "<group>"; };
+		A392FAAD1DDBD2790061BA6B /* helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = helpers.swift; path = Support/helpers.swift; sourceTree = "<group>"; };
 		A39724B81DCF8CC200EAC865 /* QueryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QueryViewController.swift; path = Views/Controllers/QueryViewController.swift; sourceTree = "<group>"; };
 		A39724BB1DCF8D7A00EAC865 /* QueryStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = QueryStoryboard.storyboard; path = Views/Storyboards/QueryStoryboard.storyboard; sourceTree = "<group>"; };
 		A39724BD1DCF943C00EAC865 /* StructureStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = StructureStoryboard.storyboard; path = Views/Storyboards/StructureStoryboard.storyboard; sourceTree = "<group>"; };
@@ -819,7 +823,7 @@
 		A33870051DD7446F00055DA5 /* Providers */ = {
 			isa = PBXGroup;
 			children = (
-				A33870061DD7449700055DA5 /* ExampleServiceProvider.swift */,
+				A392FAAA1DDBC60B0061BA6B /* DatabaseServiceProvider.swift */,
 			);
 			name = Providers;
 			sourceTree = "<group>";
@@ -864,7 +868,6 @@
 				A341BF581DCE2DBF00E622AE /* Assets.xcassets */,
 				A341BF5D1DCE2DBF00E622AE /* Info.plist */,
 				A35A01C81DCFC4B000365317 /* Model.swift */,
-				A33870031DD7444100055DA5 /* User.swift */,
 			);
 			path = BeardSql;
 			sourceTree = "<group>";
@@ -881,6 +884,8 @@
 			isa = PBXGroup;
 			children = (
 				A34A545B1DDB00480076674C /* Connector.swift */,
+				A392FAA61DDBC06E0061BA6B /* Repository.swift */,
+				A392FAA81DDBC0950061BA6B /* Table.swift */,
 			);
 			name = Database;
 			sourceTree = "<group>";
@@ -888,7 +893,9 @@
 		A34A545D1DDB004E0076674C /* Support */ = {
 			isa = PBXGroup;
 			children = (
+				A392FAAC1DDBCE8C0061BA6B /* Utils */,
 				A34A545A1DDB002D0076674C /* Database */,
+				A392FAAD1DDBD2790061BA6B /* helpers.swift */,
 			);
 			name = Support;
 			sourceTree = "<group>";
@@ -899,6 +906,13 @@
 				A35BDA141DCFE4E500D5DB56 /* SplitViewProtocol.swift */,
 			);
 			name = Protocols;
+			sourceTree = "<group>";
+		};
+		A392FAAC1DDBCE8C0061BA6B /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Utils;
 			sourceTree = "<group>";
 		};
 		A39724B41DCF8C8F00EAC865 /* Views */ = {
@@ -1468,6 +1482,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A35A01C11DCFBE1600365317 /* ContentViewController.swift in Sources */,
+				A392FAA91DDBC0950061BA6B /* Table.swift in Sources */,
 				A3DC077B1DCE376F00626E57 /* ApplicationWindowController.swift in Sources */,
 				A3DC07821DCF51C600626E57 /* PreferencesWindowController.swift in Sources */,
 				A35A01C91DCFC4B000365317 /* Model.swift in Sources */,
@@ -1475,15 +1490,16 @@
 				A35A01BF1DCFBDFC00365317 /* StructureViewController.swift in Sources */,
 				A34A52401DD611680076674C /* TablesMenuViewController.swift in Sources */,
 				A39724C01DCF94C600EAC865 /* ApplicationSplitViewController.swift in Sources */,
-				A33870041DD7444100055DA5 /* User.swift in Sources */,
+				A392FAAB1DDBC60B0061BA6B /* DatabaseServiceProvider.swift in Sources */,
 				A341BF531DCE2DBF00E622AE /* AppDelegate.swift in Sources */,
 				A35BDA151DCFE4E500D5DB56 /* SplitViewProtocol.swift in Sources */,
 				A35A01C71DCFBE7400365317 /* TableInfoViewController.swift in Sources */,
+				A392FAAE1DDBD2790061BA6B /* helpers.swift in Sources */,
 				A35A01C31DCFBE4D00365317 /* RelationsViewController.swift in Sources */,
 				A34A545C1DDB00480076674C /* Connector.swift in Sources */,
 				A341BF571DCE2DBF00E622AE /* Document.swift in Sources */,
 				A39724B91DCF8CC200EAC865 /* QueryViewController.swift in Sources */,
-				A33870071DD7449700055DA5 /* ExampleServiceProvider.swift in Sources */,
+				A392FAA71DDBC06E0061BA6B /* Repository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
