@@ -20,9 +20,14 @@ class ContentViewController: NSViewController, SplitViewProtocol
     {
         super.viewDidLoad()
         
-        self.getData()
-        
-        self.tableView.columnAutoresizingStyle = .uniformColumnAutoresizingStyle
+        repo().changedTable(handler: { table in
+            self.getData(table: table)
+        })
+    }
+    
+    func getData(table: String)
+    {
+        self.executeQuery(table: table)
         
         if self.content.count > 0 {
             self.removeAllColumns()
@@ -36,23 +41,24 @@ class ContentViewController: NSViewController, SplitViewProtocol
         }
     }
     
-    func getData()
+    func executeQuery(table: String)
     {
         self.content = []
         
-        let users = connector().execute("SELECT * FROM users")
-        print(users)
+        let users = connector().execute("SELECT * FROM \(table)")
+        
         for user in users {
             let model = Model()
+            
             model.columns = user
+            
             self.content.append(model)
         }
     }
     
     @IBAction func reloadData(_ sender: Any)
     {
-        self.getData()
-        self.tableView.reloadData()
+        self.getData(table: repo().currentTable)
     }
     
     func removeAllColumns() -> Void
@@ -97,6 +103,9 @@ extension ContentViewController: NSTableViewDelegate, NSTableViewDataSource
             let cell = tableView.make(withIdentifier: "tableCellView", owner: self) as! NSTableCellView
             if let nice = value.string {
                 cell.textField?.stringValue = nice
+            } else {
+                cell.textField?.stringValue = "NULL"
+                cell.textField?.textColor = NSColor.lightGray
             }
             
             return cell

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16C41b" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11542"/>
@@ -443,6 +443,19 @@
                                         </searchFieldCell>
                                     </searchField>
                                 </toolbarItem>
+                                <toolbarItem implicitItemIdentifier="3EC7D1BA-F98A-4E68-A91B-65C99CE25244" label="Console" paletteLabel="Console" id="cUN-ZL-Wz3">
+                                    <nil key="toolTip"/>
+                                    <size key="minSize" width="127" height="25"/>
+                                    <size key="maxSize" width="127" height="25"/>
+                                    <button key="view" verticalHuggingPriority="750" id="FWm-nf-OMF">
+                                        <rect key="frame" x="0.0" y="14" width="127" height="25"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <buttonCell key="cell" type="roundTextured" title="Console" bezelStyle="texturedRounded" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="oRV-oA-9Uh">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                    </button>
+                                </toolbarItem>
                             </allowedToolbarItems>
                             <defaultToolbarItems>
                                 <toolbarItem reference="ZZe-HJ-9uS"/>
@@ -457,7 +470,7 @@
                                 <toolbarItem reference="m14-Nc-4iK"/>
                                 <toolbarItem reference="85t-nU-J4D"/>
                                 <toolbarItem reference="m14-Nc-4iK"/>
-                                <toolbarItem reference="y8p-rU-zU6"/>
+                                <toolbarItem reference="cUN-ZL-Wz3"/>
                             </defaultToolbarItems>
                         </toolbar>
                     </window>
@@ -621,7 +634,7 @@ Gw
         <image name="Relations" width="15" height="15"/>
         <image name="Structure" width="15" height="15"/>
         <image name="Triggers" width="15" height="15"/>
-        <image name="Users" width="32" height="32"/>
+        <image name="Users" width="16" height="16"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="3OP-gR-1Y1"/>

@@ -16,6 +16,10 @@ class Repository
     ///
     var connector: Connector? = nil
     
+    var currentTable: String = ""
+    
+    var listeners: [(_ table: String) -> Void] = []
+    
     ///
     /// Create a new repository.
     ///
@@ -44,5 +48,19 @@ class Repository
             
             return []
         }
+    }
+    
+    func changeTable(table: String)
+    {
+        self.currentTable = table
+        
+        for listener in self.listeners {
+            listener(table)
+        }
+    }
+    
+    func changedTable(handler: @escaping (_ table: String) -> Void)
+    {
+        self.listeners.append(handler)
     }
 }

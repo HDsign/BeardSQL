@@ -22,6 +22,7 @@ class TablesMenuViewController: NSViewController
         super.viewDidLoad()
         
         self.tables.append("Tables")
+        
         for table in repo().getTables() {
             self.tables.append(table.getName())
         }
@@ -66,6 +67,16 @@ extension TablesMenuViewController: NSOutlineViewDelegate, NSOutlineViewDataSour
         cell.imageView?.image = NSImage(named: "NSStatusAvailable")
         
         return cell
+    }
+    
+    func outlineViewSelectionDidChange(_ notification: Notification)
+    {
+        guard let outlineView = notification.object as? NSOutlineView else {
+            return
+        }
+        
+        
+        repo().changeTable(table: outlineView.item(atRow: outlineView.selectedRow) as! String)
     }
 }
 

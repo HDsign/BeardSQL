@@ -9,12 +9,17 @@
 import Cocoa
 import BeardFramework
 
+func appDelegate() -> AppDelegate
+{
+    return NSApplication.shared().delegate as! AppDelegate
+}
+
 ///
 /// Get the beard container
 ///
 func container() -> BeardContainer
 {
-    return (NSApplication.shared().delegate as! AppDelegate).container()
+    return appDelegate().container()
 }
 
 ///

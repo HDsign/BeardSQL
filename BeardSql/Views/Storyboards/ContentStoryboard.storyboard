@@ -14,7 +14,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="978" height="533"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="5sb-AC-S7Z">
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="5sb-AC-S7Z" customClass="NSVisualEffectView">
                                 <rect key="frame" x="0.0" y="501" width="978" height="32"/>
                                 <subviews>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="vPU-sK-LsF">
@@ -105,7 +105,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="978" height="501"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" alternatingRowBackgroundColors="YES" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowSizeStyle="automatic" headerView="n7n-vE-uZy" viewBased="YES" id="MCh-rQ-6fr">
+                                        <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="none" alternatingRowBackgroundColors="YES" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowSizeStyle="automatic" headerView="n7n-vE-uZy" viewBased="YES" id="MCh-rQ-6fr">
                                             <rect key="frame" x="0.0" y="0.0" width="978" height="478"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <size key="intercellSpacing" width="3" height="2"/>
@@ -123,6 +123,7 @@
                                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                         <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                     </textFieldCell>
+                                                    <sortDescriptor key="sortDescriptorPrototype" selector="compare:" sortKey="key"/>
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                     <prototypeCellViews>
                                                         <tableCellView identifier="tableCellView" id="gQ6-AP-ubV">
@@ -130,9 +131,9 @@
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
                                                                 <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="aFK-A2-rfl">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="975" height="17"/>
-                                                                    <textFieldCell key="cell" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" title="Table View Cell" id="jOh-pG-pUE">
-                                                                        <font key="font" metaFont="system"/>
+                                                                    <rect key="frame" x="0.0" y="2" width="975" height="14"/>
+                                                                    <textFieldCell key="cell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" title="Table View Cell" id="jOh-pG-pUE">
+                                                                        <font key="font" metaFont="smallSystem"/>
                                                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                                     </textFieldCell>
