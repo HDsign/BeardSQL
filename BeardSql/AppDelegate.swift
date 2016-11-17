@@ -40,6 +40,7 @@ class AppDelegate: NSObject, NSApplicationDelegate
         ///
         self.beardContainer?.providers = [
             BeardServiceProvider.self,
+            ConsoleServiceProvider.self,
             DatabaseServiceProvider.self,
         ]
         

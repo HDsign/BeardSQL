@@ -12,48 +12,99 @@ import BeardFramework
 
 class QueryViewController: NSViewController, SplitViewProtocol
 {
-//    @IBOutlet weak var fragaria: MGSFragariaView!
     @IBOutlet weak var editor: NSTextView!
+    @IBOutlet weak var tableView: NSTableView!
+    
+    var content: [Model] = []
 
     override func viewDidLoad()
     {
         super.viewDidLoad()
-    }
-    
-    func loadAceView() -> Void
-    {
-        // Some text content
-        //let html = "select * from `relaties`"
         
-//        self.fragaria.autoCompleteDelay = 0.2
-//        self.fragaria.autoCompleteEnabled = true
-//        self.fragaria.autoCompleteWithKeywords = true
-//        self.fragaria.highlightsCurrentLine = true
-//        self.fragaria.syntaxDefinitionName = "MySQL"
-//        self.fragaria.showsSyntaxErrors = true
-//        self.fragaria.textView.string = html
-    }
-    
-    func focusAceView() -> Void
-    {
-        // self.aceView.focus()
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
+        
+        self.editor.isRichText = false
+        self.editor.font = NSFont(name: "Menlo", size: 15)
+        self.editor.backgroundColor = NSColor.darkGray
+        self.editor.textColor = NSColor.lightGray
+        self.editor.lnv_setUpLineNumberView()
     }
     
     func viewActivated()
     {
-        self.loadAceView()
+        
     }
     
     @IBAction func runQuery(_ sender: Any)
     {
-        let alert = NSAlert()
-        alert.alertStyle = .informational
-        alert.messageText = "The query you want to run is awesome! But hé did you know you can archive these queries?"
-        alert.informativeText = "Okay if you hate these kind of messages?? No problem me too :D click the flag down below to ignore them forever!"
-        alert.showsSuppressionButton = true
-        alert.icon = NSImage(named: "NSInfo")
-        alert.addButton(withTitle: "Ok")
-        alert.addButton(withTitle: "Cancel")
-        alert.runModal()
+        self.run()
+    }
+    
+    func run()
+    {
+        self.content.removeAll()
+        self.removeAllColumns()
+        
+        let results = connector().execute(self.editor.string!)
+        
+        self.content = results.map { row in
+            let model = Model()
+            model.columns = row
+            
+            return model
+        }
+        
+        let firstRow = content.first
+        
+        for column in (firstRow?.columns)! {
+            let tableColumn = NSTableColumn()
+            tableColumn.title = column.key
+            tableColumn.identifier = column.key
+            
+            self.tableView.addTableColumn(tableColumn)
+        }
+        
+        self.tableView.reloadData()
+    }
+    
+    func removeAllColumns() -> Void
+    {
+        for column in self.tableView.tableColumns {
+            self.tableView.removeTableColumn(column)
+        }
+    }
+}
+
+extension QueryViewController: NSTableViewDelegate, NSTableViewDataSource
+{
+    func numberOfRows(in tableView: NSTableView) -> Int
+    {
+        return content.count
+    }
+    
+    func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView?
+    {
+        if (!self.content.indices.contains(row)) {
+            return nil
+        }
+        
+        let model = self.content[row]
+        
+        let column = tableColumn?.identifier
+        
+        if let value = model.columns?[column!] {
+            let cell = tableView.make(withIdentifier: "tableCellView", owner: self) as! NSTableCellView
+            if let nice = value.string {
+                cell.textField?.stringValue = nice
+            } else {
+                cell.textField?.stringValue = "NULL"
+                cell.textField?.textColor = NSColor.lightGray
+            }
+            
+            return cell
+        }
+        
+        return nil
     }
 }

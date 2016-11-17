@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16C41b" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11542"/>
@@ -262,6 +262,14 @@
             </objects>
             <point key="canvasLocation" x="-332" y="-130"/>
         </scene>
+        <!--consoleWindowViewController-->
+        <scene sceneID="YSN-1j-2cG">
+            <objects>
+                <controllerPlaceholder storyboardName="ConsoleWindow" referencedIdentifier="consoleWindowViewController" id="nPt-xu-eUb" sceneMemberID="viewController"/>
+                <customObject id="f38-bd-5NS" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="66" y="-133"/>
+        </scene>
         <!--Window Controller-->
         <scene sceneID="R2V-B0-nI4">
             <objects>
@@ -455,6 +463,9 @@
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
                                     </button>
+                                    <connections>
+                                        <segue destination="nPt-xu-eUb" kind="show" id="QnQ-EJ-FGP"/>
+                                    </connections>
                                 </toolbarItem>
                             </allowedToolbarItems>
                             <defaultToolbarItems>
@@ -634,7 +645,7 @@ Gw
         <image name="Relations" width="15" height="15"/>
         <image name="Structure" width="15" height="15"/>
         <image name="Triggers" width="15" height="15"/>
-        <image name="Users" width="16" height="16"/>
+        <image name="Users" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="3OP-gR-1Y1"/>

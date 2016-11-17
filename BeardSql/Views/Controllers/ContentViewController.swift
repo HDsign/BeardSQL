@@ -11,8 +11,11 @@ import MySQL
 
 class ContentViewController: NSViewController, SplitViewProtocol
 {
+    @IBOutlet weak var scrollView: NSScrollView!
     @IBOutlet weak var tableHeaderView: NSTableHeaderView!
     @IBOutlet weak var tableView: NSTableView!
+    @IBOutlet weak var busyIndicator: NSProgressIndicator!
+    @IBOutlet weak var controlsStackView: NSStackView!
     
     var content: [Model] = []
 
@@ -20,45 +23,85 @@ class ContentViewController: NSViewController, SplitViewProtocol
     {
         super.viewDidLoad()
         
+        self.scrollView.isHidden = true
+        self.controlsStackView.isHidden = true
+        
+        self.busyIndicator.isHidden = true
+        
+        self.initEventListeners()
+    }
+    
+    func initEventListeners()
+    {
         repo().changedTable(handler: { table in
             self.getData(table: table)
+        })
+        
+        repo().droppedTable(handler: { table in
+            self.resetTable()
+            
+            self.scrollView.isHidden = true
+            self.controlsStackView.isHidden = true
         })
     }
     
     func getData(table: String)
     {
-        self.executeQuery(table: table)
+        self.showBusyIndicator()
+        
+        self.resetTable()
+        
+        self.content = self.fetchContent(table: table)
+        
+        self.createColumns(table: table)
         
         if self.content.count > 0 {
-            self.removeAllColumns()
-            
-            self.createColumns()
-            
             self.tableView.delegate = self
             self.tableView.dataSource = self
             
             self.tableView.reloadData()
         }
+        
+        self.hideBusyIndicator()
     }
     
-    func executeQuery(table: String)
+    func fetchContent(table: String) -> [Model]
     {
-        self.content = []
+        let results = connector().execute("SELECT * FROM \(table)")
         
-        let users = connector().execute("SELECT * FROM \(table)")
-        
-        for user in users {
+        return results.map { row in
             let model = Model()
+            model.columns = row
             
-            model.columns = user
-            
-            self.content.append(model)
+            return model
         }
     }
     
     @IBAction func reloadData(_ sender: Any)
     {
         self.getData(table: repo().currentTable)
+    }
+    
+    func createColumns(table: String) -> Void
+    {
+        let columns = repo().getColumns(table: table)
+        
+        for column in columns {
+            let tableColumn = NSTableColumn()
+            tableColumn.title = column.field
+            tableColumn.identifier = column.field
+            
+            self.tableView.addTableColumn(tableColumn)
+        }
+    }
+    
+    func resetTable() -> Void
+    {
+        self.scrollView.isHidden = false
+        self.controlsStackView.isHidden = false
+        
+        self.removeAllContent()
+        self.removeAllColumns()
     }
     
     func removeAllColumns() -> Void
@@ -68,21 +111,29 @@ class ContentViewController: NSViewController, SplitViewProtocol
         }
     }
     
-    func createColumns() -> Void
+    func removeAllContent() -> Void
     {
-        let data = content.first
-        
-        for column in (data?.columns)! {
-            let tableColumn = NSTableColumn()
-            tableColumn.title = column.key
-            tableColumn.identifier = column.key
-            
-            self.tableView.addTableColumn(tableColumn)
-        }
+        self.content.removeAll()
     }
     
     func viewActivated() {
         //
+    }
+    
+    func showBusyIndicator()
+    {
+        self.busyIndicator.isHidden = false
+        self.busyIndicator.startAnimation(nil)
+    }
+    
+    func hideBusyIndicator()
+    {
+        let when = DispatchTime.now()
+        
+        DispatchQueue.main.asyncAfter(deadline: when) {
+            self.busyIndicator.stopAnimation(nil)
+            self.busyIndicator.isHidden = true
+        }
     }
 }
 
@@ -95,7 +146,11 @@ extension ContentViewController: NSTableViewDelegate, NSTableViewDataSource
     
     func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView?
     {
-        let model = content[row]
+        if (!self.content.indices.contains(row)) {
+            return nil
+        }
+        
+        let model = self.content[row]
         
         let column = tableColumn?.identifier
         

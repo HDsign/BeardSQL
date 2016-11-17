@@ -21,6 +21,18 @@ class TablesMenuViewController: NSViewController
     {
         super.viewDidLoad()
         
+        self.refreshTables()
+    }
+    
+    @IBAction func refreshButtonClicked(_ sender: Any)
+    {
+        self.refreshTables()
+    }
+    
+    func refreshTables()
+    {
+        self.resetTables()
+        
         self.tables.append("Tables")
         
         for table in repo().getTables() {
@@ -28,8 +40,26 @@ class TablesMenuViewController: NSViewController
         }
         
         self.filteredTables = self.tables
+        
+        self.outlineView.reloadData()
     }
     
+    func resetTables()
+    {
+        self.tables.removeAll()
+    }
+    
+    @IBAction func dropTableButtonClicked(_ sender: Any)
+    {
+        self.dropCurrentTable()
+    }
+    
+    func dropCurrentTable()
+    {
+        repo().dropTable(table: repo().currentTable)
+        
+        self.refreshTables()
+    }
 }
 
 extension TablesMenuViewController: NSOutlineViewDelegate, NSOutlineViewDataSource

@@ -19,7 +19,7 @@ class DatabaseServiceProvider: BServiceProvider, BServiceProvidable
     func register()
     {
         self.container.singleton(name: "connector", handler: { container in
-            return Connector()
+            return Connector(console: container.get(name: "console") as! Console)
         })
         
         self.container.singleton(name: "repository", handler: { container in

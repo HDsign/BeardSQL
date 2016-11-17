@@ -157,6 +157,17 @@
 		A39724BC1DCF8D7A00EAC865 /* QueryStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A39724BB1DCF8D7A00EAC865 /* QueryStoryboard.storyboard */; };
 		A39724BE1DCF943C00EAC865 /* StructureStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A39724BD1DCF943C00EAC865 /* StructureStoryboard.storyboard */; };
 		A39724C01DCF94C600EAC865 /* ApplicationSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39724BF1DCF94C600EAC865 /* ApplicationSplitViewController.swift */; };
+		A3AF37801DDCDA9100ABAEF6 /* Repository+ChangeTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3AF377F1DDCDA9100ABAEF6 /* Repository+ChangeTable.swift */; };
+		A3AF37821DDCDC4000ABAEF6 /* Repository+DropTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3AF37811DDCDC4000ABAEF6 /* Repository+DropTable.swift */; };
+		A3AF37851DDCE17800ABAEF6 /* ConsoleServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3AF37841DDCE17800ABAEF6 /* ConsoleServiceProvider.swift */; };
+		A3AF37871DDCE1D100ABAEF6 /* Console.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3AF37861DDCE1D100ABAEF6 /* Console.swift */; };
+		A3AF378A1DDCE2E900ABAEF6 /* Statement.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3AF37891DDCE2E900ABAEF6 /* Statement.swift */; };
+		A3AF378C1DDCE7AE00ABAEF6 /* Repository+Columns.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3AF378B1DDCE7AE00ABAEF6 /* Repository+Columns.swift */; };
+		A3AF378E1DDCE7ED00ABAEF6 /* Repository+Tables.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3AF378D1DDCE7ED00ABAEF6 /* Repository+Tables.swift */; };
+		A3AF37901DDCE89700ABAEF6 /* Column.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3AF378F1DDCE89700ABAEF6 /* Column.swift */; };
+		A3AF37931DDCEC6B00ABAEF6 /* ConsoleWindow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3AF37911DDCEC6B00ABAEF6 /* ConsoleWindow.storyboard */; };
+		A3AF37951DDCECC200ABAEF6 /* ConsoleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3AF37941DDCECC200ABAEF6 /* ConsoleViewController.swift */; };
+		A3AF37981DDD28D300ABAEF6 /* LineNumberRuler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3AF37971DDD28D300ABAEF6 /* LineNumberRuler.swift */; };
 		A3DC077B1DCE376F00626E57 /* ApplicationWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DC077A1DCE376F00626E57 /* ApplicationWindowController.swift */; };
 		A3DC07801DCF51A200626E57 /* Preferences.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3DC077E1DCF51A200626E57 /* Preferences.storyboard */; };
 		A3DC07821DCF51C600626E57 /* PreferencesWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DC07811DCF51C600626E57 /* PreferencesWindowController.swift */; };
@@ -435,7 +446,7 @@
 		A35A01C61DCFBE7400365317 /* TableInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TableInfoViewController.swift; path = Views/Controllers/TableInfoViewController.swift; sourceTree = "<group>"; };
 		A35A01C81DCFC4B000365317 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		A35BDA141DCFE4E500D5DB56 /* SplitViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SplitViewProtocol.swift; path = Views/Protocols/SplitViewProtocol.swift; sourceTree = "<group>"; };
-		A392FAA61DDBC06E0061BA6B /* Repository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Repository.swift; path = Support/Database/Repository.swift; sourceTree = "<group>"; };
+		A392FAA61DDBC06E0061BA6B /* Repository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Repository.swift; path = Support/Database/Repository/Repository.swift; sourceTree = "<group>"; };
 		A392FAA81DDBC0950061BA6B /* Table.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Table.swift; path = Support/Database/Table.swift; sourceTree = "<group>"; };
 		A392FAAA1DDBC60B0061BA6B /* DatabaseServiceProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DatabaseServiceProvider.swift; path = Providers/DatabaseServiceProvider.swift; sourceTree = "<group>"; };
 		A392FAAD1DDBD2790061BA6B /* helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = helpers.swift; path = Support/helpers.swift; sourceTree = "<group>"; };
@@ -443,6 +454,17 @@
 		A39724BB1DCF8D7A00EAC865 /* QueryStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = QueryStoryboard.storyboard; path = Views/Storyboards/QueryStoryboard.storyboard; sourceTree = "<group>"; };
 		A39724BD1DCF943C00EAC865 /* StructureStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = StructureStoryboard.storyboard; path = Views/Storyboards/StructureStoryboard.storyboard; sourceTree = "<group>"; };
 		A39724BF1DCF94C600EAC865 /* ApplicationSplitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ApplicationSplitViewController.swift; path = Views/Controllers/ApplicationSplitViewController.swift; sourceTree = "<group>"; };
+		A3AF377F1DDCDA9100ABAEF6 /* Repository+ChangeTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Repository+ChangeTable.swift"; path = "Support/Database/Repository/Repository+ChangeTable.swift"; sourceTree = "<group>"; };
+		A3AF37811DDCDC4000ABAEF6 /* Repository+DropTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Repository+DropTable.swift"; path = "Support/Database/Repository/Repository+DropTable.swift"; sourceTree = "<group>"; };
+		A3AF37841DDCE17800ABAEF6 /* ConsoleServiceProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ConsoleServiceProvider.swift; path = Providers/ConsoleServiceProvider.swift; sourceTree = "<group>"; };
+		A3AF37861DDCE1D100ABAEF6 /* Console.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Console.swift; path = Support/Console/Console.swift; sourceTree = "<group>"; };
+		A3AF37891DDCE2E900ABAEF6 /* Statement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Statement.swift; path = Support/Console/Statement.swift; sourceTree = "<group>"; };
+		A3AF378B1DDCE7AE00ABAEF6 /* Repository+Columns.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Repository+Columns.swift"; path = "Support/Database/Repository/Repository+Columns.swift"; sourceTree = "<group>"; };
+		A3AF378D1DDCE7ED00ABAEF6 /* Repository+Tables.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Repository+Tables.swift"; path = "Support/Database/Repository/Repository+Tables.swift"; sourceTree = "<group>"; };
+		A3AF378F1DDCE89700ABAEF6 /* Column.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Column.swift; path = Support/Database/Column.swift; sourceTree = "<group>"; };
+		A3AF37921DDCEC6B00ABAEF6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/ConsoleWindow.storyboard; sourceTree = "<group>"; };
+		A3AF37941DDCECC200ABAEF6 /* ConsoleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ConsoleViewController.swift; path = Windows/Controllers/ConsoleViewController.swift; sourceTree = "<group>"; };
+		A3AF37971DDD28D300ABAEF6 /* LineNumberRuler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LineNumberRuler.swift; path = Support/TextView/LineNumberRuler.swift; sourceTree = "<group>"; };
 		A3DC077A1DCE376F00626E57 /* ApplicationWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ApplicationWindowController.swift; path = Windows/Controllers/ApplicationWindowController.swift; sourceTree = "<group>"; };
 		A3DC077F1DCF51A200626E57 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Preferences.storyboard; sourceTree = "<group>"; };
 		A3DC07811DCF51C600626E57 /* PreferencesWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PreferencesWindowController.swift; path = Windows/Controllers/PreferencesWindowController.swift; sourceTree = "<group>"; };
@@ -824,6 +846,7 @@
 			isa = PBXGroup;
 			children = (
 				A392FAAA1DDBC60B0061BA6B /* DatabaseServiceProvider.swift */,
+				A3AF37841DDCE17800ABAEF6 /* ConsoleServiceProvider.swift */,
 			);
 			name = Providers;
 			sourceTree = "<group>";
@@ -883,9 +906,10 @@
 		A34A545A1DDB002D0076674C /* Database */ = {
 			isa = PBXGroup;
 			children = (
+				A3AF37831DDCDCA600ABAEF6 /* Repository */,
 				A34A545B1DDB00480076674C /* Connector.swift */,
-				A392FAA61DDBC06E0061BA6B /* Repository.swift */,
 				A392FAA81DDBC0950061BA6B /* Table.swift */,
+				A3AF378F1DDCE89700ABAEF6 /* Column.swift */,
 			);
 			name = Database;
 			sourceTree = "<group>";
@@ -893,8 +917,10 @@
 		A34A545D1DDB004E0076674C /* Support */ = {
 			isa = PBXGroup;
 			children = (
-				A392FAAC1DDBCE8C0061BA6B /* Utils */,
+				A3AF37881DDCE1ED00ABAEF6 /* Console */,
 				A34A545A1DDB002D0076674C /* Database */,
+				A3AF37961DDD28AB00ABAEF6 /* TextView */,
+				A392FAAC1DDBCE8C0061BA6B /* Utils */,
 				A392FAAD1DDBD2790061BA6B /* helpers.swift */,
 			);
 			name = Support;
@@ -953,6 +979,35 @@
 			name = Storyboards;
 			sourceTree = "<group>";
 		};
+		A3AF37831DDCDCA600ABAEF6 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				A392FAA61DDBC06E0061BA6B /* Repository.swift */,
+				A3AF377F1DDCDA9100ABAEF6 /* Repository+ChangeTable.swift */,
+				A3AF37811DDCDC4000ABAEF6 /* Repository+DropTable.swift */,
+				A3AF378B1DDCE7AE00ABAEF6 /* Repository+Columns.swift */,
+				A3AF378D1DDCE7ED00ABAEF6 /* Repository+Tables.swift */,
+			);
+			name = Repository;
+			sourceTree = "<group>";
+		};
+		A3AF37881DDCE1ED00ABAEF6 /* Console */ = {
+			isa = PBXGroup;
+			children = (
+				A3AF37861DDCE1D100ABAEF6 /* Console.swift */,
+				A3AF37891DDCE2E900ABAEF6 /* Statement.swift */,
+			);
+			name = Console;
+			sourceTree = "<group>";
+		};
+		A3AF37961DDD28AB00ABAEF6 /* TextView */ = {
+			isa = PBXGroup;
+			children = (
+				A3AF37971DDD28D300ABAEF6 /* LineNumberRuler.swift */,
+			);
+			name = TextView;
+			sourceTree = "<group>";
+		};
 		A3C734201DCFE22700335896 /* Extentions */ = {
 			isa = PBXGroup;
 			children = (
@@ -975,6 +1030,7 @@
 			children = (
 				A3DC077A1DCE376F00626E57 /* ApplicationWindowController.swift */,
 				A3DC07811DCF51C600626E57 /* PreferencesWindowController.swift */,
+				A3AF37941DDCECC200ABAEF6 /* ConsoleViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -985,6 +1041,7 @@
 				A341BF5A1DCE2DBF00E622AE /* Application.storyboard */,
 				A3DC077E1DCF51A200626E57 /* Preferences.storyboard */,
 				A3386FC11DD63A6400055DA5 /* TablesMenu.storyboard */,
+				A3AF37911DDCEC6B00ABAEF6 /* ConsoleWindow.storyboard */,
 			);
 			name = Storyboards;
 			sourceTree = "<group>";
@@ -1294,6 +1351,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3AF37931DDCEC6B00ABAEF6 /* ConsoleWindow.storyboard in Resources */,
 				A39724BC1DCF8D7A00EAC865 /* QueryStoryboard.storyboard in Resources */,
 				A39724BE1DCF943C00EAC865 /* StructureStoryboard.storyboard in Resources */,
 				A3DC07801DCF51A200626E57 /* Preferences.storyboard in Resources */,
@@ -1482,11 +1540,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				A35A01C11DCFBE1600365317 /* ContentViewController.swift in Sources */,
+				A3AF378C1DDCE7AE00ABAEF6 /* Repository+Columns.swift in Sources */,
 				A392FAA91DDBC0950061BA6B /* Table.swift in Sources */,
 				A3DC077B1DCE376F00626E57 /* ApplicationWindowController.swift in Sources */,
+				A3AF37951DDCECC200ABAEF6 /* ConsoleViewController.swift in Sources */,
+				A3AF378E1DDCE7ED00ABAEF6 /* Repository+Tables.swift in Sources */,
 				A3DC07821DCF51C600626E57 /* PreferencesWindowController.swift in Sources */,
 				A35A01C91DCFC4B000365317 /* Model.swift in Sources */,
+				A3AF37981DDD28D300ABAEF6 /* LineNumberRuler.swift in Sources */,
 				A35A01C51DCFBE6100365317 /* TriggersViewController.swift in Sources */,
+				A3AF37801DDCDA9100ABAEF6 /* Repository+ChangeTable.swift in Sources */,
 				A35A01BF1DCFBDFC00365317 /* StructureViewController.swift in Sources */,
 				A34A52401DD611680076674C /* TablesMenuViewController.swift in Sources */,
 				A39724C01DCF94C600EAC865 /* ApplicationSplitViewController.swift in Sources */,
@@ -1495,11 +1558,16 @@
 				A35BDA151DCFE4E500D5DB56 /* SplitViewProtocol.swift in Sources */,
 				A35A01C71DCFBE7400365317 /* TableInfoViewController.swift in Sources */,
 				A392FAAE1DDBD2790061BA6B /* helpers.swift in Sources */,
+				A3AF378A1DDCE2E900ABAEF6 /* Statement.swift in Sources */,
 				A35A01C31DCFBE4D00365317 /* RelationsViewController.swift in Sources */,
+				A3AF37851DDCE17800ABAEF6 /* ConsoleServiceProvider.swift in Sources */,
+				A3AF37901DDCE89700ABAEF6 /* Column.swift in Sources */,
 				A34A545C1DDB00480076674C /* Connector.swift in Sources */,
 				A341BF571DCE2DBF00E622AE /* Document.swift in Sources */,
 				A39724B91DCF8CC200EAC865 /* QueryViewController.swift in Sources */,
+				A3AF37871DDCE1D100ABAEF6 /* Console.swift in Sources */,
 				A392FAA71DDBC06E0061BA6B /* Repository.swift in Sources */,
+				A3AF37821DDCDC4000ABAEF6 /* Repository+DropTable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1608,6 +1676,14 @@
 				A341BF5B1DCE2DBF00E622AE /* Base */,
 			);
 			name = Application.storyboard;
+			sourceTree = "<group>";
+		};
+		A3AF37911DDCEC6B00ABAEF6 /* ConsoleWindow.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A3AF37921DDCEC6B00ABAEF6 /* Base */,
+			);
+			name = ConsoleWindow.storyboard;
 			sourceTree = "<group>";
 		};
 		A3DC077E1DCF51A200626E57 /* Preferences.storyboard */ = {

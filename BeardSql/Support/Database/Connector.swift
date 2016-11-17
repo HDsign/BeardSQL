@@ -11,10 +11,17 @@ import MySQL
 
 class Connector
 {
+    var console: Console?
+    
     var host: String = "127.0.0.1"
     var user: String = "root"
     var password: String = "root"
     var database: String = "example"
+    
+    init(console: Console)
+    {
+        self.console = console
+    }
     
     func mysql() -> Database?
     {
@@ -34,6 +41,8 @@ class Connector
     
     func execute(_ query: String) -> [[String: Node]]
     {
+        self.console?.add(query: query)
+        
         do {
             return try self.mysql()?.execute(query) ?? [[:]]
         } catch {
