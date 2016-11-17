@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16C41b" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11542"/>
@@ -565,9 +565,9 @@ Gw
             <objects>
                 <splitViewController id="NEf-vP-oNF" customClass="ApplicationSplitViewController" customModule="BeardSql" customModuleProvider="target" sceneMemberID="viewController">
                     <splitViewItems>
-                        <splitViewItem id="ldx-lE-2Ss"/>
+                        <splitViewItem canCollapse="YES" holdingPriority="260" behavior="sidebar" id="ldx-lE-2Ss"/>
                     </splitViewItems>
-                    <splitView key="splitView" dividerStyle="thin" vertical="YES" id="izt-03-twk">
+                    <splitView key="splitView" autosaveName="splitViewAutoSave" dividerStyle="thin" vertical="YES" id="izt-03-twk">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </splitView>
@@ -645,7 +645,7 @@ Gw
         <image name="Relations" width="15" height="15"/>
         <image name="Structure" width="15" height="15"/>
         <image name="Triggers" width="15" height="15"/>
-        <image name="Users" width="32" height="32"/>
+        <image name="Users" width="16" height="16"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="3OP-gR-1Y1"/>

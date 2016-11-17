@@ -28,6 +28,8 @@ class ContentViewController: NSViewController, SplitViewProtocol
         
         self.busyIndicator.isHidden = true
         
+        self.tableView.sizeLastColumnToFit()
+        
         self.initEventListeners()
     }
     
