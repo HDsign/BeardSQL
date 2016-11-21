@@ -20,7 +20,7 @@ class Repository
     
     var changeTableListeners: [(_ table: String) -> Void] = []
     
-    var dropTableListeneres: [(_ table: String) -> Void] = []
+    var dropTableListeners: [(_ table: String) -> Void] = []
     
     ///
     /// Create a new repository.

@@ -29,6 +29,12 @@ class QueryViewController: NSViewController, SplitViewProtocol
         self.editor.backgroundColor = NSColor.darkGray
         self.editor.textColor = NSColor.lightGray
         self.editor.lnv_setUpLineNumberView()
+        
+        self.editor.string = "SELECT * FROM users"
+        
+        let area = NSMakeRange(0, (self.editor.textStorage?.length)!)
+        self.editor.textStorage?.removeAttribute(NSForegroundColorAttributeName, range: area)
+        self.editor.textStorage?.addAttribute(NSForegroundColorAttributeName, value: NSColor.blue, range: area)
     }
     
     func viewActivated()
@@ -46,7 +52,7 @@ class QueryViewController: NSViewController, SplitViewProtocol
         self.content.removeAll()
         self.removeAllColumns()
         
-        let results = connector().execute(self.editor.string!)
+        let results = connector().executeOrdered(self.editor.string!)
         
         self.content = results.map { row in
             let model = Model()
@@ -57,10 +63,10 @@ class QueryViewController: NSViewController, SplitViewProtocol
         
         let firstRow = content.first
         
-        for column in (firstRow?.columns)! {
+        for column in (firstRow?.columns) ?? [] {
             let tableColumn = NSTableColumn()
-            tableColumn.title = column.key
-            tableColumn.identifier = column.key
+            tableColumn.title = column.name
+            tableColumn.identifier = column.name
             
             self.tableView.addTableColumn(tableColumn)
         }
@@ -93,9 +99,9 @@ extension QueryViewController: NSTableViewDelegate, NSTableViewDataSource
         
         let column = tableColumn?.identifier
         
-        if let value = model.columns?[column!] {
+        if let value = model.get(name: column!) {
             let cell = tableView.make(withIdentifier: "tableCellView", owner: self) as! NSTableCellView
-            if let nice = value.string {
+            if let nice = value.value.string {
                 cell.textField?.stringValue = nice
             } else {
                 cell.textField?.stringValue = "NULL"

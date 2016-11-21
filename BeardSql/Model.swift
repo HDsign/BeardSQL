@@ -11,5 +11,16 @@ import MySQL
 
 class Model
 {
-    var columns: [String: Node]? = nil
+    var columns: [(name: String, value: Node)]? = nil
+    
+    func get(name: String) -> (name: String, value: Node)?
+    {
+        for column in self.columns ?? [] {
+            if (column.name == name) {
+                return column
+            }
+        }
+        
+        return nil
+    }
 }

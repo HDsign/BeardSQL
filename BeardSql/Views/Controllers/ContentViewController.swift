@@ -69,7 +69,7 @@ class ContentViewController: NSViewController, SplitViewProtocol
     
     func fetchContent(table: String) -> [Model]
     {
-        let results = connector().execute("SELECT * FROM \(table)")
+        let results = connector().executeOrdered("SELECT * FROM \(table)")
         
         return results.map { row in
             let model = Model()
@@ -156,9 +156,9 @@ extension ContentViewController: NSTableViewDelegate, NSTableViewDataSource
         
         let column = tableColumn?.identifier
         
-        if let value = model.columns?[column!] {
+        if let value = model.get(name: column!) {
             let cell = tableView.make(withIdentifier: "tableCellView", owner: self) as! NSTableCellView
-            if let nice = value.string {
+            if let nice = value.value.string {
                 cell.textField?.stringValue = nice
             } else {
                 cell.textField?.stringValue = "NULL"

@@ -18,13 +18,13 @@ extension Repository
             print(error)
         }
         
-        for listener in self.dropTableListeneres {
+        for listener in self.dropTableListeners {
             listener(table)
         }
     }
     
     func droppedTable(handler: @escaping (_ table: String) -> Void)
     {
-        self.dropTableListeneres.append(handler)
+        self.dropTableListeners.append(handler)
     }
 }

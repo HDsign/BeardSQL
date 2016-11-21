@@ -41,7 +41,7 @@ class Connector
     
     func execute(_ query: String) -> [[String: Node]]
     {
-        self.console?.add(query: query)
+        self.console?.add(connection: self.host, database: self.database, query: query)
         
         do {
             return try self.mysql()?.execute(query) ?? [[:]]
@@ -49,6 +49,19 @@ class Connector
             print(error)
             
             return [[:]]
+        }
+    }
+    
+    func executeOrdered(_ query: String) -> [[(name: String, value: Node)]]
+    {
+        self.console?.add(connection: self.host, database: self.database, query: query)
+        
+        do {
+            return try self.mysql()?.executeOrdered(query) ?? []
+        } catch {
+            print(error)
+            
+            return []
         }
     }
 }
