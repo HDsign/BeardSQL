@@ -41,8 +41,6 @@ extension ConsoleViewController: NSTableViewDataSource, NSTableViewDelegate
     
     func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView?
     {
-        print(tableColumn?.identifier ?? "")
-        
         if let column = tableColumn?.identifier {
             let cell = tableView.make(withIdentifier: "\(column)Cell", owner: self) as! NSTableCellView
             cell.textField?.stringValue = self.console?.getStatement(byRow: row)?.get(property: column, trim: "Column") ?? ""

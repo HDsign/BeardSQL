@@ -26,15 +26,11 @@ class QueryViewController: NSViewController, SplitViewProtocol
         
         self.editor.isRichText = false
         self.editor.font = NSFont(name: "Menlo", size: 15)
-        self.editor.backgroundColor = NSColor.darkGray
-        self.editor.textColor = NSColor.lightGray
-        self.editor.lnv_setUpLineNumberView()
+        self.editor.enableLineNumbers()
+        self.editor.textContainerInset = NSMakeSize(5, 5)
         
         self.editor.string = "SELECT * FROM users"
-        
-        let area = NSMakeRange(0, (self.editor.textStorage?.length)!)
-        self.editor.textStorage?.removeAttribute(NSForegroundColorAttributeName, range: area)
-        self.editor.textStorage?.addAttribute(NSForegroundColorAttributeName, value: NSColor.blue, range: area)
+        self.editor.enableSyntaxHighlighting(language: "MySQL")
     }
     
     func viewActivated()

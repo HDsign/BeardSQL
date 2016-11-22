@@ -152,6 +152,9 @@
 		A35BDA151DCFE4E500D5DB56 /* SplitViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35BDA141DCFE4E500D5DB56 /* SplitViewProtocol.swift */; };
 		A372A1941DE3AEA300D53377 /* Connection+execute.swift in Sources */ = {isa = PBXBuildFile; fileRef = A372A1931DE3AEA300D53377 /* Connection+execute.swift */; };
 		A372A1961DE3B32300D53377 /* Database+execute.swift in Sources */ = {isa = PBXBuildFile; fileRef = A372A1951DE3B32300D53377 /* Database+execute.swift */; };
+		A372A1A41DE4E32000D53377 /* MySQLSyntax.swift in Sources */ = {isa = PBXBuildFile; fileRef = A372A1A11DE4E32000D53377 /* MySQLSyntax.swift */; };
+		A372A1A51DE4E32000D53377 /* SyntaxHighlight.swift in Sources */ = {isa = PBXBuildFile; fileRef = A372A1A21DE4E32000D53377 /* SyntaxHighlight.swift */; };
+		A372A1A61DE4E32000D53377 /* SyntaxSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = A372A1A31DE4E32000D53377 /* SyntaxSettings.swift */; };
 		A392FAA71DDBC06E0061BA6B /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A392FAA61DDBC06E0061BA6B /* Repository.swift */; };
 		A392FAA91DDBC0950061BA6B /* Table.swift in Sources */ = {isa = PBXBuildFile; fileRef = A392FAA81DDBC0950061BA6B /* Table.swift */; };
 		A392FAAB1DDBC60B0061BA6B /* DatabaseServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A392FAAA1DDBC60B0061BA6B /* DatabaseServiceProvider.swift */; };
@@ -459,6 +462,9 @@
 		A35BDA141DCFE4E500D5DB56 /* SplitViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SplitViewProtocol.swift; path = Views/Protocols/SplitViewProtocol.swift; sourceTree = "<group>"; };
 		A372A1931DE3AEA300D53377 /* Connection+execute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Connection+execute.swift"; path = "Support/MySql/Connection+execute.swift"; sourceTree = "<group>"; };
 		A372A1951DE3B32300D53377 /* Database+execute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Database+execute.swift"; path = "Support/MySql/Database+execute.swift"; sourceTree = "<group>"; };
+		A372A1A11DE4E32000D53377 /* MySQLSyntax.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MySQLSyntax.swift; sourceTree = "<group>"; };
+		A372A1A21DE4E32000D53377 /* SyntaxHighlight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SyntaxHighlight.swift; path = Support/TextView/SyntaxHighlight.swift; sourceTree = "<group>"; };
+		A372A1A31DE4E32000D53377 /* SyntaxSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SyntaxSettings.swift; path = Support/TextView/SyntaxSettings.swift; sourceTree = "<group>"; };
 		A392FAA61DDBC06E0061BA6B /* Repository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Repository.swift; path = Support/Database/Repository/Repository.swift; sourceTree = "<group>"; };
 		A392FAA81DDBC0950061BA6B /* Table.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Table.swift; path = Support/Database/Table.swift; sourceTree = "<group>"; };
 		A392FAAA1DDBC60B0061BA6B /* DatabaseServiceProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DatabaseServiceProvider.swift; path = Providers/DatabaseServiceProvider.swift; sourceTree = "<group>"; };
@@ -957,6 +963,15 @@
 			name = MySQL;
 			sourceTree = "<group>";
 		};
+		A372A1A01DE4E32000D53377 /* Syntax */ = {
+			isa = PBXGroup;
+			children = (
+				A372A1A11DE4E32000D53377 /* MySQLSyntax.swift */,
+			);
+			name = Syntax;
+			path = Support/TextView/Syntax;
+			sourceTree = "<group>";
+		};
 		A392FAAC1DDBCE8C0061BA6B /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -1026,6 +1041,9 @@
 		A3AF37961DDD28AB00ABAEF6 /* TextView */ = {
 			isa = PBXGroup;
 			children = (
+				A372A1A01DE4E32000D53377 /* Syntax */,
+				A372A1A21DE4E32000D53377 /* SyntaxHighlight.swift */,
+				A372A1A31DE4E32000D53377 /* SyntaxSettings.swift */,
 				A3AF37971DDD28D300ABAEF6 /* LineNumberRuler.swift */,
 			);
 			name = TextView;
@@ -1584,6 +1602,7 @@
 				A3AF37801DDCDA9100ABAEF6 /* Repository+ChangeTable.swift in Sources */,
 				A35A01BF1DCFBDFC00365317 /* StructureViewController.swift in Sources */,
 				A34A52401DD611680076674C /* TablesMenuViewController.swift in Sources */,
+				A372A1A61DE4E32000D53377 /* SyntaxSettings.swift in Sources */,
 				A39724C01DCF94C600EAC865 /* ApplicationSplitViewController.swift in Sources */,
 				A392FAAB1DDBC60B0061BA6B /* DatabaseServiceProvider.swift in Sources */,
 				A341BF531DCE2DBF00E622AE /* AppDelegate.swift in Sources */,
@@ -1597,8 +1616,10 @@
 				A3AF37901DDCE89700ABAEF6 /* Column.swift in Sources */,
 				A372A1941DE3AEA300D53377 /* Connection+execute.swift in Sources */,
 				A34A545C1DDB00480076674C /* Connector.swift in Sources */,
+				A372A1A51DE4E32000D53377 /* SyntaxHighlight.swift in Sources */,
 				A341BF571DCE2DBF00E622AE /* Document.swift in Sources */,
 				A39724B91DCF8CC200EAC865 /* QueryViewController.swift in Sources */,
+				A372A1A41DE4E32000D53377 /* MySQLSyntax.swift in Sources */,
 				A3AF37871DDCE1D100ABAEF6 /* Console.swift in Sources */,
 				A392FAA71DDBC06E0061BA6B /* Repository.swift in Sources */,
 				A3AF37821DDCDC4000ABAEF6 /* Repository+DropTable.swift in Sources */,

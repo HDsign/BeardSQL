@@ -16,7 +16,7 @@ class Connector
     var host: String = "127.0.0.1"
     var user: String = "root"
     var password: String = "root"
-    var database: String = "example"
+    var database: String = "metronic"
     
     init(console: Console)
     {

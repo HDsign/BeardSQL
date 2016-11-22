@@ -22,7 +22,7 @@ extension NSTextView {
         }
     }
     
-    func lnv_setUpLineNumberView() {
+    func enableLineNumbers() {
         if font == nil {
             font = NSFont.systemFont(ofSize: 15)
         }
