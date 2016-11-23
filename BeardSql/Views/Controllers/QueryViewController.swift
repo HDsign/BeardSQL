@@ -24,13 +24,9 @@ class QueryViewController: NSViewController, SplitViewProtocol
         self.tableView.delegate = self
         self.tableView.dataSource = self
         
-        self.editor.isRichText = false
-        self.editor.font = NSFont(name: "Menlo", size: 15)
-        self.editor.enableLineNumbers()
-        self.editor.textContainerInset = NSMakeSize(5, 5)
-        
         self.editor.string = "SELECT * FROM users WHERE id = 1"
-        self.editor.enableSyntaxHighlighting(language: "MySQL")
+        
+        self.editor.enableCodeEditor(language: "MySQL")
     }
     
     func viewActivated()

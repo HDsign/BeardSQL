@@ -160,6 +160,7 @@ extension ContentViewController: NSTableViewDelegate, NSTableViewDataSource
             let cell = tableView.make(withIdentifier: "tableCellView", owner: self) as! NSTableCellView
             if let nice = value.value.string {
                 cell.textField?.stringValue = nice
+                cell.textField?.textColor = NSColor.black
             } else {
                 cell.textField?.stringValue = "NULL"
                 cell.textField?.textColor = NSColor.lightGray

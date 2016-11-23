@@ -12,7 +12,8 @@ import ObjectiveC
 
 var LineNumberViewAssocObjKey: UInt8 = 0
 
-extension NSTextView {
+extension NSTextView
+{
     var lineNumberView:LineNumberRulerView {
         get {
             return objc_getAssociatedObject(self, &LineNumberViewAssocObjKey) as! LineNumberRulerView
@@ -22,7 +23,8 @@ extension NSTextView {
         }
     }
     
-    func enableLineNumbers() {
+    func enableLineNumbers()
+    {
         if font == nil {
             font = NSFont.systemFont(ofSize: 15)
         }
@@ -52,8 +54,8 @@ extension NSTextView {
     }
 }
 
-class LineNumberRulerView: NSRulerView {
-    
+class LineNumberRulerView: NSRulerView
+{
     var font: NSFont! {
         didSet {
             self.needsDisplay = true

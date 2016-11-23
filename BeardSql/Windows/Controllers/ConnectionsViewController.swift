@@ -20,6 +20,11 @@ class ConnectionsViewController: NSViewController
     {
         super.viewDidLoad()
         // Do view setup here.
+        
+        self.hostInput.stringValue = connector().host
+        self.userInput.stringValue = connector().user
+        self.passwordInput.stringValue = connector().password
+        self.databaseInput.stringValue = connector().database
     }
     
     @IBAction func connectButtonClicked(_ sender: Any)

@@ -8,7 +8,7 @@
 
 import Foundation
 
-class MySQLSyntax
+class MySQLSyntax: SyntaxProtocol
 {
     let keywords: [String] = [
         "SELECT",

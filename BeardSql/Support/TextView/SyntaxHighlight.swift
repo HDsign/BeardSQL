@@ -7,70 +7,34 @@
 //
 
 import Cocoa
+import ObjectiveC
+
+var SyntaxHighlighterViewAssocObjKey: UInt8 = 0
 
 extension NSTextView
 {
-    func enableSyntaxHighlighting(language: String)
-    {
-        self.highlight()
-        self.smartInsertDeleteEnabled = false
-        self.isAutomaticQuoteSubstitutionEnabled = false
-        self.isAutomaticDashSubstitutionEnabled = false
-        self.backgroundColor = SyntaxSettings.shared.backgroundColor
-        self.insertionPointColor = SyntaxSettings.shared.insertionPointColor
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(syntaxTextDidChange), name: NSNotification.Name.NSTextDidChange, object: self)
+    var syntaxHighlighter: SyntaxHighlighter {
+        get {
+            return objc_getAssociatedObject(self, &SyntaxHighlighterViewAssocObjKey) as! SyntaxHighlighter
+        }
+        set {
+            objc_setAssociatedObject(self, &SyntaxHighlighterViewAssocObjKey, newValue, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+        }
     }
     
-    func highlight()
+    func enableSyntaxHighlighting(syntax: SyntaxProtocol)
     {
-        let nsText = NSString(string: self.string!)
-        let textRange = NSMakeRange(0, nsText.length)
-        
-        let syntax = MySQLSyntax()
-        let colors = SyntaxSettings.shared
-        
-        self.resetSyntaxHighlighting()
-        
-        // Color keywords
-        nsText.enumerateSubstrings(in: textRange, options: .byWords, using: { (substring, substringRange, _, _) in
-            if (syntax.isKeyword(search: substring!)) {
-                self.textStorage?.addAttribute(NSForegroundColorAttributeName, value: colors.keywordColor, range: substringRange)
-            }
-        })
-        
-        // Color connectors and calculators
-        nsText.enumerateSubstrings(in: textRange, options: .byComposedCharacterSequences, using: { (substring, substringRange, _, _) in
-            if (syntax.isConnector(search: substring!)) {
-                self.textStorage?.addAttribute(NSForegroundColorAttributeName, value: colors.connectorColor, range: substringRange)
-            }
-            
-            if (syntax.isCalculator(search: substring!)) {
-                self.textStorage?.addAttribute(NSForegroundColorAttributeName, value: colors.calculatorColor, range: substringRange)
-            }
-        })
-        
-        // Color comments.
-        nsText.enumerateSubstrings(in: textRange, options: .byLines, using: { (substring, substringRange, _, _) in
-            if (substring?.contains("-- "))! {
-                let range = substring?.range(of: "-- ")
-                let startIndex: Int = substring!.distance(from: substring!.startIndex, to: range!.lowerBound)
-                let newsubstringRange = NSMakeRange(substringRange.location + startIndex, substringRange.length)
-                self.textStorage?.addAttribute(NSForegroundColorAttributeName, value: colors.commentColor, range: newsubstringRange)
-            }
-        })
+        self.syntaxHighlighter = SyntaxHighlighter(syntax: syntax, textView: self)
+        self.registerListeners()
+    }
+    
+    private func registerListeners()
+    {
+        NotificationCenter.default.addObserver(self, selector: #selector(syntaxTextDidChange), name: NSNotification.Name.NSTextDidChange, object: self)
     }
     
     func syntaxTextDidChange(notification: NSNotification)
     {
-        self.highlight()
-    }
-    
-    private func resetSyntaxHighlighting()
-    {
-        let area = NSMakeRange(0, (self.textStorage?.length)!)
-        
-        self.textStorage?.removeAttribute(NSForegroundColorAttributeName, range: area)
-        self.setTextColor(SyntaxSettings.shared.textColor, range: area)
+        self.syntaxHighlighter.highlight()
     }
 }

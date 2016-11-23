@@ -21,6 +21,8 @@ class TablesMenuViewController: NSViewController
     {
         super.viewDidLoad()
         
+        self.searchField.delegate = self
+        
         self.refreshTables()
     }
     

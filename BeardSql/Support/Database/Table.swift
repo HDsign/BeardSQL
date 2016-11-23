@@ -36,7 +36,7 @@ class Table
     convenience init(nodeResult: [String: Node], database: String)
     {
         let type = nodeResult["Table_type"]?.string ?? ""
-        let name = nodeResult["Tables_in_\(database)"]?.string ?? ""
+        let name = nodeResult["Tables_in_\(database.lowercased())"]?.string ?? ""
         
         self.init(type: type, name: name)
     }
