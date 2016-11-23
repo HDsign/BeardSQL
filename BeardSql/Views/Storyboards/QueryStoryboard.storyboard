@@ -47,7 +47,7 @@
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </scroller>
                                             </scrollView>
-                                            <customView verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="PHv-53-h0K">
+                                            <customView verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="PHv-53-h0K" customClass="NSVisualEffectView">
                                                 <rect key="frame" x="0.0" y="0.0" width="823" height="33"/>
                                                 <subviews>
                                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="djd-fo-58J">

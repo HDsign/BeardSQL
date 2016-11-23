@@ -60,7 +60,8 @@ class LineNumberRulerView: NSRulerView {
         }
     }
     
-    init(textView: NSTextView) {
+    init(textView: NSTextView)
+    {
         super.init(scrollView: textView.enclosingScrollView!, orientation: NSRulerOrientation.verticalRuler)
         self.font = textView.font ?? NSFont.systemFont(ofSize: NSFont.smallSystemFontSize())
         self.clientView = textView
@@ -68,11 +69,15 @@ class LineNumberRulerView: NSRulerView {
         self.ruleThickness = 40
     }
     
-    required init(coder: NSCoder) {
+    required init(coder: NSCoder)
+    {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func drawHashMarksAndLabels(in rect: NSRect) {
+    override func drawHashMarksAndLabels(in rect: NSRect)
+    {
+        SyntaxSettings.shared.rulerBackgroundColor.setFill()
+        NSRectFill(rect)
         
         if let textView = self.clientView as? NSTextView {
             if let layoutManager = textView.layoutManager {

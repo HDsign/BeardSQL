@@ -139,6 +139,7 @@
 		A34A545C1DDB00480076674C /* Connector.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34A545B1DDB00480076674C /* Connector.swift */; };
 		A34A54971DDD92F90076674C /* MySQL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3186DD51DDA4BFC00CADFF6 /* MySQL.framework */; };
 		A34A54981DDD92F90076674C /* MySQL.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A3186DD51DDA4BFC00CADFF6 /* MySQL.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A355701C1DE5AF2E00586D82 /* ConnectionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A355701B1DE5AF2E00586D82 /* ConnectionsViewController.swift */; };
 		A35A01B51DCFBD8900365317 /* ContentStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A35A01B41DCFBD8900365317 /* ContentStoryboard.storyboard */; };
 		A35A01B91DCFBDAE00365317 /* RelationsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A35A01B81DCFBDAE00365317 /* RelationsStoryboard.storyboard */; };
 		A35A01BB1DCFBDC500365317 /* TriggersStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A35A01BA1DCFBDC500365317 /* TriggersStoryboard.storyboard */; };
@@ -449,6 +450,7 @@
 		A341BF5D1DCE2DBF00E622AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A34A523F1DD611680076674C /* TablesMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TablesMenuViewController.swift; path = Windows/Sections/TablesMenuViewController.swift; sourceTree = "<group>"; };
 		A34A545B1DDB00480076674C /* Connector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Connector.swift; path = Support/Database/Connector.swift; sourceTree = "<group>"; };
+		A355701B1DE5AF2E00586D82 /* ConnectionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ConnectionsViewController.swift; path = Windows/Controllers/ConnectionsViewController.swift; sourceTree = "<group>"; };
 		A35A01B41DCFBD8900365317 /* ContentStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = ContentStoryboard.storyboard; path = Views/Storyboards/ContentStoryboard.storyboard; sourceTree = "<group>"; };
 		A35A01B81DCFBDAE00365317 /* RelationsStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = RelationsStoryboard.storyboard; path = Views/Storyboards/RelationsStoryboard.storyboard; sourceTree = "<group>"; };
 		A35A01BA1DCFBDC500365317 /* TriggersStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = TriggersStoryboard.storyboard; path = Views/Storyboards/TriggersStoryboard.storyboard; sourceTree = "<group>"; };
@@ -1072,6 +1074,7 @@
 				A3DC077A1DCE376F00626E57 /* ApplicationWindowController.swift */,
 				A3DC07811DCF51C600626E57 /* PreferencesWindowController.swift */,
 				A3AF37941DDCECC200ABAEF6 /* ConsoleViewController.swift */,
+				A355701B1DE5AF2E00586D82 /* ConnectionsViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -1607,6 +1610,7 @@
 				A392FAAB1DDBC60B0061BA6B /* DatabaseServiceProvider.swift in Sources */,
 				A341BF531DCE2DBF00E622AE /* AppDelegate.swift in Sources */,
 				A35BDA151DCFE4E500D5DB56 /* SplitViewProtocol.swift in Sources */,
+				A355701C1DE5AF2E00586D82 /* ConnectionsViewController.swift in Sources */,
 				A35A01C71DCFBE7400365317 /* TableInfoViewController.swift in Sources */,
 				A392FAAE1DDBD2790061BA6B /* helpers.swift in Sources */,
 				A3AF378A1DDCE2E900ABAEF6 /* Statement.swift in Sources */,

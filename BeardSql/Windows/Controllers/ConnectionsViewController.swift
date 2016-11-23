@@ -1,0 +1,35 @@
+//
+//  ConnectionsViewController.swift
+//  BeardSql
+//
+//  Created by Swen van Zanten on 23-11-16.
+//  Copyright © 2016 Swen van Zanten. All rights reserved.
+//
+
+import Cocoa
+
+class ConnectionsViewController: NSViewController
+{
+
+    @IBOutlet weak var hostInput: NSTextField!
+    @IBOutlet weak var userInput: NSTextField!
+    @IBOutlet weak var passwordInput: NSTextField!
+    @IBOutlet weak var databaseInput: NSTextField!
+    
+    override func viewDidLoad()
+    {
+        super.viewDidLoad()
+        // Do view setup here.
+    }
+    
+    @IBAction func connectButtonClicked(_ sender: Any)
+    {
+        connector().host = self.hostInput.stringValue
+        connector().user = self.userInput.stringValue
+        connector().password = self.passwordInput.stringValue
+        connector().database = self.databaseInput.stringValue
+        
+        self.dismissViewController(self)
+    }
+    
+}

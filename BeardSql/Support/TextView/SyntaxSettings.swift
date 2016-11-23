@@ -19,4 +19,6 @@ class SyntaxSettings
     var calculatorColor: NSColor = #colorLiteral(red: 0.3898568942, green: 0.8341991305, blue: 0.7605380137, alpha: 1)
     var commentColor: NSColor = #colorLiteral(red: 0.5609186484, green: 0.5659616623, blue: 0.5886113715, alpha: 1)
     var insertionPointColor: NSColor = NSColor.white
+    
+    var rulerBackgroundColor: NSColor = #colorLiteral(red: 0.2498163819, green: 0.2513880055, blue: 0.2635425567, alpha: 1)
 }

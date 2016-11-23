@@ -29,7 +29,13 @@ class MySQLSyntax
         "LEFT",
         "RIGHT",
         "INNER",
-        "on",
+        "ON",
+        "IF",
+        "IFNULL",
+        "CONCAT",
+        "GROUP_CONCAT",
+        "SUM",
+        "COUNT",
     ]
     
     let connectors: [String] = [

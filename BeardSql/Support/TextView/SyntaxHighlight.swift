@@ -51,13 +51,12 @@ extension NSTextView
         })
         
         // Color comments.
-        nsText.enumerateLines({ (string, _) in
-            if (string.contains("-- ")) {
-                let range = string.range(of: "-- ")
-                let totalLength = string.characters.count
-                let index: Int = string.distance(from: string.startIndex, to: range!.lowerBound)
-                let substringRange = NSMakeRange(index, totalLength)
-                self.textStorage?.addAttribute(NSForegroundColorAttributeName, value: colors.commentColor, range: substringRange)
+        nsText.enumerateSubstrings(in: textRange, options: .byLines, using: { (substring, substringRange, _, _) in
+            if (substring?.contains("-- "))! {
+                let range = substring?.range(of: "-- ")
+                let startIndex: Int = substring!.distance(from: substring!.startIndex, to: range!.lowerBound)
+                let newsubstringRange = NSMakeRange(substringRange.location + startIndex, substringRange.length)
+                self.textStorage?.addAttribute(NSForegroundColorAttributeName, value: colors.commentColor, range: newsubstringRange)
             }
         })
     }

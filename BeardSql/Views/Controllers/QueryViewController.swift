@@ -29,7 +29,7 @@ class QueryViewController: NSViewController, SplitViewProtocol
         self.editor.enableLineNumbers()
         self.editor.textContainerInset = NSMakeSize(5, 5)
         
-        self.editor.string = "SELECT * FROM users"
+        self.editor.string = "SELECT * FROM users WHERE id = 1"
         self.editor.enableSyntaxHighlighting(language: "MySQL")
     }
     

@@ -6,7 +6,7 @@
 //  Copyright © 2016 Swen van Zanten. All rights reserved.
 //
 
-import Foundation
+import Cocoa
 import MySQL
 
 class Connector
@@ -45,6 +45,14 @@ class Connector
         
         do {
             return try self.mysql()?.execute(query) ?? [[:]]
+        } catch MySQL.Error.prepare(let error) {
+            let alert = NSAlert()
+            alert.alertStyle = .warning
+            alert.messageText = error
+            alert.runModal()
+            print(error)
+            
+            return [[:]]
         } catch {
             print(error)
             
@@ -58,6 +66,14 @@ class Connector
         
         do {
             return try self.mysql()?.executeOrdered(query) ?? []
+        } catch MySQL.Error.prepare(let error) {
+            let alert = NSAlert()
+            alert.alertStyle = .warning
+            alert.messageText = error
+            alert.runModal()
+            print(error)
+            
+            return []
         } catch {
             print(error)
             
