@@ -12,7 +12,7 @@ class SyntaxSettings
 {
     static let shared = SyntaxSettings()
     
-    var backgroundColor: NSColor = NSColor.darkGray
+    var backgroundColor: NSColor = #colorLiteral(red: 0.3360741083, green: 0.3380373691, blue: 0.3532207465, alpha: 1)
     var textColor: NSColor = NSColor.white
     var keywordColor: NSColor = #colorLiteral(red: 0.2964815373, green: 0.8341991305, blue: 0.6071883276, alpha: 1)
     var connectorColor: NSColor = #colorLiteral(red: 0.5711379248, green: 0.7899073361, blue: 0.8199804925, alpha: 1)

@@ -32,22 +32,32 @@ extension NSTextView
         
         self.resetSyntaxHighlighting()
         
+        // Color keywords
         nsText.enumerateSubstrings(in: textRange, options: .byWords, using: { (substring, substringRange, _, _) in
             if (syntax.isKeyword(search: substring!)) {
-                self.textStorage?.removeAttribute(NSForegroundColorAttributeName, range: substringRange)
                 self.textStorage?.addAttribute(NSForegroundColorAttributeName, value: colors.keywordColor, range: substringRange)
             }
         })
         
+        // Color connectors and calculators
         nsText.enumerateSubstrings(in: textRange, options: .byComposedCharacterSequences, using: { (substring, substringRange, _, _) in
             if (syntax.isConnector(search: substring!)) {
-                self.textStorage?.removeAttribute(NSForegroundColorAttributeName, range: substringRange)
                 self.textStorage?.addAttribute(NSForegroundColorAttributeName, value: colors.connectorColor, range: substringRange)
             }
             
             if (syntax.isCalculator(search: substring!)) {
-                self.textStorage?.removeAttribute(NSForegroundColorAttributeName, range: substringRange)
                 self.textStorage?.addAttribute(NSForegroundColorAttributeName, value: colors.calculatorColor, range: substringRange)
+            }
+        })
+        
+        // Color comments.
+        nsText.enumerateLines({ (string, _) in
+            if (string.contains("-- ")) {
+                let range = string.range(of: "-- ")
+                let totalLength = string.characters.count
+                let index: Int = string.distance(from: string.startIndex, to: range!.lowerBound)
+                let substringRange = NSMakeRange(index, totalLength)
+                self.textStorage?.addAttribute(NSForegroundColorAttributeName, value: colors.commentColor, range: substringRange)
             }
         })
     }
