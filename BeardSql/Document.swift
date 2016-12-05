@@ -11,12 +11,24 @@ import BeardFramework
 
 class Document: NSDocument
 {
+    
+    open override var isDocumentEdited: Bool {
+        get {
+            return false
+        }
+    }
+    
+    
     override init()
     {
         super.init()
         // Add your subclass-specific initialization here.
     }
 
+    override func defaultDraftName() -> String {
+        return "Connect"
+    }
+    
     override class func autosavesInPlace() -> Bool
     {
         return false

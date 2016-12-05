@@ -20,7 +20,7 @@ class ApplicationWindowController: NSWindowController
     
     func bootstrapping()
     {
-        self.window?.titleVisibility = .hidden
+//        self.window?.titleVisibility = .hidden
         self.window?.toolbar?.displayMode = .iconAndLabel
         
         self.window?.contentView?.wantsLayer = true

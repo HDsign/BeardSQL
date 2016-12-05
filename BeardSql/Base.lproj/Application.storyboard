@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16C53a" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11542"/>
@@ -274,10 +274,11 @@
         <scene sceneID="R2V-B0-nI4">
             <objects>
                 <windowController storyboardIdentifier="Document Window Controller" id="jGA-0Y-lOj" customClass="ApplicationWindowController" customModule="BeardSql" customModuleProvider="target" sceneMemberID="viewController">
-                    <window key="window" title="BeardSql" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" tabbingMode="preferred" id="Ckk-yw-fiv">
+                    <window key="window" title="BeardSql" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="beardWindowSave" animationBehavior="default" tabbingMode="preferred" id="Ckk-yw-fiv">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
-                        <rect key="contentRect" x="-82" y="240" width="900" height="500"/>
+                        <rect key="contentRect" x="-82" y="240" width="1048" height="500"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1440" height="900"/>
+                        <value key="minSize" type="size" width="1048" height="500"/>
                         <toolbar key="toolbar" implicitIdentifier="44E5BA89-346A-4C2C-B767-2421EA3F9837" allowsUserCustomization="NO" displayMode="iconAndLabel" sizeMode="regular" id="K9Y-iS-2pO">
                             <allowedToolbarItems>
                                 <toolbarItem implicitItemIdentifier="295D9E08-C55B-45E1-BFCE-D3A9209BA3F1" label="Settings" paletteLabel="Settings" image="NSActionTemplate" selectable="YES" id="ZZe-HJ-9uS">

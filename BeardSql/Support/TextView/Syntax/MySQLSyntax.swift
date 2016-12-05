@@ -36,6 +36,8 @@ class MySQLSyntax: SyntaxProtocol
         "GROUP_CONCAT",
         "SUM",
         "COUNT",
+        "LIMIT",
+        "OFFSET"
     ]
     
     let connectors: [String] = [
