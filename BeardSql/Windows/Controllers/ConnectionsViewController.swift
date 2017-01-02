@@ -34,6 +34,8 @@ class ConnectionsViewController: NSViewController
         connector().password = self.passwordInput.stringValue
         connector().database = self.databaseInput.stringValue
         
+        NotificationCenter.default.post(name: .DatabaseConnectionConnected, object: nil)
+        
         self.dismissViewController(self)
     }
     

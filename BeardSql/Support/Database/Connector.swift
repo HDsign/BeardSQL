@@ -81,3 +81,10 @@ class Connector
         }
     }
 }
+
+extension NSNotification.Name
+{
+    public static let DatabaseConnectionLost = NSNotification.Name("DatabaseConnectionLost")
+    public static let DatabaseConnectionConnected = NSNotification.Name("DatabaseConnectionConnected")
+    public static let DatabaseConnectionDisconnected = NSNotification.Name("DatabaseConnectionLost")
+}

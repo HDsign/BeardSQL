@@ -373,7 +373,7 @@
                                     <box key="view" boxType="custom" borderType="line" borderWidth="0.0" title="Connection" id="YkD-Ab-MTD">
                                         <rect key="frame" x="0.0" y="14" width="320" height="38"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                        <view key="contentView" id="bFi-gW-vqV">
+                                        <view key="contentView" id="bFi-gW-vqV" customClass="StatusContainer" customModule="BeardSql" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="38"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
@@ -387,7 +387,7 @@
                                                 </textField>
                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="zyR-4I-Vnm">
                                                     <rect key="frame" x="8" y="5" width="247" height="14"/>
-                                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="192.168.75.30 : SH_darwinplants_darwinplants" id="Kb3-OA-BWE">
+                                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" id="Kb3-OA-BWE">
                                                         <font key="font" metaFont="system" size="11"/>
                                                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -398,7 +398,7 @@
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="19" id="pPd-Eu-kFA"/>
                                                     </constraints>
-                                                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="NSStatusAvailable" id="9Mk-U3-upD"/>
+                                                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="NSStatusUnavailable" id="9Mk-U3-upD"/>
                                                 </imageView>
                                                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="im4-h7-q1C">
                                                     <rect key="frame" x="274" y="1" width="42" height="32"/>
@@ -466,6 +466,8 @@
                         </toolbar>
                     </window>
                     <connections>
+                        <outlet property="connectionLabel" destination="zyR-4I-Vnm" id="ECl-3l-wqm"/>
+                        <outlet property="connectionStatusImage" destination="M3m-xc-dMa" id="YEZ-HM-Ddd"/>
                         <segue destination="NEf-vP-oNF" kind="relationship" relationship="window.shadowedContentViewController" id="AHY-mU-25a"/>
                     </connections>
                 </windowController>
@@ -749,7 +751,7 @@ Gw
         <image name="Content" width="16" height="16"/>
         <image name="Info" width="16" height="16"/>
         <image name="NSActionTemplate" width="14" height="14"/>
-        <image name="NSStatusAvailable" width="16" height="16"/>
+        <image name="NSStatusUnavailable" width="16" height="16"/>
         <image name="Query" width="16" height="16"/>
         <image name="Relations" width="16" height="16"/>
         <image name="Structure" width="16" height="16"/>

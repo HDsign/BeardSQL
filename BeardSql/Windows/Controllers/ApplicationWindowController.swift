@@ -10,12 +10,16 @@ import Cocoa
 
 class ApplicationWindowController: NSWindowController
 {
+    @IBOutlet weak var connectionLabel: NSTextField!
+    @IBOutlet weak var connectionStatusImage: NSImageView!
 
     override func windowDidLoad()
     {
         super.windowDidLoad()
         
-        self.bootstrapping();
+        self.bootstrapping()
+        
+        self.listenToConnectionChanges()
     }
     
     func bootstrapping()
@@ -40,5 +44,31 @@ class ApplicationWindowController: NSWindowController
         if let splitViewController = self.contentViewController as? ApplicationSplitViewController {
             splitViewController.switchViewByTag(tag: tag)
         }
+    }
+    
+    func listenToConnectionChanges()
+    {
+        NotificationCenter.default.addObserver(self, selector: #selector(databaseConnectionConnected), name: .DatabaseConnectionConnected, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(databaseConnectionDisconnected), name: .DatabaseConnectionDisconnected, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(databaseConnectionLost), name: .DatabaseConnectionLost, object: nil)
+    }
+    
+    func databaseConnectionConnected(notification: NSNotification)
+    {
+        let host: String = connector().host
+        let database: String = (connector().database == "") ? "No database selected" : connector().database
+        
+        connectionLabel.stringValue = "\(host): \(database)"
+        connectionStatusImage.image = NSImage(named: NSImageNameStatusAvailable)
+    }
+    
+    func databaseConnectionDisconnected(notification: NSNotification)
+    {
+        print(notification)
+    }
+    
+    func databaseConnectionLost(notification: NSNotification)
+    {
+        print(notification)
     }
 }
