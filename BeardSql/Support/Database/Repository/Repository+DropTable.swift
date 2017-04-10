@@ -17,12 +17,12 @@ extension Repository
         } catch {
             print(error)
         }
-        
+
         for listener in self.dropTableListeners {
             listener(table)
         }
     }
-    
+
     func droppedTable(handler: @escaping (_ table: String) -> Void)
     {
         self.dropTableListeners.append(handler)

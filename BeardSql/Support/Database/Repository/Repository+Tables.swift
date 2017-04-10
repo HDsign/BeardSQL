@@ -22,13 +22,13 @@ extension Repository
                 .mysql()?
                 .execute("SHOW /*!50002 FULL*/ TABLES;")
                 ?? [[:]]
-            
+
             return tables.map { (table: [String: Node]) in
                 return Table(nodeResult: table, database: (self.connector?.database) ?? "")
             }
         } catch {
             print(error)
-            
+
             return []
         }
     }

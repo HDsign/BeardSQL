@@ -11,24 +11,27 @@ import BeardFramework
 
 class Document: NSDocument
 {
-    
-    open override var isDocumentEdited: Bool {
-        get {
+
+    open override var isDocumentEdited: Bool
+    {
+        get
+        {
             return false
         }
     }
-    
-    
+
+
     override init()
     {
         super.init()
         // Add your subclass-specific initialization here.
     }
 
-    override func defaultDraftName() -> String {
+    override func defaultDraftName() -> String
+    {
         return "Connect"
     }
-    
+
     override class func autosavesInPlace() -> Bool
     {
         return false
@@ -37,8 +40,10 @@ class Document: NSDocument
     override func makeWindowControllers()
     {
         // Returns the Storyboard that contains your Document window.
-        let storyboard = NSStoryboard(name: "Application", bundle: nil)
-        let windowController = storyboard.instantiateController(withIdentifier: "Document Window Controller") as! NSWindowController
+        let storyboard       = NSStoryboard(name: "Application", bundle: nil)
+        let windowController = storyboard.instantiateController(
+                withIdentifier: "Document Window Controller"
+        ) as! NSWindowController
         self.addWindowController(windowController)
     }
 

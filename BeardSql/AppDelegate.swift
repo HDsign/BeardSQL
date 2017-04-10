@@ -13,13 +13,14 @@ import BeardFramework
 class AppDelegate: NSObject, NSApplicationDelegate
 {
     private var beardContainer: BeardContainer? = nil
-    
-    override init() {
+
+    override init()
+    {
         super.init()
-        
+
         self.bootBeardFramework()
     }
-    
+
     func applicationDidFinishLaunching(_ aNotification: Notification)
     {
         // Insert code here to initialize your application
@@ -27,14 +28,14 @@ class AppDelegate: NSObject, NSApplicationDelegate
             NSApplication.shared().isAutomaticCustomizeTouchBarMenuItemEnabled = true
         }
     }
-    
+
     ///
     /// Boot up the beard framework!
     ///
     func bootBeardFramework()
     {
         self.beardContainer = BeardContainer()
-        
+
         ///
         /// Give all the service providers you want initialized.
         ///
@@ -43,13 +44,13 @@ class AppDelegate: NSObject, NSApplicationDelegate
             ConsoleServiceProvider.self,
             DatabaseServiceProvider.self,
         ]
-        
+
         ///
         /// Initialize all service providers.
         ///
         self.beardContainer?.start()
     }
-    
+
     func container() -> BeardContainer
     {
         return self.beardContainer!
@@ -60,4 +61,3 @@ class AppDelegate: NSObject, NSApplicationDelegate
         // Insert code here to tear down your application
     }
 }
-

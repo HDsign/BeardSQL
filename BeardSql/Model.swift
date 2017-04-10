@@ -12,7 +12,7 @@ import MySQL
 class Model
 {
     var columns: [(name: String, value: Node)]? = nil
-    
+
     func get(name: String) -> (name: String, value: Node)?
     {
         for column in self.columns ?? [] {
@@ -20,7 +20,7 @@ class Model
                 return column
             }
         }
-        
+
         return nil
     }
 }

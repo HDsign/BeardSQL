@@ -12,23 +12,25 @@ class InstanceHandler
 {
     var container: BContainer?
     var instance: Any? = nil
-    
+
     var name: String = ""
-    var handler: (BContainer) -> Any  = {_ in return 0}
-    
+    var handler: (BContainer) -> Any = { _ in
+        return 0
+    }
+
     init(name: String, handler: @escaping (BContainer) -> Any, container: BContainer)
     {
         self.name = name
         self.handler = handler
         self.container = container
     }
-    
+
     func createInstance() -> Any?
     {
         if let container = self.container {
             return self.handler(container)
         }
-        
+
         return nil
     }
 }

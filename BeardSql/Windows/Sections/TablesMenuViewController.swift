@@ -22,6 +22,8 @@ class TablesMenuViewController: NSViewController
         super.viewDidLoad()
         
         self.searchField.delegate = self
+
+        self.listenToConnectionChanges()
         
         self.refreshTables()
     }
@@ -33,6 +35,10 @@ class TablesMenuViewController: NSViewController
     
     func refreshTables()
     {
+        if (!connector().hasConnection()) {
+            return
+        }
+
         self.resetTables()
         
         self.tables.append("Tables")
@@ -61,6 +67,28 @@ class TablesMenuViewController: NSViewController
         repo().dropTable(table: repo().currentTable)
         
         self.refreshTables()
+    }
+
+    func listenToConnectionChanges()
+    {
+        NotificationCenter.default.addObserver(self, selector: #selector(databaseConnectionConnected), name: .DatabaseConnectionConnected, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(databaseConnectionDisconnected), name: .DatabaseConnectionDisconnected, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(databaseConnectionLost), name: .DatabaseConnectionLost, object: nil)
+    }
+
+    func databaseConnectionConnected(notification: NSNotification)
+    {
+        self.refreshTables()
+    }
+
+    func databaseConnectionDisconnected(notification: NSNotification)
+    {
+        print(notification)
+    }
+
+    func databaseConnectionLost(notification: NSNotification)
+    {
+        print(notification)
     }
 }
 
@@ -134,4 +162,3 @@ extension TablesMenuViewController: NSSearchFieldDelegate
         self.outlineView.reloadData()
     }
 }
-

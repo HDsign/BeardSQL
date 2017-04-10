@@ -29,9 +29,10 @@ extension Connection
             self.lock = newValue
         }
     }
-    
+
     @discardableResult
-    public func executeOrdered(_ query: String, _ values: [NodeRepresentable] = []) throws -> [[(name: String, value: Node)]] {
+    public func executeOrdered(_ query: String, _ values: [NodeRepresentable] = []) throws -> [[(name: String, value: Node)]]
+    {
         var returnable: [[(name: String, value: Node)]] = []
         try lock.locked {
             // Create a pointer to the statement
@@ -42,28 +43,28 @@ extension Connection
             defer {
                 mysql_stmt_close(statement)
             }
-            
+
             // Prepares the created statement
             // This parses `?` in the query and
             // prepares them to attach parameterized bindings.
             guard mysql_stmt_prepare(statement, query, UInt(strlen(query))) == 0 else {
                 throw Error.prepare(error)
             }
-            
+
             // Transforms the `[Value]` array into bindings
             // and applies those bindings to the statement.
             let inputBinds = try Binds(values)
             guard mysql_stmt_bind_param(statement, inputBinds.cBinds) == 0 else {
                 throw Error.inputBind(error)
             }
-            
+
             // Fetches metadata from the statement which has
             // not yet run.
             if let metadata = mysql_stmt_result_metadata(statement) {
                 defer {
                     mysql_free_result(metadata)
                 }
-                
+
                 // Parse the fields (columns) that will be returned
                 // by this statement.
                 let fields: Fields
@@ -72,34 +73,34 @@ extension Connection
                 } catch {
                     throw Error.fetchFields(self.error)
                 }
-                
+
                 // Use the fields data to create output bindings.
                 // These act as buffers for the data that will
                 // be returned when the statement is executed.
                 let outputBinds = Binds(fields)
-                
+
                 // Bind the output bindings to the statement.
                 guard mysql_stmt_bind_result(statement, outputBinds.cBinds) == 0 else {
                     throw Error.outputBind(error)
                 }
-                
+
                 // Execute the statement!
                 // The data is ready to be fetched when this completes.
                 guard mysql_stmt_execute(statement) == 0 else {
                     throw Error.execute(error)
                 }
-                
+
                 var results: [[(name: String, value: Node)]] = []
-                
+
                 // Iterate over all of the rows that are returned.
                 // `mysql_stmt_fetch` will continue to return `0`
                 // as long as there are rows to be fetched.
                 while mysql_stmt_fetch(statement) == 0 {
                     var parsed: [(name: String, value: Node)] = []
-                    
+
                     // For each row, loop over all of the fields expected.
                     for (i, field) in fields.fields.enumerated() {
-                        
+
                         // For each field, grab the data from
                         // the output binding buffer and add
                         // it to the parsed results.
@@ -107,7 +108,7 @@ extension Connection
                         parsed.append((name: field.name, value: output.value))
                     }
                     results.append(parsed)
-                    
+
                     // reset the bindings onto the statement to
                     // signal that they may be reused as buffers
                     // for the next row fetch.
@@ -115,7 +116,7 @@ extension Connection
                         throw Error.outputBind(error)
                     }
                 }
-                
+
                 returnable = results
             } else {
                 // no data is expected to return from
@@ -126,7 +127,7 @@ extension Connection
                 returnable = []
             }
         }
-        
+
         return returnable
     }
 }
